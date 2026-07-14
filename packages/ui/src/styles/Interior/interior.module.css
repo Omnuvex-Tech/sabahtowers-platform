@@ -1,0 +1,243 @@
+.exterior {
+    width: 100%;
+    padding: 92px 60px 80px 73px;
+}
+
+.eyebrowRow {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 41px;
+}
+
+.eyebrow {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: rgba(184, 173, 120, 1);
+}
+
+.eyebrowLine {
+    border-top: 2px solid #b8ad78;
+    width: 96px;
+}
+
+
+.navIcon {
+  width: 40px;
+  height: 40px;
+}
+.box {
+    position: relative;
+    width: 100%;
+    height: 613px;
+    border-radius: 33px;
+    overflow: hidden;
+    padding: 171px 26px 51px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image {
+    object-fit: cover;
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+   background: rgba(2, 59, 76, 0.6);
+}
+
+.content {
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    gap: 44px;
+    max-width: 96%;
+    display: flex;
+    position: relative;
+}
+
+.title {
+    letter-spacing: -.8px;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 47px;
+    font-weight: 500;
+    line-height: 56px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.btnPrimary {
+    letter-spacing: .1px;
+    color: #212529;
+    background-color: #fff;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 193px;
+    height: 53px;
+    padding: 12px 20px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    text-decoration: none;
+    transition: opacity .2s;
+    display: flex;
+}
+
+.btnPrimary:hover {
+    opacity: 0.85;
+}
+
+.btnSecondary {
+letter-spacing: .1px;
+    color: #fff;
+    background-color: #24303fad;
+    border: 1px solid #f9f6e8;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 193px;
+    height: 52px;
+    padding: 12px 20px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    text-decoration: none;
+    transition: background-color .2s;
+    display: flex;
+}
+
+.btnSecondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer {
+    position: relative;
+    z-index: 2;
+    width: 1330px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.progressTrack {
+    position: relative;
+    flex: 1;
+    height: 1px;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.25);
+    overflow: hidden;
+}
+
+.progressThumb {
+    position: absolute;
+    top: 0;
+    height: 1px;
+    background-color: #ffffff;
+    border-radius: 100px;
+    transition: left 0.4s ease;
+}
+
+.navArrows {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.navBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    border: none;
+    background: transparent;
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.navBtn:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+    .exterior {
+        padding: 20px 40px 60px 40px;
+    }
+
+    .box {
+        height: auto;
+        min-height: 480px;
+        padding: 120px 40px 32px 40px;
+    }
+
+    .title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .footer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .exterior {
+        padding: 16px 20px 48px 20px;
+    }
+
+    .eyebrowLine {
+        display: none;
+    }
+
+    .box {
+        min-height: 440px;
+        padding: 80px 24px 24px 24px;
+        border-radius: 16px;
+    }
+
+    .title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .btnPrimary,
+    .btnSecondary {
+        width: 100%;
+    }
+
+    .footer {
+        gap: 12px;
+    }
+
+    .navBtn {
+        width: 30px;
+        height: 30px;
+    }
+}

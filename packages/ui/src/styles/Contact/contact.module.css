@@ -1,0 +1,409 @@
+.contact {
+    position: relative;
+    width: 100%;
+    height: 725px;
+    padding: 60px;
+    overflow: hidden;
+}
+
+.bgImage {
+    object-fit: cover;
+    z-index: 0;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 36px;
+    margin-left: 12px;
+}
+
+
+.infoCard {
+    width: 100%;
+    max-width: 567px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 45px 93px;
+    border-radius: 24px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.infoGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.getInTouchGroup {
+    gap: 17px;
+}
+
+.addressGroup {
+    margin-top: 70px;
+    gap: 12px;
+}
+
+.addressTitle {
+    margin-top: 8px;
+}
+
+.followGroup {
+    margin-top: 75px;
+    gap: 16px;
+}
+
+.labelRow {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.label {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: rgba(184, 173, 120, 1);
+}
+
+.labelFollow {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: rgba(184, 173, 120, 1);
+}
+
+.labelLine {
+    border-top: 2px solid #b8ad78;
+    width: 48px;
+    height: 0;
+}
+
+.phoneText {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+    color: rgba(2, 59, 76, 1);
+    text-decoration: none;
+    margin-top: 4px;
+}
+
+.phoneFull {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+    color: rgba(2, 59, 76, 1);
+    text-decoration: none;
+}
+
+.addressTitle {
+    letter-spacing: -.4px;
+    color: #212529;
+    margin-top: 8px;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 29px;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+.addressText {
+    letter-spacing: 0;
+    color: #212529;
+    margin: 0;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-top: 4px;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+}
+
+.socialLink:hover {
+    opacity: 0.7;
+}
+
+.socialIcon {
+    width: 29px;
+    height: 28px;
+}
+
+.formCard {
+    width: 100%;
+    max-width: 786px;
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+    padding: 49px 49px;
+    border-radius: 24px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.formTitle {
+    margin: 0;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 500;
+    font-size: 29px;
+    line-height: 32px;
+    letter-spacing: -0.4px;
+    color: rgba(33, 37, 41, 1);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    color: #adb5bd;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #adb5bd;
+    outline: none;
+    width: 100%;
+    padding: 8px 3px 10px 5px;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    transition: border-color .2s, color .2s;
+}
+
+
+.inputNumber {
+    color: #adb5bd;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #adb5bd;
+    outline: none;
+    width: 511px;
+    padding: 8px 3px 10px 5px;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    transition: border-color .2s, color .2s;
+}
+
+.fieldNumber{    display: flex;}
+.input::placeholder {
+    color: rgba(173, 181, 189, 1);
+}
+
+.input:focus {
+    border-bottom-color: rgba(184, 173, 120, 1);
+    color: rgba(184, 173, 120, 1);
+}
+
+.input:not(:focus):not(:placeholder-shown) {
+    border-bottom-color: rgba(33, 37, 41, 1);
+    color: rgba(33, 37, 41, 1);
+}
+
+/* .codeField {
+    color: #212529;
+    cursor: pointer;
+    border-bottom: 1px solid #adb5bd;
+    align-items: center;
+    gap: 27px;
+    width: 133px;
+    padding: 10px 0;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    display: flex;
+}
+
+.codeArrows {
+    width: 10px;
+    height: 10px;
+    border-right: 1.5px solid rgba(33, 37, 41, 0.5);
+    border-bottom: 1.5px solid rgba(33, 37, 41, 0.5);
+    transform: rotate(45deg);
+} */
+
+
+.codeFieldWrap {
+  position: relative;
+}
+
+.codeField {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 133px;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #adb5bd;
+  background: none;
+  color: #212529;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.codeFlag {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.codeArrows {
+    width: 12px;
+    height: 12px;
+  margin-left: auto;
+  border-right: 1.5px solid rgba(33, 37, 41, 0.5);
+  border-bottom: 1.5px solid rgba(33, 37, 41, 0.5);
+  transform: rotate(45deg);
+  transition: transform 0.25s ease;
+}
+
+.codeArrowsOpen {
+  transform: rotate(225deg);
+}
+
+.codeDropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 50;
+  width: 220px;
+  max-height: 260px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.codeOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 15px;
+  color: #212529;
+  transition: background-color 0.15s ease;
+}
+
+.codeOption:hover {
+  background-color: rgba(2, 59, 76, 0.06);
+}
+
+.codeOptionActive {
+  background-color: rgba(184, 173, 120, 0.15);
+  font-weight: 600;
+}
+
+.codeIso {
+  flex: 1;
+  letter-spacing: 0.5px;
+}
+
+.codeDial {
+  color: rgba(33, 37, 41, 0.6);
+}
+
+.submitBtn {
+    align-self: flex-start;
+    width: 195px;
+    height: 57px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 14px;
+    background-color: rgba(2, 59, 76, 1);
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    color: rgba(248, 249, 250, 1);
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+        margin-top: 27px;
+}
+
+.submitBtn:hover {
+    opacity: 0.85;
+}
+
+/* ============ Tablet ============ */
+@media (max-width: 1024px) {
+    .contact {
+        padding: 40px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .infoCard,
+    .formCard {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+}
+
+/* ============ Mobile ============ */
+@media (max-width: 768px) {
+    .contact {
+        padding: 20px;
+    }
+
+    .infoCard,
+    .formCard {
+        padding: 24px;
+        gap: 32px;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .submitBtn {
+        width: 100%;
+        align-self: stretch;
+    }
+}

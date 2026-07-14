@@ -1,0 +1,159 @@
+{
+  "hero": {
+    "eyebrow": "Moderin yaşayış kompleksi",
+    "titleBefore": "İstirahət günü kimi başladığı,",
+    "titleItalic": "dəniz dalğaları və sağlamlıq",
+    "titleAfter": "ritmi ilə yaşam hekayəsi",
+    "imageAlt": "Sabah Towers",
+    "primaryCtaLabel": "Kataloq",
+    "secondaryCtaLabel": "Bizimlə əlaqə"
+  },
+  "header": {
+    "navLinks": {
+      "about": "Haqqımızda",
+      "brokers": "Brokerlər",
+      "units": "Mənzillər",
+      "contact": "Əlaqə"
+    }
+  },
+  "exterior": {
+    "eyebrow": "Exterior Design",
+    "imageAlt": "Sabah Towers — Exterior",
+    "slides": [
+      "Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti.",
+      "2Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti.",
+      "3Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti.",
+      "4Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti."
+    ],
+    "primaryCtaLabel": "Kataloq",
+    "secondaryCtaLabel": "Bizimlə əlaqə"
+  },
+  "ecosystem": {
+    "title": "İstirahət və idmanı ekosistem",
+    "description": "Hər detal ailənizin tam rahatlığı və fərqli təcrübələr kəşf etməsi üçün düşünülüb. Hər detal ailənizin tam rahatlığı və fərqli təcrübələr kəşfi",
+    "imageAlt": "Sabah Towers",
+    "primaryCtaLabel": "Kataloq",
+    "secondaryCtaLabel": "Bizimlə əlaqə"
+  },
+  "interior": {
+    "eyebrow": "Interior Design",
+    "imageAlt": "Sabah Towers — Interior",
+    "slides": [
+      "Mənzillərin təmirsiz və sərbəst planlaşdırma ilə təhvil verilməsi, öz zövqünüzə uyğun dizayn etmək rahatlığı.",
+      "4Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti.",
+      "2Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti.",
+      "3Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti."
+    ],
+    "primaryCtaLabel": "Kataloq",
+    "secondaryCtaLabel": "Bizimlə əlaqə"
+  },
+  "amenities": {
+    "eyebrow": "Exclusive Amenities",
+    "title": "Burada hər bir sahə gündəlik həyatınızı daimi kurort mühitinə çevirmək üçün layihələndirilib.",
+    "items": [
+      {
+        "iconAlt": "Tennis və Padel",
+        "title": "TENNİS VƏ PADEL",
+        "description": "Həm idman, həm də sakinlər arasında ünsiyyət üçün peşəkar kortlar."
+      },
+      {
+        "iconAlt": "İdman İnfrastukturu",
+        "title": "İDMAN İNFRASTUKTURU",
+        "description": "Technogym avadanlıqları ilə təchiz olunmuş fitness zalı."
+      },
+      {
+        "iconAlt": "Açıq Hovuzlar",
+        "title": "AÇIQ HOVUZLAR",
+        "description": "Şəhərdən uzaqlaşmadan kurort mühiti yaradan 2 ədəd açıq, 1 ədəd qapalı hovuz."
+      },
+      {
+        "iconAlt": "Uşaq Klubu",
+        "title": "UŞAQ KLUBU",
+        "description": "Öyrənmə və oyun proqramları ilə uşaqların inkişafı üçün təhlükəsiz zona."
+      },
+      {
+        "iconAlt": "Wellness Kafe",
+        "title": "WELLNESS KAFE",
+        "description": "Orqanik məhsullar, sağlam qidalanma və funksional içkilər təqdim edən kafe."
+      },
+      {
+        "iconAlt": "Sahil Xətti",
+        "title": "SAHİL XƏTTİ",
+        "description": "Sabah qaçışları, gün batımı gəzintiləri və dəniz kənarında yoqa platformaları."
+      }
+    ]
+  },
+  "typologies": {
+    "eyebrow": "Residential Typologies",
+    "titleSegments": [
+      {
+        "text": "Müasir həyat"
+      },
+      {
+        "text": "ritmini",
+        "italic": true
+      },
+      {
+        "text": "və"
+      },
+      {
+        "text": "fərdi",
+        "italic": true
+      },
+      {
+        "text": "fəaliyyət ehtiyaclarını tamamlamaq üçün xüsusi olaraq düşünülmüş"
+      },
+      {
+        "text": "fərqli",
+        "italic": true
+      },
+      {
+        "text": "yaşayış və planlaşdırma."
+      }
+    ],
+    "cards": [
+      {
+        "imageAlt": "1-Bedroom",
+        "badge": "1-BEDROOM",
+        "description": "Zərif istirahət üçün nəzərdə tutulmuş, ayrıca yataq otağı zonaları və şəxsi planlaşdırma ilə balanslaşdırılmış rahatlıq.",
+        "features": [
+          "64M²/689FT² (BALKON DAXİL 10M²/108FT²)",
+          "ŞƏXSİ BALKON",
+          "İŞ ZONASI",
+          "DUBAI DESIGN DISTRICT VƏ RACECOURSE MƏNZƏRƏSİ"
+        ]
+      },
+      {
+        "imageAlt": "Studio",
+        "badge": "STUDIO",
+        "description": "Müasir yaşayış üçün optimallaşdırılmış, birləşdirilmiş qonaq otağı, yemək zonası və yataq sahəsi olan kompakt məkan.",
+        "features": [
+          "64M²/689FT² (BALKON DAXİL 10M²/108FT²)",
+          "ŞƏXSİ BALKON",
+          "İŞ ZONASI",
+          "DUBAI DESIGN DISTRICT VƏ RACECOURSE MƏNZƏRƏSİ"
+        ]
+      },
+      {
+        "imageAlt": "1-Bedroom",
+        "badge": "1-BEDROOM",
+        "description": "Aşağıda hamam və müalicə otaqları xəttini əhatə edən isidilən dam üstü hovuz.",
+        "features": [
+          "64M²/689FT² (BALKON DAXİL 10M²/108FT²)",
+          "ŞƏXSİ BALKON",
+          "İŞ ZONASI",
+          "DUBAI DESIGN DISTRICT VƏ RACECOURSE MƏNZƏRƏSİ"
+        ]
+      }
+    ]
+  },"contact": {
+  "backgroundImageAlt": "Sabah Towers",
+  "getInTouchLabel": "Bizimlə əlaqə",
+  "addressLabel": "Ünvan",
+  "addressTitle": "SeaBreeze, Azərbaycan",
+  "addressText": "Sabah Towers, Bakı Azərbaycan",
+  "followLabel": "Bizi izləyin",
+  "formTitle": "Marağınızı bildirin",
+  "submitLabel": "Göndər"
+}
+}

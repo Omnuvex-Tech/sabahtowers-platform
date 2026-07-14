@@ -1,0 +1,159 @@
+{
+  "hero": {
+    "eyebrow": "Modern residential complex",
+    "titleBefore": "A life story that begins like a day off,",
+    "titleItalic": "sea waves and wellness",
+    "titleAfter": "in perfect rhythm",
+    "imageAlt": "Sabah Towers",
+    "primaryCtaLabel": "Catalog",
+    "secondaryCtaLabel": "Contact us"
+  },
+  "header": {
+    "navLinks": {
+      "about": "About",
+      "brokers": "Brokers",
+      "units": "Units",
+      "contact": "Contact"
+    }
+  },
+  "exterior": {
+    "eyebrow": "Exterior Design",
+    "imageAlt": "Sabah Towers — Exterior",
+    "slides": [
+      "A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism.",
+      "2A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism.",
+      "3A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism.",
+      "4A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism."
+    ],
+    "primaryCtaLabel": "Catalog",
+    "secondaryCtaLabel": "Contact us"
+  },
+  "ecosystem": {
+    "title": "Recreation and sports ecosystem",
+    "description": "Every detail is designed for your family's complete comfort and the discovery of distinct experiences. Every detail is designed for your family's complete comfort and discovery",
+    "imageAlt": "Sabah Towers",
+    "primaryCtaLabel": "Catalog",
+    "secondaryCtaLabel": "Contact us"
+  },
+  "interior": {
+    "eyebrow": "Interior Design",
+    "imageAlt": "Sabah Towers — Interior",
+    "slides": [
+      "Apartments delivered without renovation and with free layout planning, offering the comfort of designing to your own taste.",
+      "4A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism.",
+      "2A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism.",
+      "3A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism."
+    ],
+    "primaryCtaLabel": "Catalog",
+    "secondaryCtaLabel": "Contact us"
+  },
+  "amenities": {
+    "eyebrow": "Exclusive Amenities",
+    "title": "Here, every area is designed to turn your everyday life into a permanent resort environment.",
+    "items": [
+      {
+        "iconAlt": "Tennis and Padel",
+        "title": "TENNIS AND PADEL",
+        "description": "Professional courts for both sport and connection among residents."
+      },
+      {
+        "iconAlt": "Sports Infrastructure",
+        "title": "SPORTS INFRASTRUCTURE",
+        "description": "Fitness hall equipped with Technogym equipment."
+      },
+      {
+        "iconAlt": "Outdoor Pools",
+        "title": "OUTDOOR POOLS",
+        "description": "2 outdoor and 1 indoor pool creating a resort atmosphere without leaving the city."
+      },
+      {
+        "iconAlt": "Kids Club",
+        "title": "KIDS CLUB",
+        "description": "A safe zone for children's development with learning and play programs."
+      },
+      {
+        "iconAlt": "Wellness Cafe",
+        "title": "WELLNESS CAFE",
+        "description": "A cafe offering organic products, healthy nutrition, and functional drinks."
+      },
+      {
+        "iconAlt": "Coastline",
+        "title": "COASTLINE",
+        "description": "Morning runs, sunset walks, and seaside yoga platforms."
+      }
+    ]
+  },
+  "typologies": {
+    "eyebrow": "Residential Typologies",
+    "titleSegments": [
+      {
+        "text": "Living and planning specially designed to complement the"
+      },
+      {
+        "text": "rhythm",
+        "italic": true
+      },
+      {
+        "text": "of modern life and"
+      },
+      {
+        "text": "individual",
+        "italic": true
+      },
+      {
+        "text": "activity needs, offering a"
+      },
+      {
+        "text": "different",
+        "italic": true
+      },
+      {
+        "text": "kind of everyday experience."
+      }
+    ],
+    "cards": [
+      {
+        "imageAlt": "1-Bedroom",
+        "badge": "1-BEDROOM",
+        "description": "Balanced comfort featuring separate bedroom areas and private layouts crafted for refined relaxation.",
+        "features": [
+          "64M²/689FT² (INCLUDING BALCONY 10M²/108FT²)",
+          "PRIVATE BALCONY",
+          "WORKING AREA",
+          "DUBAI DESIGN DISTRICT AND RACECOURSE VIEW"
+        ]
+      },
+      {
+        "imageAlt": "Studio",
+        "badge": "STUDIO",
+        "description": "A compact space with integrated living, dining, and sleeping areas designed for optimal modern living.",
+        "features": [
+          "64M²/689FT² (INCLUDING BALCONY 10M²/108FT²)",
+          "PRIVATE BALCONY",
+          "WORKING AREA",
+          "DUBAI DESIGN DISTRICT AND RACECOURSE VIEW"
+        ]
+      },
+      {
+        "imageAlt": "1-Bedroom",
+        "badge": "1-BEDROOM",
+        "description": "A heated rooftop pool meeting the line of the hammam and treatment rooms below.",
+        "features": [
+          "64M²/689FT² (INCLUDING BALCONY 10M²/108FT²)",
+          "PRIVATE BALCONY",
+          "WORKING AREA",
+          "DUBAI DESIGN DISTRICT AND RACECOURSE VIEW"
+        ]
+      }
+    ]
+  },"contact": {
+  "backgroundImageAlt": "Sabah Towers",
+  "getInTouchLabel": "Get in touch",
+  "addressLabel": "Address",
+  "addressTitle": "SeaBreeze, Azerbaijan",
+  "addressText": "Sabah Towers, Baku Azerbaijan",
+  "followLabel": "Follow us",
+  "formTitle": "Express your interest",
+  "submitLabel": "Submit"
+}
+}

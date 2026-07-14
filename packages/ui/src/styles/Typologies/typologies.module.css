@@ -1,0 +1,268 @@
+.typologies {
+    width: 100%;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.eyebrowRow {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin: 0 60px 34px 69px;
+}
+
+.eyebrow {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: rgba(184, 173, 120, 1);
+}
+
+.eyebrowLine {
+    width: 98px;
+    height: 0px;
+    border-top: 2px solid rgba(205, 195, 146, 1);
+}
+
+.title {
+    margin: 0 60px 59px 68px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: -0.8px;
+    color: rgba(33, 37, 41, 1);
+}
+
+.titleItalic {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 53px;
+    line-height: 48px;
+    letter-spacing: -0.8px;
+    color: rgba(33, 37, 41, 1);
+}
+
+.sliderOuter {
+    margin-left: 72px;
+}
+
+.sliderViewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+.track {
+    display: flex;
+    gap: 28px;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    flex-shrink: 0;
+    padding: 4px 4px 20px 4px;
+    border-radius: 24px;
+    background-color: rgba(245, 253, 255, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    transition: width 0.5s ease;
+    height: 558px;
+}
+
+.cardImageWrap {
+    border-radius: 23px;
+    width: 100%;
+    height: 242px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cardImage {
+    object-fit: cover;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 8px;
+}
+
+.cardBadge {
+    margin: 0;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: rgba(33, 37, 41, 1);
+}
+
+.cardDescription {
+    margin: -11px 0 0 0;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 23px;
+    letter-spacing: 0.1px;
+    color: #000000;
+    max-width: 530px;
+}
+
+.featureList {
+    list-style: none;
+    margin-top: 8px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.featureItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 500;
+    font-size: 14.5px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #000000d9;
+    text-transform: uppercase;
+}
+
+.featureIcon {
+    width: 28px;
+    height: 24px;
+}
+
+.footer {
+    align-items: center;
+    gap: 24px;
+    margin: 22px 60px 0 73px;
+    display: flex;
+}
+
+.progressTrack {
+    position: relative;
+    flex: 1;
+    height: 1px;
+    border-radius: 100px;
+    background-color: rgba(33, 37, 41, 0.15);
+    overflow: hidden;
+}
+
+.progressThumb {
+    position: absolute;
+    top: 0;
+    height: 1px;
+    background-color: rgba(3, 69, 88, 1);
+    border-radius: 100px;
+    transition: left 0.4s ease;
+}
+
+.navArrows {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.navBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.navBtn:hover {
+    opacity: 0.7;
+}
+
+.navIcon {
+    display: block;
+    width: 40px;
+    height: 35px;
+    background-color: rgb(4, 61, 77);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+.navIconLeft {
+    -webkit-mask-image: url('/images/heroicons-outline_arrow-narrow-left.png');
+    mask-image: url('/images/heroicons-outline_arrow-narrow-left.png');
+}
+
+.navIconRight {
+    -webkit-mask-image: url('/images/heroicons_arrow-long-right.png');
+    mask-image: url('/images/heroicons_arrow-long-right.png');
+}
+
+.trackNoTransition {
+  transition: none;
+}
+
+.cardNoTransition {
+  transition: none;
+}
+
+@media (max-width: 1024px) {
+
+    .eyebrowRow,
+    .title,
+    .footer {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .sliderOuter {
+        margin-left: 40px;
+    }
+
+    .title,
+    .titleItalic {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .typologies {
+        padding: 40px 0;
+    }
+
+    .eyebrowRow,
+    .title,
+    .footer {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .eyebrowLine {
+        display: none;
+    }
+
+    .sliderOuter {
+        margin-left: 20px;
+    }
+
+    .title,
+    .titleItalic {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
