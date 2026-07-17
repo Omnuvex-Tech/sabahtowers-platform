@@ -20,7 +20,7 @@
     "eyebrow": "Exterior Design",
     "imageAlt": "Sabah Towers — Exterior",
     "slides": [
-      "Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti.",
+      "Sabah Towers: dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti.",
       "2Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti.",
       "3Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti.",
       "4Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti."
@@ -39,7 +39,7 @@
     "eyebrow": "Interior Design",
     "imageAlt": "Sabah Towers — Interior",
     "slides": [
-      "Mənzillərin təmirsiz və sərbəst planlaşdırma ilə təhvil verilməsi, öz zövqünüzə uyğun dizayn etmək rahatlığı.",
+      "Mənzillərin təmirsiz və sərbəst planlaşdırma ilə təhvil verilməsi, panoramik şəhər mənzərəli geniş məkanları öz zövqünüzə və vərdişlərinizə uyğun dizayn etmək azadlığı yaradır.",
       "4Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti.",
       "2Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti.",
       "3Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti."
@@ -53,33 +53,33 @@
     "items": [
       {
         "iconAlt": "Tennis və Padel",
-        "title": "TENNİS VƏ PADEL",
-        "description": "Həm idman, həm də sakinlər arasında ünsiyyət üçün peşəkar kortlar."
+        "title": "Tennis və padel",
+        "description": "Dinamik oyunlar və fərdi turnirlər üçün peşəkar kortlar."
       },
       {
         "iconAlt": "İdman İnfrastukturu",
-        "title": "İDMAN İNFRASTUKTURU",
-        "description": "Technogym avadanlıqları ilə təchiz olunmuş fitness zalı."
+        "title": "İdman infrastrukturu",
+        "description": "Peşəkar avadanlıqlar ilə təchiz olunmuş fitness zalı."
       },
       {
         "iconAlt": "Açıq Hovuzlar",
-        "title": "AÇIQ HOVUZLAR",
-        "description": "Şəhərdən uzaqlaşmadan kurort mühiti yaradan 2 ədəd açıq, 1 ədəd qapalı hovuz."
+        "title": "Hovuzlar",
+        "description": "2 açıq hovuz və ilboyu istifadə üçün 1 qapalı hovuz."
       },
       {
         "iconAlt": "Uşaq Klubu",
-        "title": "UŞAQ KLUBU",
-        "description": "Öyrənmə və oyun proqramları ilə uşaqların inkişafı üçün təhlükəsiz zona."
+        "title": "Uşaq klubu",
+        "description": "Təhlükəsiz oyun və fərdi inkişaf sahəsi"
       },
       {
         "iconAlt": "Wellness Kafe",
-        "title": "WELLNESS KAFE",
-        "description": "Orqanik məhsullar, sağlam qidalanma və funksional içkilər təqdim edən kafe."
+        "title": "Wellness kafe",
+        "description": "Təbii inqrediyentlərlə hazırlanan sağlam qidalar və içkilər."
       },
       {
-        "iconAlt": "Sahil Xətti",
-        "title": "SAHİL XƏTTİ",
-        "description": "Sabah qaçışları, gün batımı gəzintiləri və dəniz kənarında yoqa platformaları."
+        "iconAlt": "Birinci sahil xətti",
+        "title": "Birinci sahil xətti",
+        "description": "Gəzinti və qaçışlar üçün zonalar və xüsusi yoqa sahələri."
       }
     ]
   },
@@ -146,14 +146,30 @@
         ]
       }
     ]
-  },"contact": {
-  "backgroundImageAlt": "Sabah Towers",
-  "getInTouchLabel": "Bizimlə əlaqə",
-  "addressLabel": "Ünvan",
-  "addressTitle": "SeaBreeze, Azərbaycan",
-  "addressText": "Sabah Towers, Bakı Azərbaycan",
-  "followLabel": "Bizi izləyin",
-  "formTitle": "Marağınızı bildirin",
-  "submitLabel": "Göndər"
+  },
+  "contact": {
+    "backgroundImageAlt": "Sabah Towers",
+    "getInTouchLabel": "Bizimlə əlaqə",
+    "addressLabel": "Ünvan",
+    "addressTitle": "SeaBreeze, Azərbaycan",
+    "addressText": "Sabah Towers, Bakı Azərbaycan",
+    "followLabel": "Bizi izləyin",
+    "formTitle": "Marağınızı bildirin",
+    "submitLabel": "Göndər",
+    "phoneMinError": "Minimum 5 rəqəm daxil edin",
+"requiredError": "Bu sahə mütləqdir"
+  },
+  "footer": {
+  "addressText": "The Alba Residences, Dorchester Collection, AVA at Palm Jumeirah, Dorchester Collection, VELA Viento, Dorchester Collection, Dubai",
+  "exploreTitle": "KEŞF ET",
+  "exploreLinks": {
+    "about": "HAQQIMIZDA",
+    "brokers": "BROKERLƏR",
+    "units": "MƏNZİLLƏR",
+    "contact": "ƏLAQƏ"
+  },
+  "getInTouchTitle": "BİZİMLƏ ƏLAQƏ",
+  "followTitle": "BİZİ İZLƏYİN",
+  "copyrightText": "COPYRIGHT© 2026 | SABAH TOWERS"
 }
 }

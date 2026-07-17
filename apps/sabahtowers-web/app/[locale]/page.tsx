@@ -9,6 +9,8 @@ import { Interior } from "./components/Interior/interior-wrapper";
 import { Amenities } from "./components/Amenities/amenities-wrapper";
 import { Typologies } from "./components/Typologies/typologies-wrapper";
 import { Contact } from "./components/Contact/contact-wrapper";
+import { MapLocation } from "./components/MapLocation/map-location-wrapper";
+import { Footer } from "./components/Footer/footer-wrapper";
 
 export const dynamic = "force-dynamic";
 
@@ -33,13 +35,15 @@ export default async function Home({
     }
     return (
         <>
-          <Hero locale={locale} />
+            <Hero locale={locale} />
             <Ecosystem locale={locale} />
             <Exterior locale={locale} />
             <Interior locale={locale} />
             <Amenities locale={locale} />
             <Typologies locale={locale} />
-            <Contact locale={locale} /> 
+            <Contact locale={locale} />
+            <MapLocation />
+            <Footer locale={locale} />
         </>
     );
 }

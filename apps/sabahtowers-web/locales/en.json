@@ -20,7 +20,7 @@
     "eyebrow": "Exterior Design",
     "imageAlt": "Sabah Towers — Exterior",
     "slides": [
-      "A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism.",
+      "Sabah Towers: minimalist sustainable architecture, panoramic sea views, and a perfect balance of urban dynamic and resort tranquility.",
       "2A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism.",
       "3A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism.",
       "4A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism."
@@ -39,7 +39,7 @@
     "eyebrow": "Interior Design",
     "imageAlt": "Sabah Towers — Interior",
     "slides": [
-      "Apartments delivered without renovation and with free layout planning, offering the comfort of designing to your own taste.",
+      "Apartments are delivered in shell-and-core condition with open-floor layouts, providing complete architectural freedom to customize the panoramic space according to your preferences.",
       "4A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism.",
       "2A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism.",
       "3A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism."
@@ -49,37 +49,37 @@
   },
   "amenities": {
     "eyebrow": "Exclusive Amenities",
-    "title": "Here, every area is designed to turn your everyday life into a permanent resort environment.",
+    "title": "Every aspect here is designed to transform your daily life into a permanent resort-style experience. All that remains for you is to savor every moment and enjoy the comfort of your own home.",
     "items": [
       {
         "iconAlt": "Tennis and Padel",
-        "title": "TENNIS AND PADEL",
-        "description": "Professional courts for both sport and connection among residents."
+        "title": "Tennis & padel",
+        "description": " Professional courts designed for high-energy matches and single tournaments."
       },
       {
         "iconAlt": "Sports Infrastructure",
-        "title": "SPORTS INFRASTRUCTURE",
-        "description": "Fitness hall equipped with Technogym equipment."
+        "title": "Fitness infrastructure",
+        "description": "Fully equipped gym with professional Technogym training gear."
       },
       {
-        "iconAlt": "Outdoor Pools",
-        "title": "OUTDOOR POOLS",
-        "description": "2 outdoor and 1 indoor pool creating a resort atmosphere without leaving the city."
+        "iconAlt": "Pools",
+        "title": "Pools",
+        "description": "Two outdoor pools and one indoor pool for year-round training."
       },
       {
         "iconAlt": "Kids Club",
-        "title": "KIDS CLUB",
-        "description": "A safe zone for children's development with learning and play programs."
+        "title": "Kids club",
+        "description": "A secure space designed for play and personal development."
       },
       {
         "iconAlt": "Wellness Cafe",
-        "title": "WELLNESS CAFE",
-        "description": "A cafe offering organic products, healthy nutrition, and functional drinks."
+        "title": "Wellness café",
+        "description": "Healthy meals and functional drinks made with natural ingredients."
       },
       {
-        "iconAlt": "Coastline",
-        "title": "COASTLINE",
-        "description": "Morning runs, sunset walks, and seaside yoga platforms."
+        "iconAlt": "Frontline waterfront",
+        "title": "Frontline waterfront",
+        "description": "Dedicated spaces for jogging, walks, and outdoor yoga platforms."
       }
     ]
   },
@@ -146,14 +146,30 @@
         ]
       }
     ]
-  },"contact": {
-  "backgroundImageAlt": "Sabah Towers",
-  "getInTouchLabel": "Get in touch",
-  "addressLabel": "Address",
-  "addressTitle": "SeaBreeze, Azerbaijan",
-  "addressText": "Sabah Towers, Baku Azerbaijan",
-  "followLabel": "Follow us",
-  "formTitle": "Express your interest",
-  "submitLabel": "Submit"
+  },
+  "contact": {
+    "backgroundImageAlt": "Sabah Towers",
+    "getInTouchLabel": "Get in touch",
+    "addressLabel": "Address",
+    "addressTitle": "SeaBreeze, Azerbaijan",
+    "addressText": "Sabah Towers, Baku Azerbaijan",
+    "followLabel": "Follow us",
+    "formTitle": "Express your interest",
+    "submitLabel": "Submit",
+    "phoneMinError": "Enter at least 5 digits",
+"requiredError": "This field is required"
+  },
+  "footer": {
+  "addressText": "The Alba Residences, Dorchester Collection, AVA at Palm Jumeirah, Dorchester Collection, VELA Viento, Dorchester Collection, Dubai",
+  "exploreTitle": "EXPLORE",
+  "exploreLinks": {
+    "about": "ABOUT",
+    "brokers": "BROKERS",
+    "units": "UNITS",
+    "contact": "CONTACT"
+  },
+  "getInTouchTitle": "GET IN TOUCH",
+  "followTitle": "FOLLOW US",
+  "copyrightText": "COPYRIGHT© 2026 | SABAH TOWERS"
 }
 }

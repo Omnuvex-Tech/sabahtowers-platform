@@ -24,6 +24,8 @@ export function Contact({ locale }: { locale: string }) {
       socialLinks={socialLinks}
       formTitle={t.contact.formTitle}
       submitLabel={t.contact.submitLabel}
+      phoneMinError={t.contact.phoneMinError}
+      requiredError={t.contact.requiredError}
     />
   );
 }
