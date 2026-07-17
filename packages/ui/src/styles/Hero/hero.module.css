@@ -109,58 +109,265 @@
     background-color: rgba(255, 255, 255, 0.08);
 }
 
-/* ============ Tablet ============ */
-@media (max-width: 1024px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1300px) {
     .hero {
-        padding: 20px 40px 0 40px;
+        padding: 24px 60px 0 60px;
     }
-
+    .heroBox {
+        height: auto !important;
+        aspect-ratio: 2.2 / 1;
+        overflow: visible !important;
+    }
+    .heroBox > div {
+        overflow: visible !important;
+    }
+    .heroImage {
+        object-fit: fill !important;
+        object-position: center !important;
+    }
     .content {
-        max-width: 60%;
+        top: 57%;
+        transform: translateY(-50%);
+        left: 50px;
+        max-width: 50%;
     }
-
-    .title,
+    .title {
+        font-size: 38px;
+        line-height: 42px;
+    }
     .titleItalic {
-        font-size: 32px;
-        line-height: 40px;
+        font-size: 40px;
+        line-height: 48px;
     }
 }
 
-/* ============ Mobile ============ */
-@media (max-width: 768px) {
-    .hero {
-        padding: 16px 20px 0 20px;
-    }
-
+@media (max-width: 1120px) {
     .heroBox {
-        aspect-ratio: auto;
-        min-height: 560px;
+        aspect-ratio: 2.15 / 1;
     }
-
-    .heroImage {
-        object-fit: cover;
-        object-position: bottom right;
-    }
-
     .content {
-        position: static;
-        max-width: 100%;
-        padding: 24px 20px;
+        left: 40px;
     }
-
-    .title,
+    .title {
+        font-size: 32px;
+        line-height: 36px;
+    }
     .titleItalic {
-        font-size: 26px;
+        font-size: 34px;
+        line-height: 42px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        padding: 24px 40px 0 40px;
+    }
+    .heroBox {
+        height: auto !important;
+        aspect-ratio: 2.15 / 1;
+        overflow: visible !important; 
+    }
+    .heroBox > div {
+        overflow: visible !important;
+    }
+    .heroImage {
+        object-fit: fill !important;
+        object-position: center !important; 
+    }
+    .content {
+        top: 57%;
+        transform: translateY(-50%);
+        left: 40px;
+        max-width: 50%;
+        gap: 12px;
+    }
+    .eyebrow {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .title {
+        font-size: 30px;
         line-height: 34px;
+        letter-spacing: -0.5px;
     }
-
+    .titleItalic {
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -0.5px;
+    }
     .actions {
-        flex-direction: column;
-        align-items: stretch;
+        margin-top: 16px;
+        gap: 12px;
     }
-
     .btnPrimary,
     .btnSecondary {
-        width: 100%;
+        width: 148px;
+        height: 46px;
+        font-size: 15px;
+        line-height: 18px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 880px) {
+    .heroBox {
+        aspect-ratio: 2.1 / 1;
+    }
+    .content {
+        left: 32px;
+        max-width: 52%;
+    }
+    .title {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    .titleItalic {
+        font-size: 30px;
+        line-height: 38px;
+    }
+}
+
+@media (max-width: 778px) {
+    .hero {
+        padding: 20px 24px 0 24px;
+    }
+    .heroBox {
+        aspect-ratio: 2 / 1; 
+        overflow: visible !important;
+    }
+    .heroBox > div {
+        overflow: visible !important;
+    }
+    .heroImage {
+        object-fit: fill !important;
+        object-position: center !important;
+    }
+    .content {
+        left: 32px;
+        max-width: 55%;
+        top: 56%;
+    }
+    .title {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .titleItalic {
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero {
+        padding: 16px 16px 0 16px;
+    }
+    .heroBox {
+        height: auto !important;
+        aspect-ratio: 1 / 1.05 !important;
+        overflow: visible !important;
+        border-radius: 24px !important;
+    }
+    .heroBox > div {
+        overflow: visible !important;
+        border-radius: 24px !important;
+    }
+    .heroBox > div > div {
+        overflow: visible !important;
+        border-radius: 24px !important;
+    }
+    .heroImage {
+        object-fit: fill !important;
+        object-position: center !important;
+        border-radius: 24px !important;
+    }
+    .content {
+        position: absolute !important;
+        top: 50% !important;
+        left: 20px !important;
+        right: 20px !important;
+        width: auto !important;
+        max-width: none !important;
+        transform: translateY(-50%) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        gap: 12px !important;
+    }
+    .eyebrow {
+        font-size: 14px !important;
+        line-height: 18px !important;
+        margin: 0 !important;
+    }
+    .title {
+        font-size: 21px !important;
+        line-height: 26px !important;
+        letter-spacing: -0.3px !important;
+    }
+    .titleItalic {
+        font-size: 23px !important;
+        line-height: 32px !important;
+        letter-spacing: -0.3px !important;
+    }
+    .actions {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 10px !important;
+        margin-top: 8px !important;
+    }
+    .btnPrimary,
+    .btnSecondary {
+        width: 100% !important;
+        height: 46px !important;
+        font-size: 14px !important;
+        line-height: 18px !important;
+        border-radius: 12px !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .content {
+        left: 16px !important;
+        right: 16px !important;
+        gap: 8px !important;
+    }
+    .title {
+        font-size: 18px !important;
+        line-height: 22px !important;
+    }
+    .titleItalic {
+        font-size: 20px !important;
+        line-height: 28px !important;
+    }
+    .actions {
+        margin-top: 4px !important;
+    }
+    .btnPrimary,
+    .btnSecondary {
+        height: 42px !important;
+        font-size: 13px !important;
     }
 }

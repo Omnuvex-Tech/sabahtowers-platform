@@ -1,3 +1,4 @@
+
 .ecosystem {
     display: grid;
     grid-template-columns: 1fr minmax(320px, 600px) 1fr;
@@ -117,62 +118,165 @@
     letter-spacing: 0.1px;
     color: rgba(2, 59, 76, 1);
     text-decoration: none;
-    transition: background-color 0.2s ease;
+    transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
 }
 
 .btnSecondary:hover {
-    background-color: rgba(3, 69, 88, 0.06);
+    border-color: rgba(28, 173, 217, 0.764);
+    color: rgba(28, 173, 217, 1);
 }
 
-/* ============ Tablet ============ */
 @media (max-width: 1024px) {
     .ecosystem {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr minmax(320px, 500px) 1fr;
+        padding: 80px 0;
+    }
+
+    .imageWrapperLeft {
+        margin-left: calc(50% - 15vw - 120px);
+    }
+
+    .imageWrapperRight {
+        margin-right: calc(50% - 15vw - 120px);
+        transform: translateY(120px);
+    }
+
+    .image {
+        width: 380px;
+        height: 300px;
+        border-radius: 24px;
+    }
+
+    .content {
+        transform: translateY(60px);
+    }
+
+    .title {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .description {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 880px) {
+    .ecosystem {
+        grid-template-columns: 1fr minmax(320px, 420px) 1fr;
+    }
+
+    .imageWrapperLeft {
+        margin-left: calc(50% - 20vw - 80px);
+    }
+
+    .imageWrapperRight {
+        margin-right: calc(50% - 20vw - 80px);
+        transform: translateY(80px);
+    }
+
+    .image {
+        width: 280px;
+        height: 240px;
+    }
+
+    .content {
+        transform: translateY(40px);
+        gap: 12px;
+    }
+
+    .title {
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
+
+@media (max-width: 640px) {
+    .ecosystem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 16px;
         gap: 32px;
-        padding: 60px 24px;
     }
 
     .imageWrapperLeft,
     .imageWrapperRight {
-        justify-self: center;
+        width: 100%;
+        margin: 0;
+        transform: none;
+        padding: 0;
     }
 
-    .content {
-        order: -1;
+    .imageWrapperLeft {
+        order: -2; 
     }
-}
 
-/* ============ Mobile ============ */
-@media (max-width: 768px) {
-    .ecosystem {
-        padding: 40px 20px;
-        gap: 24px;
+    .imageWrapperRight {
+        order: 1; 
     }
 
     .image {
         width: 100%;
         height: auto;
-        aspect-ratio: 448 / 324;
+        aspect-ratio: 1.38 / 1;
+        border-radius: 24px;
+        object-fit: cover;
+    }
+
+    .content {
+        order: 0; 
+        transform: none;
+        padding: 0;
+        gap: 16px;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0;
     }
 
     .title {
         font-size: 28px;
-        line-height: 36px;
+        line-height: 34px;
     }
 
     .description {
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 15px;
+        line-height: 22px;
     }
 
     .actions {
         flex-direction: column;
-        align-items: stretch;
         width: 100%;
+        gap: 12px;
+        margin-top: 8px;
     }
 
     .btnPrimary,
     .btnSecondary {
         width: 100%;
+        height: 48px;
+        font-size: 15px;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .ecosystem {
+        padding: 32px 12px;
+        gap: 24px;
+    }
+
+    .title {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .description {
+        font-size: 14px;
+        line-height: 20px;
     }
 }

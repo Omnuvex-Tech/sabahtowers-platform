@@ -1,0 +1,146 @@
+.mapSection {
+  width: 100%;
+}
+
+.mapWrap {
+  position: relative;
+  width: 100%;
+  height: 521px;
+  overflow: hidden;
+}
+
+.mapImage {
+  object-fit: cover;
+}
+
+.marker {
+  position: absolute;
+  top: 33%;
+  left: 56.7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  transform: translate(-50%, -100%);
+}
+
+.markerBadge {
+  width: 71px;
+  height: 67px;
+  border-radius: 100px;
+}
+
+.markerPin {
+  width: 40px;
+  height: 40px;
+}
+
+.viewOnMapBtn {
+  letter-spacing: .1px;
+  color: #212529;
+  background-color: #fff;
+  border-radius: 14px;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+  height: 54px;
+  padding: 12px 20px;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+  transition: opacity .2s;
+  display: flex;
+  position: absolute;
+  top: 45px;
+  right: 60px;
+}
+
+.viewOnMapBtn:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 1024px) {
+  .mapWrap {
+    height: 360px;
+  }
+
+  .marker {
+    gap: 6px;
+  }
+
+  .markerBadge {
+    width: 58px;
+    height: 55px;
+  }
+
+  .markerPin {
+    width: 34px;
+    height: 34px;
+  }
+
+  .viewOnMapBtn {
+    width: 170px;
+    height: 48px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mapWrap {
+    height: 300px;
+  }
+
+  .viewOnMapBtn {
+    top: 20px;
+    right: 20px;
+    width: auto;
+    padding: 10px 16px;
+  }
+
+  .marker {
+    gap: 4px;
+        top: 40%;
+  }
+
+  .markerBadge {
+    width: 44px;
+    height: 44px;
+    border-radius: 100px;
+  }
+
+  .markerPin {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mapWrap {
+    height: 240px;
+  }
+
+  .marker {
+    top: 28%;
+  }
+
+  .markerBadge {
+    width: 36px;
+    height: 36px;
+  }
+
+  .markerPin {
+    width: 22px;
+    height: 22px;
+  }
+
+  .viewOnMapBtn {
+    top: 14px;
+    right: 14px;
+    width: auto;
+    height: 40px;
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}

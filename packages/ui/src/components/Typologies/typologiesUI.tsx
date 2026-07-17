@@ -1,8 +1,9 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import styles from '../../styles/Typologies/typologies.module.css';
+import { motion, Variants } from 'framer-motion';
 
 export interface TypologyCard {
   imageSrc: string;
@@ -24,16 +25,70 @@ interface TypologiesUIProps {
   starIconSrc: string;
 }
 
-const WIDE_WIDTH = 585;
-const NARROW_WIDTH = 458;
-const GAP = 28;
-
-// How many full copies of the card list to render side by side. Having the
-// real slides sandwiched between full extra copies (instead of just single
-// clones) guarantees there are always enough cards on both sides to fill the
-// viewport, no matter where the user has scrolled to - so there is never a
-// blank gap at the start/end of the loop.
 const REPEAT = 3;
+const smoothEase = [0.16, 1, 0.3, 1] as const;
+const mainSectionVariants: Variants = {
+  hidden: { 
+    opacity: 0, 
+    y: 35 
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { 
+      duration: 1.1, 
+      ease: smoothEase,
+    },
+  },
+};
+
+const titleWordVariants: Variants = {
+  hidden: { 
+    opacity: 0, 
+    y: 25 
+  },
+  visible: (globalIndex: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { 
+      duration: 0.9, 
+      ease: smoothEase,
+      delay: 0.08 + globalIndex * 0.06
+    },
+  }),
+};
+
+const sliderOuterVariants: Variants = {
+  hidden: { 
+    opacity: 0, 
+    y: 45 
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { 
+      duration: 1, 
+      ease: smoothEase,
+      delay: 0.3
+    },
+  },
+};
+
+const footerVariants: Variants = {
+  hidden: { 
+    opacity: 0, 
+    y: 25 
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { 
+      duration: 0.9, 
+      ease: smoothEase,
+      delay: 0.4
+    },
+  },
+};
 
 export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: TypologiesUIProps) {
   const total = cards.length;
@@ -41,10 +96,11 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
   const extendedCards: TypologyCard[] =
     total > 0 ? Array.from({ length: REPEAT }, () => cards).flat() : [];
 
-  // trackIndex is the position inside extendedCards. The "real" slides live
-  // in the middle copy, so real slide 0 sits at position `total`.
   const [trackIndex, setTrackIndex] = useState(total);
   const [enableTransition, setEnableTransition] = useState(true);
+  const [step, setStep] = useState(0);
+
+  const trackRef = useRef<HTMLDivElement>(null);
 
   const activeRealIndex = total > 0 ? ((trackIndex % total) + total) % total : 0;
 
@@ -60,20 +116,14 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
     if (e.propertyName !== 'transform') return;
 
     if (trackIndex < total) {
-      // Slid into the leading buffer copy - snap forward into the middle
-      // copy, landing on the exact same visual card.
       setEnableTransition(false);
       setTrackIndex((prev) => prev + total);
     } else if (trackIndex >= total * 2) {
-      // Slid into the trailing buffer copy - snap back into the middle
-      // copy, landing on the exact same visual card.
       setEnableTransition(false);
       setTrackIndex((prev) => prev - total);
     }
   };
 
-  // After a transition-less snap, re-enable the transition on the next
-  // frame so future clicks animate normally again.
   useEffect(() => {
     if (!enableTransition) {
       const raf = requestAnimationFrame(() => setEnableTransition(true));
@@ -81,30 +131,105 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
     }
   }, [enableTransition]);
 
-  const offset = trackIndex * (NARROW_WIDTH + GAP);
+  // Measure the actual rendered card width + gap from the DOM instead of
+  // hardcoding pixel breakpoints in JS. This makes the slider follow
+  // whatever width the CSS media queries define at any screen size.
+  useEffect(() => {
+    const trackEl = trackRef.current;
+    if (!trackEl) return;
+
+    const measure = () => {
+      const inactiveCard = trackEl.querySelector<HTMLElement>(
+        `.${styles.card}:not(.${styles.cardActive})`
+      );
+      const referenceCard = inactiveCard ?? trackEl.querySelector<HTMLElement>(`.${styles.card}`);
+      if (!referenceCard) return;
+
+      const trackStyles = getComputedStyle(trackEl);
+      const gap = parseFloat(trackStyles.columnGap || trackStyles.gap || '0') || 0;
+
+      setStep(referenceCard.getBoundingClientRect().width + gap);
+    };
+
+    measure();
+
+    const ro = new ResizeObserver(measure);
+    ro.observe(trackEl);
+
+    return () => ro.disconnect();
+  }, [total]);
+
+  const offset = trackIndex * step;
+
+  const renderAnimatedSegments = () => {
+    let globalWordIndex = 0;
+
+    return titleSegments.map((segment, segmentIndex) => {
+      const segmentWords = segment.text.split(" ").filter(w => w !== "");
+      
+      const content = segmentWords.map((word) => {
+        const currentWordIndex = globalWordIndex;
+        globalWordIndex++; 
+
+        return (
+          <motion.span
+            key={currentWordIndex}
+            variants={titleWordVariants}
+            custom={currentWordIndex} 
+            style={{
+              display: "inline-block",
+              willChange: "transform, opacity",
+            }}
+          >
+            {word}
+            {"\u00A0"}
+          </motion.span>
+        );
+      });
+
+      if (segment.italic) {
+        return (
+          <em key={segmentIndex} className={styles.titleItalic}>
+            {content}
+          </em>
+        );
+      }
+
+      return <span key={segmentIndex}>{content}</span>;
+    });
+  };
 
   return (
-    <section className={styles.typologies}>
+    <motion.section 
+      className={styles.typologies}
+      variants={mainSectionVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.15 }}
+    >
       <div className={styles.eyebrowRow}>
         <span className={styles.eyebrow}>{eyebrow}</span>
         <span className={styles.eyebrowLine} />
       </div>
-
-      <h2 className={styles.title}>
-        {titleSegments.map((segment, i) =>
-          segment.italic ? (
-            <em key={i} className={styles.titleItalic}>
-              {segment.text}{' '}
-            </em>
-          ) : (
-            <span key={i}>{segment.text} </span>
-          )
-        )}
-      </h2>
-
-      <div className={styles.sliderOuter}>
+      <motion.h2 
+        className={styles.title}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        {renderAnimatedSegments()}
+      </motion.h2>
+      <motion.div 
+        className={styles.sliderOuter}
+        variants={sliderOuterVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.15 }}
+        style={{ willChange: 'transform, opacity' }}
+      >
         <div className={styles.sliderViewport}>
           <div
+            ref={trackRef}
             className={`${styles.track} ${!enableTransition ? styles.trackNoTransition : ''}`}
             style={{ transform: `translateX(-${offset}px)` }}
             onTransitionEnd={handleTransitionEnd}
@@ -114,8 +239,7 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
               return (
                 <div
                   key={`${card.badge}-${index}`}
-                  className={`${styles.card} ${!enableTransition ? styles.cardNoTransition : ''}`}
-                  style={{ width: isActive ? WIDE_WIDTH : NARROW_WIDTH }}
+                  className={`${styles.card} ${isActive ? styles.cardActive : ''} ${!enableTransition ? styles.cardNoTransition : ''}`}
                 >
                   <div className={styles.cardImageWrap}>
                     <Image
@@ -151,9 +275,15 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
             })}
           </div>
         </div>
-      </div>
-
-      <div className={styles.footer}>
+      </motion.div>
+      <motion.div 
+        className={styles.footer}
+        variants={footerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        style={{ willChange: 'transform, opacity' }}
+      >
         <div className={styles.progressTrack}>
           <span
             className={styles.progressThumb}
@@ -182,7 +312,7 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
             <span className={`${styles.navIcon} ${styles.navIconRight}`} />
           </button>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }
