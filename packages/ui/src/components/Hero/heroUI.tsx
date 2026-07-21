@@ -44,7 +44,6 @@ const eyebrowVariants: Variants = {
   },
 };
 
-// Yazının həm opacity, həm də aşağıdan yuxarı gəlmə animasiyası
 const lineVariants: Variants = {
   hidden: { opacity: 0, y: "100%" },
   visible: {
@@ -99,7 +98,6 @@ export function HeroUI({
         initial="hidden"
         animate="visible"
       >
-        {/* Şəkil Konteyneri */}
         <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', borderRadius: 'inherit', zIndex: 0 }}>
           <motion.div
             variants={imageVariants}
@@ -126,7 +124,6 @@ export function HeroUI({
           />
         </div>
 
-        {/* Mətn Bloqu */}
         <div className={styles.content} style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}>
             <motion.p
@@ -139,7 +136,6 @@ export function HeroUI({
           </div>
 
           <h1 className={styles.title}>
-            {/* clipPath sayəsində yazı hündürlük məhdudiyyəti olmadan öz sahəsində kəsilmədən çıxır */}
             <div style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', paddingBottom: '0.1em' }}>
               <motion.span
                 style={{ display: 'block', opacity: 0 }}
@@ -158,8 +154,6 @@ export function HeroUI({
               </motion.span>
             </div>
           </h1>
-
-          {/* Düymələr */}
           <div style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', paddingTop: '8px' }}>
             <motion.div
               className={styles.actions}

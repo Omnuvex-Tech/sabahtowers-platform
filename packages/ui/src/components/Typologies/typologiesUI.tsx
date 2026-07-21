@@ -131,9 +131,6 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
     }
   }, [enableTransition]);
 
-  // Measure the actual rendered card width + gap from the DOM instead of
-  // hardcoding pixel breakpoints in JS. This makes the slider follow
-  // whatever width the CSS media queries define at any screen size.
   useEffect(() => {
     const trackEl = trackRef.current;
     if (!trackEl) return;

@@ -1,7 +1,6 @@
 .footer {
     background-color: #023b4c;
     width: 100%;
-    height: 632px;
     padding-top: 52px;
 }
 
@@ -9,8 +8,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1800px;
+    margin: 0 auto 43px;
     padding: 0 67px;
-    margin-bottom: 43px;
 }
 
 .localesRow {
@@ -75,8 +75,9 @@
 .mainRow {
     display: flex;
     gap: 207px;
+    max-width: 1800px;
+    margin: 0 auto 105px;
     padding: 0 60px;
-    margin-bottom: 105px;
 }
 
 .addressText {
@@ -102,7 +103,6 @@
     margin-left: 93px;
 }
 
-
 .columnHeader {
     display: flex;
     align-items: center;
@@ -117,7 +117,6 @@
     margin-bottom: 20px;
 }
 
-
 .columnTitleRight {
     letter-spacing: -.2px;
     color: #b8ad78;
@@ -127,7 +126,6 @@
     line-height: 28px;
     margin-top: 6px;
 }
-
 
 .followHeader {
     display: flex;
@@ -195,7 +193,6 @@
     width: 100%;
 }
 
-
 .phoneGroup {
     display: flex;
     flex-direction: column;
@@ -248,7 +245,9 @@
 .wordmarkRow {
     position: relative;
     z-index: 1;
-    margin-bottom: -14px;
+    max-width: 1800px;
+    margin: 0 auto;
+    margin-bottom: -1.05%;
 }
 
 .copyrightRow {
@@ -346,7 +345,7 @@
     }
 
     .wordmarkRow {
-        margin-bottom: -3px;
+        margin-bottom: -0.4%;
     }
 
     .localeBtn,

@@ -16,7 +16,6 @@ interface MapLocationUIProps {
 
 const ultraSmoothEase = [0.25, 1, 0.2, 1] as const;
 
-// Bölmənin aşağıdan rəvan və yavaş süzülməsi üçün animasiya
 const mapSectionVariants: Variants = {
   hidden: { 
     opacity: 0, 
