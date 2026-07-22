@@ -28,30 +28,30 @@ interface TypologiesUIProps {
 const REPEAT = 3;
 const smoothEase = [0.16, 1, 0.3, 1] as const;
 const mainSectionVariants: Variants = {
-  hidden: { 
-    opacity: 0, 
-    y: 35 
+  hidden: {
+    opacity: 0,
+    y: 35
   },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { 
-      duration: 1.1, 
+    transition: {
+      duration: 1.1,
       ease: smoothEase,
     },
   },
 };
 
 const titleWordVariants: Variants = {
-  hidden: { 
-    opacity: 0, 
-    y: 25 
+  hidden: {
+    opacity: 0,
+    y: 25
   },
   visible: (globalIndex: number) => ({
     opacity: 1,
     y: 0,
-    transition: { 
-      duration: 0.9, 
+    transition: {
+      duration: 0.9,
       ease: smoothEase,
       delay: 0.08 + globalIndex * 0.06
     },
@@ -59,15 +59,15 @@ const titleWordVariants: Variants = {
 };
 
 const sliderOuterVariants: Variants = {
-  hidden: { 
-    opacity: 0, 
-    y: 45 
+  hidden: {
+    opacity: 0,
+    y: 45
   },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { 
-      duration: 1, 
+    transition: {
+      duration: 1,
       ease: smoothEase,
       delay: 0.3
     },
@@ -75,15 +75,15 @@ const sliderOuterVariants: Variants = {
 };
 
 const footerVariants: Variants = {
-  hidden: { 
-    opacity: 0, 
-    y: 25 
+  hidden: {
+    opacity: 0,
+    y: 25
   },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { 
-      duration: 0.9, 
+    transition: {
+      duration: 0.9,
       ease: smoothEase,
       delay: 0.4
     },
@@ -163,16 +163,16 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
 
     return titleSegments.map((segment, segmentIndex) => {
       const segmentWords = segment.text.split(" ").filter(w => w !== "");
-      
+
       const content = segmentWords.map((word) => {
         const currentWordIndex = globalWordIndex;
-        globalWordIndex++; 
+        globalWordIndex++;
 
         return (
           <motion.span
             key={currentWordIndex}
             variants={titleWordVariants}
-            custom={currentWordIndex} 
+            custom={currentWordIndex}
             style={{
               display: "inline-block",
               willChange: "transform, opacity",
@@ -197,18 +197,18 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
   };
 
   return (
-    <motion.section 
+    <motion.section
+      id='units'
       className={styles.typologies}
       variants={mainSectionVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.15 }}
-    >
+      viewport={{ once: true, amount: 0.15 }}>
       <div className={styles.eyebrowRow}>
         <span className={styles.eyebrow}>{eyebrow}</span>
         <span className={styles.eyebrowLine} />
       </div>
-      <motion.h2 
+      <motion.h2
         className={styles.title}
         initial="hidden"
         whileInView="visible"
@@ -216,7 +216,7 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
       >
         {renderAnimatedSegments()}
       </motion.h2>
-      <motion.div 
+      <motion.div
         className={styles.sliderOuter}
         variants={sliderOuterVariants}
         initial="hidden"
@@ -273,7 +273,7 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
           </div>
         </div>
       </motion.div>
-      <motion.div 
+      <motion.div
         className={styles.footer}
         variants={footerVariants}
         initial="hidden"
