@@ -99,6 +99,27 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
   const [trackIndex, setTrackIndex] = useState(total);
   const [enableTransition, setEnableTransition] = useState(true);
   const [step, setStep] = useState(0);
+ /* YENİ */
+const [expandedIndex, setExpandedIndex] = useState(total);
+const isFirstRender = useRef(true);
+
+const CARD_TRANSITION_MS = 500; 
+
+useEffect(() => {
+  if (isFirstRender.current) {
+    isFirstRender.current = false;
+    setExpandedIndex(trackIndex);
+    return;
+  }
+
+  setExpandedIndex(-1);
+  const timer = setTimeout(() => {
+    setExpandedIndex(trackIndex); 
+  }, CARD_TRANSITION_MS);
+
+  return () => clearTimeout(timer);
+}, [trackIndex]);
+
 
   const trackRef = useRef<HTMLDivElement>(null);
 
@@ -233,10 +254,11 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
           >
             {extendedCards.map((card, index) => {
               const isActive = index === trackIndex;
+              const isExpanded = index === expandedIndex;
               return (
                 <div
                   key={`${card.badge}-${index}`}
-                  className={`${styles.card} ${isActive ? styles.cardActive : ''} ${!enableTransition ? styles.cardNoTransition : ''}`}
+                  className={`${styles.card} ${isActive ? styles.cardActive : ''} ${isExpanded ? styles.cardExpanded : ''} ${!enableTransition ? styles.cardNoTransition : ''}`}
                 >
                   <div className={styles.cardImageWrap}>
                     <Image

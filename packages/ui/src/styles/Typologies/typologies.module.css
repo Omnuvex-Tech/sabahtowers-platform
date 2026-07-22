@@ -73,7 +73,9 @@
     gap: 31px;
     transition: width 0.5s ease;
     height: 558px;
+    overflow: hidden;
 }
+
 
 .cardActive {
     width: 585px;
@@ -97,28 +99,6 @@
     gap: 24px;
     padding: 0 8px;
 }
-
-/* .cardBadge {
-    margin: 0;
-    font-family: 'Bai Jamjuree', sans-serif;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 28px;
-    letter-spacing: 0px;
-    text-transform: uppercase;
-    color: rgba(33, 37, 41, 1);
-}
-
-.cardDescription {
-    margin: -11px 0 0 0;
-    font-family: 'Bai Jamjuree', sans-serif;
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 23px;
-    letter-spacing: 0.1px;
-    color: #000000;
-    max-width: 530px;
-} */
 
 .cardBadge {
     margin: 0;
@@ -152,12 +132,12 @@
     text-overflow: ellipsis;
 }
 
-.cardActive .cardBadge {
+.cardExpanded .cardBadge {
     -webkit-line-clamp: unset;
     overflow: visible;
 }
 
-.cardActive .cardDescription {
+.cardExpanded .cardDescription {
     -webkit-line-clamp: unset;
     overflow: visible;
 }
