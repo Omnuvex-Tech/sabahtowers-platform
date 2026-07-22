@@ -9,7 +9,7 @@ export function MapLocation() {
       badgeIconAlt="Sabah Towers"
       pinIconSrc="/images/map-pin.png"
       viewOnMapLabel="View on map"
-      viewOnMapHref="https://maps.google.com/?q=Sabah+Towers+Baku"
+      viewOnMapHref="https://maps.app.goo.gl/KGpTQEfnr6VC1q597?g_st=ic"
     />
   );
 }
