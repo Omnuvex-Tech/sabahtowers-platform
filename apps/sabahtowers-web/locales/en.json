@@ -1,9 +1,9 @@
 {
   "hero": {
     "eyebrow": "Modern residential complex",
-    "titleBefore": "A life story that begins like a day off,",
-    "titleItalic": "sea waves and wellness",
-    "titleAfter": "in perfect rhythm",
+    "titleBefore": "Everyday resort living on the first coastline of the Caspian Sea, where",
+    "titleItalic": "wellness shapes your daily routine.",
+    "titleAfter": "",
     "imageAlt": "Sabah Towers",
     "primaryCtaLabel": "Catalog",
     "secondaryCtaLabel": "Contact us"
@@ -20,17 +20,17 @@
     "eyebrow": "Exterior Design",
     "imageAlt": "Sabah Towers — Exterior",
     "slides": [
-      "Sabah Towers: minimalist sustainable architecture, panoramic sea views, and a perfect balance of urban dynamic and resort tranquility.",
-      "2A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism.",
+      "This concept focuses on the residents' health and quality leisure time",
+      "Thanks to outdoor pools and a cafe offering organic flavors, there’s no need to make extra vacation plans.",
       "3A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism.",
-      "4A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism."
+      "The layout of the complex caters to diverse interests, creating a continuous resort atmosphere."
     ],
     "primaryCtaLabel": "Catalog",
     "secondaryCtaLabel": "Contact us"
   },
   "ecosystem": {
-    "title": "Recreation and sports ecosystem",
-    "description": "Every detail is designed for your family's complete comfort and the discovery of distinct experiences. Every detail is designed for your family's complete comfort and discovery",
+    "title": "Leisure, Activity, and Wellness",
+    "description": "Sabah Towers was created for those who wish to live an active and balanced resort lifestyle right on the beachfront every single day.",
     "imageAlt": "Sabah Towers",
     "primaryCtaLabel": "Catalog",
     "secondaryCtaLabel": "Contact us"
@@ -39,7 +39,7 @@
     "eyebrow": "Interior Design",
     "imageAlt": "Sabah Towers — Interior",
     "slides": [
-      "Apartments are delivered in shell-and-core condition with open-floor layouts, providing complete architectural freedom to customize the panoramic space according to your preferences.",
+      "Apartments are delivered without interior finishing and with open floor plans, giving you total freedom to design according to your personal taste",
       "4A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism.",
       "2A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism.",
       "3A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism."
@@ -49,7 +49,7 @@
   },
   "amenities": {
     "eyebrow": "Exclusive Amenities",
-    "title": "Every aspect here is designed to transform your daily life into a permanent resort-style experience. All that remains for you is to savor every moment and enjoy the comfort of your own home.",
+    "title": "Every area here is designed to turn your everyday life into a permanent resort experience.",
     "items": [
       {
         "iconAlt": "Tennis and Padel",
@@ -85,64 +85,62 @@
   },
   "typologies": {
     "eyebrow": "Residential Typologies",
-    "titleSegments": [
-      {
-        "text": "Living and planning specially designed to complement the"
-      },
-      {
-        "text": "rhythm",
-        "italic": true
-      },
-      {
-        "text": "of modern life and"
-      },
-      {
-        "text": "individual",
-        "italic": true
-      },
-      {
-        "text": "activity needs, offering a"
-      },
-      {
-        "text": "different",
-        "italic": true
-      },
-      {
-        "text": "kind of everyday experience."
-      }
-    ],
+   "titleSegments": [
+  {
+    "text": "Different",
+    "italic": true
+  },
+  {
+    "text": "living and planning solutions specially designed to complement the"
+  },
+  {
+    "text": "rhythm",
+    "italic": true
+  },
+  {
+    "text": "of modern life and"
+  },
+  {
+    "text": "individual",
+    "italic": true
+  },
+  {
+    "text": "activity needs."
+  }
+],
+
     "cards": [
       {
         "imageAlt": "1-Bedroom",
-        "badge": "1-BEDROOM",
-        "description": "Balanced comfort featuring separate bedroom areas and private layouts crafted for refined relaxation.",
+        "badge": "1 BEDROOM APARTMENT",
+        "description": "A living space tailored to daily relaxation, featuring a spacious studio area and a functional layout.",
         "features": [
-          "64M²/689FT² (INCLUDING BALCONY 10M²/108FT²)",
-          "PRIVATE BALCONY",
-          "WORKING AREA",
-          "DUBAI DESIGN DISTRICT AND RACECOURSE VIEW"
+          "84.09 M² (including 8.26 M² and 2.66 M² balconies)",
+          "37.74 M² Studio (Living Room + Kitchen)",
+          "2 separate balconies with internal access",
+          "Separate walk-in closet and bathroom"
         ]
       },
       {
-        "imageAlt": "Studio",
-        "badge": "STUDIO",
-        "description": "A compact space with integrated living, dining, and sleeping areas designed for optimal modern living.",
+        "imageAlt": "2 BEDROOM APARTMENT",
+        "badge": "2 BEDROOM APARTMENT",
+        "description": "A layout adapted for family living, featuring two separate bedroom zones, two bathrooms, and a spacious 17.36 m² balcony.",
         "features": [
-          "64M²/689FT² (INCLUDING BALCONY 10M²/108FT²)",
-          "PRIVATE BALCONY",
-          "WORKING AREA",
-          "DUBAI DESIGN DISTRICT AND RACECOURSE VIEW"
+          "98.02 M² (including 17.36 M² balcony)",
+          "25.36 M² Studio (Living Room + Kitchen)",
+          "2 separate bedrooms and 2 bathrooms",
+          "Spacious balcony area"
         ]
       },
       {
-        "imageAlt": "1-Bedroom",
-        "badge": "1-BEDROOM",
-        "description": "A heated rooftop pool meeting the line of the hammam and treatment rooms below.",
+        "imageAlt": "STUDIO APARTMENT",
+        "badge": "STUDIO APARTMENT",
+        "description": "A compact living space with ergonomic planning, designed for personal comfort and a daily resort rhythm.",
         "features": [
-          "64M²/689FT² (INCLUDING BALCONY 10M²/108FT²)",
-          "PRIVATE BALCONY",
-          "WORKING AREA",
-          "DUBAI DESIGN DISTRICT AND RACECOURSE VIEW"
+          "40.58 M² (including 5.31 M² balcony)",
+          "22.62 M² Spacious studio zone",
+          "Balcony for outdoor relaxation",
+          "Optimal layout for hallway and bathroom"
         ]
       }
     ]

@@ -77,6 +77,7 @@ const fadeUpVariants: Variants = {
 
 export function ExteriorUI({ eyebrow, slides, primaryCta, secondaryCta }: ExteriorUIProps) {
     const [activeIndex, setActiveIndex] = useState(0);
+    const [introPlayed, setIntroPlayed] = useState(false);
     const total = slides.length;
     const activeSlide = slides[activeIndex];
 
@@ -153,10 +154,13 @@ export function ExteriorUI({ eyebrow, slides, primaryCta, secondaryCta }: Exteri
 
                 <div className={styles.content}>
                     <motion.h2
+                        key={activeIndex}
                         className={styles.title}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
+                        initial={introPlayed ? false : "hidden"}
+                        animate={introPlayed ? "visible" : undefined}
+                        whileInView={introPlayed ? undefined : "visible"}
+                        viewport={introPlayed ? undefined : { once: true }}
+                        onViewportEnter={() => setIntroPlayed(true)}
                     >
                         {renderAnimatedTitle(activeSlide.title)}
                     </motion.h2>
@@ -175,12 +179,12 @@ export function ExteriorUI({ eyebrow, slides, primaryCta, secondaryCta }: Exteri
                         >
                             {primaryCta.label}
                         </a>
-                       <a href={secondaryCta.href}
-    className={styles.btnSecondary}
-    onClick={(e) => handleAnchorClick(e, secondaryCta.href)}
->
-    {secondaryCta.label}
-</a>
+                        <a href={secondaryCta.href}
+                            className={styles.btnSecondary}
+                            onClick={(e) => handleAnchorClick(e, secondaryCta.href)}
+                        >
+                            {secondaryCta.label}
+                        </a>
                     </motion.div>
                 </div>
                 <motion.div

@@ -1,9 +1,9 @@
 {
   "hero": {
     "eyebrow": "Moderin yaşayış kompleksi",
-    "titleBefore": "İstirahət günü kimi başladığı,",
-    "titleItalic": "dəniz dalğaları və sağlamlıq",
-    "titleAfter": "ritmi ilə yaşam hekayəsi",
+    "titleBefore": "Xəzər dənizinin birinci sahil xəttində",
+    "titleItalic": "sağlamlıqla formalaşan, hər günü tətil dadında",
+    "titleAfter": "yeni bir yaşam.",
     "imageAlt": "Sabah Towers",
     "primaryCtaLabel": "Kataloq",
     "secondaryCtaLabel": "Bizimlə əlaqə"
@@ -20,17 +20,16 @@
     "eyebrow": "Exterior Design",
     "imageAlt": "Sabah Towers — Exterior",
     "slides": [
-      "Sabah Towers: dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti.",
-      "2Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti.",
-      "3Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti.",
-      "4Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti."
+      "Bu konsepsiyada diqqət sakinlərin sağlamlığına və  asudə vaxtın keyfiyyətinə yönəlib.",
+      "Açıq hovuzlar və orqanik dadlar təqdim edən kafe sayəsində istirahət üçün əlavə planlar qurmağa ehtiyac qalmır.",
+      "Kompleksin planlaşdırılması müxtəlif maraqları bölüşməyə şərait yaradır və hər gün tətil ab-havası yaradır."
     ],
     "primaryCtaLabel": "Kataloq",
     "secondaryCtaLabel": "Bizimlə əlaqə"
   },
   "ecosystem": {
-    "title": "İstirahət və idmanı ekosistem",
-    "description": "Hər detal ailənizin tam rahatlığı və fərqli təcrübələr kəşf etməsi üçün düşünülüb. Hər detal ailənizin tam rahatlığı və fərqli təcrübələr kəşfi",
+    "title": "İstirahət, aktivlik və sağlamlıq",
+    "description": "Sabah Towers dənizin birinci xəttində aktiv və balanslı bir istirahət həyatını hər gün yaşamaq istəyənlər üçün yaradılıb.",
     "imageAlt": "Sabah Towers",
     "primaryCtaLabel": "Kataloq",
     "secondaryCtaLabel": "Bizimlə əlaqə"
@@ -39,10 +38,9 @@
     "eyebrow": "Interior Design",
     "imageAlt": "Sabah Towers — Interior",
     "slides": [
-      "Mənzillərin təmirsiz və sərbəst planlaşdırma ilə təhvil verilməsi, panoramik şəhər mənzərəli geniş məkanları öz zövqünüzə və vərdişlərinizə uyğun dizayn etmək azadlığı yaradır.",
-      "4Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti.",
-      "2Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti.",
-      "3Dayanıqlı memarlıq, panoramik dəniz mənzərəsi və şəhər dinamikası ilə kurort hüzurunun minimalist vəhdəti."
+      "Mənzillərin təmirsiz və sərbəst planlaşdırma ilə təhvil verilməsi öz zövqünüzə uyğun dizayn etmək azadlığı yaradır.",
+      "Səhəri sahil boyu gəzinti ilə qarşılayıb, günortanı aktiv idman sahələrində keçirmək buradakı gündəlik ritmin təbii hissəsidir.",
+      "Hovuzlar, dəniz havası və sağlamlıq zonaları runsuz sakitlik yaradaraq bədəninizi hər gün yenidən bərpa edir."
     ],
     "primaryCtaLabel": "Kataloq",
     "secondaryCtaLabel": "Bizimlə əlaqə"
@@ -108,41 +106,41 @@
         "italic": true
       },
       {
-        "text": "yaşayış və planlaşdırma."
+        "text": "yaşayış və planlaşdırma həlləri."
       }
     ],
     "cards": [
       {
-        "imageAlt": "1-Bedroom",
-        "badge": "1-BEDROOM",
-        "description": "Zərif istirahət üçün nəzərdə tutulmuş, ayrıca yataq otağı zonaları və şəxsi planlaşdırma ilə balanslaşdırılmış rahatlıq.",
+        "imageAlt": "YATAQ OTAQLI MƏNZİL",
+        "badge": "1 YATAQ OTAQLI MƏNZİL",
+        "description": "Gündəlik istirahət ritminə uyğunlaşdırılmış, geniş studiya zonası və funksional daxili planlamaya malik yaşayış sahəsi.",
         "features": [
-          "64M²/689FT² (BALKON DAXİL 10M²/108FT²)",
-          "ŞƏXSİ BALKON",
-          "İŞ ZONASI",
-          "DUBAI DESIGN DISTRICT VƏ RACECOURSE MƏNZƏRƏSİ"
+          "84,09 M² (8,26 M² VƏ 2,66 M² EYVANLAR DAXİL)",
+          "37,74 M² STUDİYA (QONAQ OTAĞI + MƏTBƏX)",
+          "İÇƏRİDƏN ÇIXIŞLI 2 AYRI EYVAN",
+          "AYRICA QARDEROB VƏ SANİTAR QOVŞAQ"
         ]
       },
       {
         "imageAlt": "Studio",
-        "badge": "STUDIO",
-        "description": "Müasir yaşayış üçün optimallaşdırılmış, birləşdirilmiş qonaq otağı, yemək zonası və yataq sahəsi olan kompakt məkan.",
+        "badge": "2 YATAQ OTAQLI MƏNZİL",
+        "description": "İki ayrı yataq zonası, iki sanitar qovşağı və geniş 17,36 m²-lik eyvanı ilə ailəvi yaşayış ritminə uyğunlaşdırılmış planlaşdırma.",
         "features": [
-          "64M²/689FT² (BALKON DAXİL 10M²/108FT²)",
-          "ŞƏXSİ BALKON",
-          "İŞ ZONASI",
-          "DUBAI DESIGN DISTRICT VƏ RACECOURSE MƏNZƏRƏSİ"
+          "98,02 M² (17,36 M² EYVAN DAXİL)",
+          "25,36 M² STUDİYA (QONAQ OTAĞI + MƏTBƏX)",
+          "2 AYRI YATAQ OTAĞI VƏ 2 SANİTAR QOVŞAQ",
+          "GENİŞ EYVAN ZONASI"
         ]
       },
       {
-        "imageAlt": "1-Bedroom",
-        "badge": "1-BEDROOM",
-        "description": "Aşağıda hamam və müalicə otaqları xəttini əhatə edən isidilən dam üstü hovuz.",
+        "imageAlt": "STUDİYA MƏNZİL",
+        "badge": "STUDİYA MƏNZİL",
+        "description": "Şəxsi rahatlıq, erqonomik planlaşdırma və gündəlik istirahət ritminə uyğunlaşdırılmış kompakt yaşayış sahəsi.",
         "features": [
-          "64M²/689FT² (BALKON DAXİL 10M²/108FT²)",
-          "ŞƏXSİ BALKON",
-          "İŞ ZONASI",
-          "DUBAI DESIGN DISTRICT VƏ RACECOURSE MƏNZƏRƏSİ"
+          "40,58 M² (5,31 M² EYVAN DAXİL)",
+          "22,62 M² GENİŞ STUDİYA ZONASI",
+          "AÇIQ HAVADA İSTİRAHƏT ÜÇÜN EYVAN",
+          "OPTİMAL DƏHLİZ VƏ SANİTAR QOVŞAQ BÖLGÜSÜ"
         ]
       }
     ]

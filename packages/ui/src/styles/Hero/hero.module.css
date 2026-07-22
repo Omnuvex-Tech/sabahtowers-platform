@@ -4,17 +4,18 @@
 }
 
 .heroBox {
-  position: relative;
-  width: 100%;
-  height: 583px;
-  border-radius: 32px;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 583px;
+    border-radius: 32px;
+    overflow: hidden;
 }
 
 .heroImage {
-  object-fit: cover;
-  object-position: top;
+    object-fit: cover;
+    object-position: top;
 }
+
 .content {
     position: absolute;
     top: 29%;
@@ -36,13 +37,13 @@
 }
 
 .title {
+    letter-spacing: -.8px;
+    color: #ffffffe0;
     margin: 0;
-    font-family: 'Bai Jamjuree', sans-serif;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 41px;
     font-weight: 500;
-    font-size: 47px;
-    line-height: 48px;
-    letter-spacing: -0.8px;
-    color: rgba(255, 255, 255, 0.88);
+    line-height: 44px; 
 }
 
 .titleItalic {
@@ -73,7 +74,7 @@
     background-color: rgba(230, 244, 247, 1);
     font-family: 'Bai Jamjuree', sans-serif;
     font-weight: 400;
-      font-size: 18px;
+    font-size: 18px;
     line-height: 20px;
     letter-spacing: 0.1px;
     color: rgba(33, 37, 41, 1);
@@ -97,7 +98,7 @@
     background-color: #0000003b;
     font-family: 'Bai Jamjuree', sans-serif;
     font-weight: 400;
-       font-size: 17px;
+    font-size: 17px;
     line-height: 20px;
     letter-spacing: 0.1px;
     color: rgba(255, 255, 255, 1);
@@ -112,52 +113,38 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 1300px) {
     .hero {
         padding: 24px 60px 0 60px;
     }
+
     .heroBox {
         height: auto !important;
         aspect-ratio: 2.2 / 1;
         overflow: visible !important;
     }
-    .heroBox > div {
+
+    .heroBox>div {
         overflow: visible !important;
     }
+
     .heroImage {
         object-fit: fill !important;
         object-position: center !important;
     }
+
     .content {
         top: 57%;
         transform: translateY(-50%);
         left: 50px;
         max-width: 50%;
     }
+
     .title {
         font-size: 38px;
         line-height: 42px;
     }
+
     .titleItalic {
         font-size: 40px;
         line-height: 48px;
@@ -168,13 +155,16 @@
     .heroBox {
         aspect-ratio: 2.15 / 1;
     }
+
     .content {
         left: 40px;
     }
+
     .title {
         font-size: 32px;
         line-height: 36px;
     }
+
     .titleItalic {
         font-size: 34px;
         line-height: 42px;
@@ -185,18 +175,22 @@
     .hero {
         padding: 24px 40px 0 40px;
     }
+
     .heroBox {
         height: auto !important;
         aspect-ratio: 2.15 / 1;
-        overflow: visible !important; 
-    }
-    .heroBox > div {
         overflow: visible !important;
     }
+
+    .heroBox>div {
+        overflow: visible !important;
+    }
+
     .heroImage {
         object-fit: fill !important;
-        object-position: center !important; 
+        object-position: center !important;
     }
+
     .content {
         top: 57%;
         transform: translateY(-50%);
@@ -204,24 +198,29 @@
         max-width: 50%;
         gap: 12px;
     }
+
     .eyebrow {
         font-size: 16px;
         line-height: 20px;
     }
+
     .title {
         font-size: 30px;
         line-height: 34px;
         letter-spacing: -0.5px;
     }
+
     .titleItalic {
         font-size: 32px;
         line-height: 40px;
         letter-spacing: -0.5px;
     }
+
     .actions {
         margin-top: 16px;
         gap: 12px;
     }
+
     .btnPrimary,
     .btnSecondary {
         width: 148px;
@@ -236,14 +235,17 @@
     .heroBox {
         aspect-ratio: 2.1 / 1;
     }
+
     .content {
         left: 32px;
         max-width: 52%;
     }
+
     .title {
         font-size: 28px;
         line-height: 32px;
     }
+
     .titleItalic {
         font-size: 30px;
         line-height: 38px;
@@ -254,97 +256,35 @@
     .hero {
         padding: 20px 24px 0 24px;
     }
+
     .heroBox {
-        aspect-ratio: 2 / 1; 
+        aspect-ratio: 2 / 1;
         overflow: visible !important;
     }
-    .heroBox > div {
+
+    .heroBox>div {
         overflow: visible !important;
     }
+
     .heroImage {
         object-fit: fill !important;
         object-position: center !important;
     }
+
     .content {
         left: 32px;
         max-width: 55%;
         top: 56%;
     }
+
     .title {
         font-size: 26px;
         line-height: 30px;
     }
+
     .titleItalic {
         font-size: 28px;
         line-height: 36px;
-    }
-}
-
-@media (max-width: 640px) {
-    .hero {
-        padding: 16px 16px 0 16px;
-    }
-    .heroBox {
-        height: auto !important;
-        aspect-ratio: 1 / 1.05 !important;
-        overflow: visible !important;
-        border-radius: 24px !important;
-    }
-    .heroBox > div {
-        overflow: visible !important;
-        border-radius: 24px !important;
-    }
-    .heroBox > div > div {
-        overflow: visible !important;
-        border-radius: 24px !important;
-    }
-    .heroImage {
-        object-fit: fill !important;
-        object-position: center !important;
-        border-radius: 24px !important;
-    }
-    .content {
-        position: absolute !important;
-        top: 50% !important;
-        left: 20px !important;
-        right: 20px !important;
-        width: auto !important;
-        max-width: none !important;
-        transform: translateY(-50%) !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-        gap: 12px !important;
-    }
-    .eyebrow {
-        font-size: 14px !important;
-        line-height: 18px !important;
-        margin: 0 !important;
-    }
-    .title {
-        font-size: 21px !important;
-        line-height: 26px !important;
-        letter-spacing: -0.3px !important;
-    }
-    .titleItalic {
-        font-size: 23px !important;
-        line-height: 32px !important;
-        letter-spacing: -0.3px !important;
-    }
-    .actions {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-        gap: 10px !important;
-        margin-top: 8px !important;
-    }
-    .btnPrimary,
-    .btnSecondary {
-        width: 100% !important;
-        height: 46px !important;
-        font-size: 14px !important;
-        line-height: 18px !important;
-        border-radius: 12px !important;
     }
 }
 
@@ -354,20 +294,90 @@
         right: 16px !important;
         gap: 8px !important;
     }
+
     .title {
         font-size: 18px !important;
         line-height: 22px !important;
     }
+
     .titleItalic {
         font-size: 20px !important;
         line-height: 28px !important;
     }
+
     .actions {
         margin-top: 4px !important;
     }
+
     .btnPrimary,
     .btnSecondary {
         height: 42px !important;
         font-size: 13px !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 640px) {
+    .content {
+        flex-direction: column !important;
+        gap: 5px !important;
+        width: auto !important;
+        max-width: 61% !important;
+        display: flex !important;
+        top: 57% !important;
+        left: 15px !important;
+        right: auto !important;
+        transform: translateY(-50%) !important;
+    }
+
+    .eyebrow {
+        font-size: 12px !important;
+        line-height: 16px !important;
+        margin: 0 !important;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55) !important;
+    }
+
+    .title {
+        font-size: 11px !important;
+        line-height: 19px !important;
+        letter-spacing: -0.2px !important;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
+    }
+
+    .titleItalic {
+        font-size: 12px !important;
+        line-height: 21px !important;
+        letter-spacing: -0.2px !important;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
+    }
+
+    .actions {
+        margin-top: 2px !important;
+        gap: 8px !important;
+    }
+
+    .btnSecondary {
+        border-radius: 10px !important;
+        width: 95px !important;
+        height: 32px !important;
+        padding: 8px 12px !important;
+        font-size: 11px !important;
+        line-height: 15px !important;
+    }
+
+      .btnPrimary {
+        width: 77px !important;
+        height: 32px !important;
+        font-size: 11px !important;
+        line-height: 15px !important;
+        border-radius: 10px !important;
+        padding: 8px 12px !important;
     }
 }

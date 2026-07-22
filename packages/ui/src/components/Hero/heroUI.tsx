@@ -135,26 +135,18 @@ export function HeroUI({
             </motion.p>
           </div>
 
-          <h1 className={styles.title}>
-            <div style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', paddingBottom: '0.1em' }}>
-              <motion.span
-                style={{ display: 'block', opacity: 0 }}
-                variants={lineVariants}
-              >
-                {titleBefore}
-              </motion.span>
-            </div>
-
-            <div style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', paddingBottom: '0.1em' }}>
-              <motion.span
-                style={{ display: 'block', opacity: 0 }}
-                variants={lineVariants}
-              >
-                <em className={styles.titleItalic}>{titleItalic}</em> {titleAfter}
-              </motion.span>
-            </div>
-          </h1>
-          <div style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', paddingTop: '8px' }}>
+        <h1 className={styles.title}>
+  <div style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', paddingBottom: '0.1em' }}>
+    <motion.span
+      style={{ display: 'inline', opacity: 0 }}
+      variants={lineVariants}
+    >
+      {titleBefore}{' '}
+      <em className={styles.titleItalic}>{titleItalic}</em> {titleAfter}
+    </motion.span>
+  </div>
+</h1>
+          <div style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'}}>
             <motion.div
               className={styles.actions}
               variants={actionsVariants}

@@ -77,6 +77,7 @@ const fadeUpVariants: Variants = {
 
 export function InteriorUI({ eyebrow, slides, primaryCta, secondaryCta }: InteriorUIProps) {
     const [activeIndex, setActiveIndex] = useState(0);
+    const [introPlayed, setIntroPlayed] = useState(false);
     const total = slides.length;
     const activeSlide = slides[activeIndex];
 
@@ -154,14 +155,16 @@ export function InteriorUI({ eyebrow, slides, primaryCta, secondaryCta }: Interi
 
                 <div className={styles.content}>
                     <motion.h2
+                        key={activeIndex}
                         className={styles.title}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
+                        initial={introPlayed ? false : "hidden"}
+                        animate={introPlayed ? "visible" : undefined}
+                        whileInView={introPlayed ? undefined : "visible"}
+                        viewport={introPlayed ? undefined : { once: true }}
+                        onViewportEnter={() => setIntroPlayed(true)}
                     >
                         {renderAnimatedTitle(activeSlide.title)}
                     </motion.h2>
-
                     <motion.div
                         className={styles.actions}
                         variants={fadeUpVariants}
