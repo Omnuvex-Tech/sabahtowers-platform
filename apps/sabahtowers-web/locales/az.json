@@ -12,7 +12,7 @@
     "navLinks": {
       "about": "Haqqımızda",
       "brokers": "Brokerlər",
-      "units": "Mənzillər",
+      "units": "MƏNZİLLƏR",
       "contact": "Əlaqə"
     }
   },
@@ -147,27 +147,27 @@
   },
   "contact": {
     "backgroundImageAlt": "Sabah Towers",
-    "getInTouchLabel": "Bizimlə əlaqə",
-    "addressLabel": "Ünvan",
+    "getInTouchLabel": "BİZİMLƏ ƏLAQƏ",
+    "addressLabel": "ÜNVAN",
     "addressTitle": "SeaBreeze, Azərbaycan",
     "addressText": "Sabah Towers, Bakı Azərbaycan",
-    "followLabel": "Bizi izləyin",
+    "followLabel": "BİZİ İZLƏYİN",
     "formTitle": "Marağınızı bildirin",
     "submitLabel": "Göndər",
     "phoneMinError": "Minimum 5 rəqəm daxil edin",
-"requiredError": "Bu sahə mütləqdir"
+    "requiredError": "Bu sahə mütləqdir"
   },
   "footer": {
-  "addressText": "The Alba Residences, Dorchester Collection, AVA at Palm Jumeirah, Dorchester Collection, VELA Viento, Dorchester Collection, Dubai",
-  "exploreTitle": "KƏŞF ET",
-  "exploreLinks": {
-    "about": "HAQQIMIZDA",
-    "brokers": "BROKERLƏR",
-    "units": "MƏNZİLLƏR",
-    "contact": "ƏLAQƏ"
-  },
-  "getInTouchTitle": "BİZİMLƏ ƏLAQƏ",
-  "followTitle": "BİZİ İZLƏYİN",
-  "copyrightText": "COPYRIGHT© 2026 | SABAH TOWERS"
-}
+    "addressText": "Sabah Towers Yaşayış Kompleksi, Sea Breeze, Bakı, Azərbaycan. Aktiv həyat tərzi və ailəvi istirahət üçün layihələndirilmiş yaşayış mühiti.",
+    "exploreTitle": "KƏŞF ET",
+    "exploreLinks": {
+      "about": "HAQQIMIZDA",
+      "brokers": "BROKERLƏR",
+      "units": "MƏNZİLLƏR",
+      "contact": "ƏLAQƏ"
+    },
+    "getInTouchTitle": "BİZİMLƏ ƏLAQƏ",
+    "followTitle": "BİZİ İZLƏYİN",
+    "copyrightText": "COPYRIGHT© 2026 | SABAH TOWERS"
+  }
 }

@@ -159,8 +159,8 @@ export function HeaderUI({ navLinks, phoneNumber, phoneHref, languageSwitcher }:
           <a href="https://www.tiktok.com/@sabahtowers?_r=1&_t=ZS-98GqECiYeFU" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
             <Image src="/images/whitett.png" alt="TikTok" width={24} height={24} />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-            <Image src="/images/whitelk.png" alt="LinkedIn" width={24} height={24} />
+          <a href="https://www.facebook.com/profile.php?id=61591201147020" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+            <Image src="/images/facebook.png" alt="Facebook" width={24} height={24} />
           </a>
         </div>
       </div>
