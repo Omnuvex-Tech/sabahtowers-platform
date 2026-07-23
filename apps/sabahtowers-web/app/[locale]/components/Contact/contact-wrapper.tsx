@@ -2,8 +2,8 @@ import { ContactUI, type SocialLink } from "@repo/ui/components/Contact/contactU
 import { getDictionary } from "@/lib/i18n";
 
 const socialLinks: SocialLink[] = [
-  { iconSrc: "/images/InstagramLogo.png", alt: "Instagram", href: "https://instagram.com" },
-  { iconSrc: "/images/TiktokLogo.png", alt: "TikTok", href: "https://tiktok.com" },
+  { iconSrc: "/images/InstagramLogo.png", alt: "Instagram", href: "https://www.instagram.com/sabahtowers.az?igsh=MTNzYTZreXNmZHA4Mg%3D%3D&utm_source=qr" },
+  { iconSrc: "/images/TiktokLogo.png", alt: "TikTok", href: "https://www.tiktok.com/@sabahtowers?_r=1&_t=ZS-98GqECiYeFU" },
   { iconSrc: "/images/linkedin.png", alt: "LinkedIn", href: "https://linkedin.com" },
 ];
 

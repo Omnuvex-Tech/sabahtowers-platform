@@ -11,8 +11,8 @@ const locales: FooterLocale[] = [
 ];
 
 const socialLinks: FooterSocialLink[] = [
-  { iconSrc: '/images/whiteig.png', alt: 'Instagram', href: 'https://instagram.com' },
-  { iconSrc: '/images/whitett.png', alt: 'TikTok', href: 'https://tiktok.com' },
+  { iconSrc: '/images/whiteig.png', alt: 'Instagram', href: 'https://www.instagram.com/sabahtowers.az?igsh=MTNzYTZreXNmZHA4Mg%3D%3D&utm_source=qr' },
+  { iconSrc: '/images/whitett.png', alt: 'TikTok', href: 'https://www.tiktok.com/@sabahtowers?_r=1&_t=ZS-98GqECiYeFU' },
   { iconSrc: '/images/whitelk.png', alt: 'LinkedIn', href: 'https://linkedin.com' },
 ];
 
