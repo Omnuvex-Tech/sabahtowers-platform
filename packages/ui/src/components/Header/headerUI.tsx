@@ -153,10 +153,10 @@ export function HeaderUI({ navLinks, phoneNumber, phoneHref, languageSwitcher }:
           </a>
         </div>
         <div className={`${styles.drawerSocials} ${styles.drawerItem}`}>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+          <a href="https://www.instagram.com/sabahtowers.az?igsh=MTNzYTZreXNmZHA4Mg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
             <Image src="/images/whiteig.png" alt="Instagram" width={24} height={24} />
           </a>
-          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+          <a href="https://www.tiktok.com/@sabahtowers?_r=1&_t=ZS-98GqECiYeFU" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
             <Image src="/images/whitett.png" alt="TikTok" width={24} height={24} />
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
