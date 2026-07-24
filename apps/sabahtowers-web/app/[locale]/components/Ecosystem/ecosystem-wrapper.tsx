@@ -14,7 +14,7 @@ export function Ecosystem({ locale }: { locale: string }) {
       leftImageAlt={t.ecosystem.imageAlt}
       rightImageSrc="/images/img-hero2.jpg"
       rightImageAlt={t.ecosystem.imageAlt}
-      iconSrc="/images/StarFour.png"
+      iconSrc="/images/StarFour.svg"
       primaryCta={{ label: t.ecosystem.primaryCtaLabel, href: catalogueHref, download: true }}
       secondaryCta={{ label: t.ecosystem.secondaryCtaLabel, href: "#contact" }}
     />

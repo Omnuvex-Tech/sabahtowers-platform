@@ -2,12 +2,12 @@ import { AmenitiesUI, type AmenityItem } from "@repo/ui/components/Amenities/ame
 import { getDictionary } from "@/lib/i18n";
 
 const iconSrcs: string[] = [
-  "/images/arcticons_tennis.png",
-  "/images/Vector.png",
-  "/images/SwimmingPool.png",
-  "/images/kids-club.png",
-  "/images/cafe.png",
-  "/images/run.png",
+  "/images/arcticons_tennis.svg",
+  "/images/Barbell.svg",
+  "/images/SwimmingPool.svg",
+  "/images/kids-club.svg",
+  "/images/cafe.svg",
+  "/images/run.svg",
 ];
 
 export function Amenities({ locale }: { locale: string }) {

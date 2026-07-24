@@ -30,7 +30,7 @@ export function Typologies({ locale }: { locale: string }) {
       eyebrow={t.typologies.eyebrow}
       titleSegments={titleSegments}
       cards={cards}
-      starIconSrc="/images/Light.png"
+      starIconSrc="/images/Light.svg"
     />
   );
 }

@@ -11,9 +11,9 @@ const locales: FooterLocale[] = [
 ];
 
 const socialLinks: FooterSocialLink[] = [
-  { iconSrc: '/images/whiteig.png', alt: 'Instagram', href: 'https://www.instagram.com/sabahtowers.az?igsh=MTNzYTZreXNmZHA4Mg%3D%3D&utm_source=qr' },
-  { iconSrc: '/images/whitett.png', alt: 'TikTok', href: 'https://www.tiktok.com/@sabahtowers?_r=1&_t=ZS-98GqECiYeFU' },
-  { iconSrc: '/images/facebook.png', alt: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61591201147020' },
+  { iconSrc: '/images/whiteig.svg', alt: 'Instagram', href: 'https://www.instagram.com/sabahtowers.az?igsh=MTNzYTZreXNmZHA4Mg%3D%3D&utm_source=qr' },
+  { iconSrc: '/images/whitett.svg', alt: 'TikTok', href: 'https://www.tiktok.com/@sabahtowers?_r=1&_t=ZS-98GqECiYeFU' },
+  { iconSrc: '/images/facebook.svg', alt: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61591201147020' },
 ];
 
 export function Footer({ locale }: { locale: string }) {
@@ -47,7 +47,7 @@ export function Footer({ locale }: { locale: string }) {
       phoneFull="+994 50 277 2662"
       followTitle={t.footer.followTitle}
       socialLinks={socialLinks}
-      wordmarkSrc="/images/footer-logo.png"
+      wordmarkSrc="/images/footer-logo.svg"
       wordmarkAlt="Sabah Towers"
       copyrightText={t.footer.copyrightText}
     />

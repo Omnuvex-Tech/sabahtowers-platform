@@ -2,9 +2,9 @@ import { ContactUI, type SocialLink } from "@repo/ui/components/Contact/contactU
 import { getDictionary } from "@/lib/i18n";
 
 const socialLinks: SocialLink[] = [
-  { iconSrc: "/images/InstagramLogo.png", alt: "Instagram", href: "https://www.instagram.com/sabahtowers.az?igsh=MTNzYTZreXNmZHA4Mg%3D%3D&utm_source=qr" },
-  { iconSrc: "/images/TiktokLogo.png", alt: "TikTok", href: "https://www.tiktok.com/@sabahtowers?_r=1&_t=ZS-98GqECiYeFU" },
-  { iconSrc: "/images/facebookblue.png", alt: "Facebook", href: "https://www.facebook.com/profile.php?id=61591201147020" },
+  { iconSrc: "/images/InstagramLogo.svg", alt: "Instagram", href: "https://www.instagram.com/sabahtowers.az?igsh=MTNzYTZreXNmZHA4Mg%3D%3D&utm_source=qr" },
+  { iconSrc: "/images/TiktokLogo.svg", alt: "TikTok", href: "https://www.tiktok.com/@sabahtowers?_r=1&_t=ZS-98GqECiYeFU" },
+  { iconSrc: "/images/facebookblue.svg", alt: "Facebook", href: "https://www.facebook.com/profile.php?id=61591201147020" },
 ];
 
 export function Contact({ locale }: { locale: string }) {

@@ -216,7 +216,7 @@ export function InteriorUI({ eyebrow, slides, primaryCta, secondaryCta }: Interi
                             onClick={goPrev}
                         >
                             <Image
-                                src="/images/heroicons-outline_arrow-narrow-left.png"
+                                src="/images/heroicons-outline_arrow-narrow-left.svg"
                                 alt=""
                                 width={20}
                                 height={20}
@@ -230,7 +230,7 @@ export function InteriorUI({ eyebrow, slides, primaryCta, secondaryCta }: Interi
                             onClick={goNext}
                         >
                             <Image
-                                src="/images/heroicons_arrow-long-right.png"
+                                src="/images/heroicons_arrow-long-right.svg"
                                 alt=""
                                 width={20}
                                 height={20}

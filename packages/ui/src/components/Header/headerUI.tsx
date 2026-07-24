@@ -51,7 +51,7 @@ export function HeaderUI({ navLinks, phoneNumber, phoneHref, languageSwitcher }:
       <div className={styles.inner}>
         <Link href="/" className={styles.logo} onClick={closeMenu}>
           <Image
-            src="/images/logo.webp"
+            src="/images/logo.svg"
             alt="Sabah Towers"
             width={48}
             height={55}
@@ -154,13 +154,13 @@ export function HeaderUI({ navLinks, phoneNumber, phoneHref, languageSwitcher }:
         </div>
         <div className={`${styles.drawerSocials} ${styles.drawerItem}`}>
           <a href="https://www.instagram.com/sabahtowers.az?igsh=MTNzYTZreXNmZHA4Mg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-            <Image src="/images/whiteig.png" alt="Instagram" width={24} height={24} />
+            <Image src="/images/whiteig.svg" alt="Instagram" width={24} height={24} />
           </a>
           <a href="https://www.tiktok.com/@sabahtowers?_r=1&_t=ZS-98GqECiYeFU" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-            <Image src="/images/whitett.png" alt="TikTok" width={24} height={24} />
+            <Image src="/images/whitett.svg" alt="TikTok" width={24} height={24} />
           </a>
           <a href="https://www.facebook.com/profile.php?id=61591201147020" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-            <Image src="/images/facebook.png" alt="Facebook" width={24} height={24} />
+            <Image src="/images/facebook.svg" alt="Facebook" width={24} height={24} />
           </a>
         </div>
       </div>
