@@ -234,13 +234,13 @@
 }
 
 .navIconLeft {
-    -webkit-mask-image: url('/images/heroicons-outline_arrow-narrow-left.png');
-    mask-image: url('/images/heroicons-outline_arrow-narrow-left.png');
+    -webkit-mask-image: url('/images/heroicons-outline_arrow-narrow-left.svg');
+    mask-image: url('/images/heroicons-outline_arrow-narrow-left.svg');
 }
 
 .navIconRight {
-    -webkit-mask-image: url('/images/heroicons_arrow-long-right.png');
-    mask-image: url('/images/heroicons_arrow-long-right.png');
+    -webkit-mask-image: url('/images/heroicons_arrow-long-right.svg');
+    mask-image: url('/images/heroicons_arrow-long-right.svg');
 }
 
 @media (max-width: 1024px) {
