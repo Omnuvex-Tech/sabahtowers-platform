@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import styles from '../../styles/Typologies/typologies.module.css';
 import { motion, Variants } from 'framer-motion';
@@ -18,7 +18,7 @@ export interface TitleSegment {
   italic?: boolean;
 }
 
-interface TypologiesUIProps {
+export interface TypologiesUIProps {
   eyebrow: string;
   titleSegments: TitleSegment[];
   cards: TypologyCard[];
@@ -26,265 +26,152 @@ interface TypologiesUIProps {
 }
 
 const REPEAT = 3;
+const CARD_TRANSITION_MS = 500;
+
 const smoothEase = [0.16, 1, 0.3, 1] as const;
+
 const mainSectionVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 35
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1.1,
-      ease: smoothEase,
-    },
-  },
+  hidden: { opacity: 0, y: 35 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1.1, ease: smoothEase } },
 };
 
 const titleWordVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 25
-  },
+  hidden: { opacity: 0, y: 25 },
   visible: (globalIndex: number) => ({
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.9,
-      ease: smoothEase,
-      delay: 0.08 + globalIndex * 0.06
-    },
+    transition: { duration: 0.9, ease: smoothEase, delay: 0.08 + globalIndex * 0.06 },
   }),
 };
 
 const sliderOuterVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 45
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-      ease: smoothEase,
-      delay: 0.3
-    },
-  },
+  hidden: { opacity: 0, y: 45 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: smoothEase, delay: 0.3 } },
 };
 
 const footerVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 25
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.9,
-      ease: smoothEase,
-      delay: 0.4
-    },
-  },
+  hidden: { opacity: 0, y: 25 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease: smoothEase, delay: 0.4 } },
 };
 
 export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: TypologiesUIProps) {
   const total = cards.length;
-
-  const extendedCards: TypologyCard[] =
-    total > 0 ? Array.from({ length: REPEAT }, () => cards).flat() : [];
-
+  const extendedCards = total > 0 ? Array.from({ length: REPEAT }, () => cards).flat() : [];
   const [trackIndex, setTrackIndex] = useState(total);
-  const [enableTransition, setEnableTransition] = useState(true);
-  const [step, setStep] = useState(0);
- /* YENİ */
-const [expandedIndex, setExpandedIndex] = useState(total);
-const isFirstRender = useRef(true);
-
-const CARD_TRANSITION_MS = 500; 
-
-useEffect(() => {
-  if (isFirstRender.current) {
-    isFirstRender.current = false;
-    setExpandedIndex(trackIndex);
-    return;
-  }
-
-  setExpandedIndex(-1);
-  const timer = setTimeout(() => {
-    setExpandedIndex(trackIndex); 
-  }, CARD_TRANSITION_MS);
-
-  return () => clearTimeout(timer);
-}, [trackIndex]);
-
-
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const trackRef = useRef<HTMLDivElement>(null);
-
+  const [step, setStep] = useState(486);
   const activeRealIndex = total > 0 ? ((trackIndex % total) + total) % total : 0;
+  const move = useCallback((dir: 1 | -1) => {
+    if (isTransitioning || total <= 1) return;
+    setIsTransitioning(true);
+    setTrackIndex(prev => prev + dir);
+  }, [isTransitioning, total]);
 
-  const goPrev = () => {
-    setTrackIndex((prev) => prev - 1);
-  };
+  const handleTransitionEnd = useCallback((e?: React.TransitionEvent) => {
+    if (e && e.target !== trackRef.current) return;
+    if (!trackRef.current) return;
+    const current = trackIndex;
+    let newIndex = current;
+    if (current < total) newIndex = current + total;
+    else if (current >= total * 2) newIndex = current - total;
 
-  const goNext = () => {
-    setTrackIndex((prev) => prev + 1);
-  };
-
-  const handleTransitionEnd = (e: React.TransitionEvent<HTMLDivElement>) => {
-    if (e.propertyName !== 'transform') return;
-
-    if (trackIndex < total) {
-      setEnableTransition(false);
-      setTrackIndex((prev) => prev + total);
-    } else if (trackIndex >= total * 2) {
-      setEnableTransition(false);
-      setTrackIndex((prev) => prev - total);
+    if (newIndex !== current) {
+      trackRef.current.style.transition = 'none';
+      setTrackIndex(newIndex);
+      void trackRef.current.offsetHeight;
     }
-  };
+
+    setIsTransitioning(false);
+  }, [trackIndex, total]);
 
   useEffect(() => {
-    if (!enableTransition) {
-      const raf = requestAnimationFrame(() => setEnableTransition(true));
-      return () => cancelAnimationFrame(raf);
-    }
-  }, [enableTransition]);
+  const updateStep = () => {
+    if (!trackRef.current) return;
+    const firstCard = trackRef.current.children[0] as HTMLElement | undefined;
+    if (!firstCard) return;
 
-  useEffect(() => {
-    const trackEl = trackRef.current;
-    if (!trackEl) return;
+    const cardWidth = firstCard.getBoundingClientRect().width;
+    const gap = parseFloat(
+      getComputedStyle(trackRef.current).columnGap ||
+      getComputedStyle(trackRef.current).gap ||
+      '0'
+    );
+    setStep(cardWidth + gap);
+  };
 
-    const measure = () => {
-      const inactiveCard = trackEl.querySelector<HTMLElement>(
-        `.${styles.card}:not(.${styles.cardActive})`
-      );
-      const referenceCard = inactiveCard ?? trackEl.querySelector<HTMLElement>(`.${styles.card}`);
-      if (!referenceCard) return;
+  updateStep();
+  window.addEventListener('resize', updateStep);
+  return () => window.removeEventListener('resize', updateStep);
+}, [total]);
 
-      const trackStyles = getComputedStyle(trackEl);
-      const gap = parseFloat(trackStyles.columnGap || trackStyles.gap || '0') || 0;
-
-      setStep(referenceCard.getBoundingClientRect().width + gap);
-    };
-
-    measure();
-
-    const ro = new ResizeObserver(measure);
-    ro.observe(trackEl);
-
-    return () => ro.disconnect();
-  }, [total]);
 
   const offset = trackIndex * step;
-
   const renderAnimatedSegments = () => {
     let globalWordIndex = 0;
-
     return titleSegments.map((segment, segmentIndex) => {
       const segmentWords = segment.text.split(" ").filter(w => w !== "");
-
       const content = segmentWords.map((word) => {
-        const currentWordIndex = globalWordIndex;
-        globalWordIndex++;
-
+        const currentWordIndex = globalWordIndex++;
         return (
           <motion.span
             key={currentWordIndex}
             variants={titleWordVariants}
             custom={currentWordIndex}
-            style={{
-              display: "inline-block",
-              willChange: "transform, opacity",
-            }}
+            style={{ display: "inline-block" }}
           >
-            {word}
-            {"\u00A0"}
+            {word}{"\u00A0"}
           </motion.span>
         );
       });
 
       if (segment.italic) {
-        return (
-          <em key={segmentIndex} className={styles.titleItalic}>
-            {content}
-          </em>
-        );
+        return <em key={segmentIndex} className={styles.titleItalic}>{content}</em>;
       }
-
       return <span key={segmentIndex}>{content}</span>;
     });
   };
 
   return (
-    <motion.section
-      id='units'
-      className={styles.typologies}
-      variants={mainSectionVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.15 }}>
+    <motion.section id='units' className={styles.typologies} variants={mainSectionVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.15 }}>
       <div className={styles.eyebrowRow}>
         <span className={styles.eyebrow}>{eyebrow}</span>
         <span className={styles.eyebrowLine} />
       </div>
-      <motion.h2
-        className={styles.title}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
+
+      <motion.h2 className={styles.title} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
         {renderAnimatedSegments()}
       </motion.h2>
-      <motion.div
-        className={styles.sliderOuter}
-        variants={sliderOuterVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.15 }}
-        style={{ willChange: 'transform, opacity' }}
-      >
+
+      <motion.div className={styles.sliderOuter} variants={sliderOuterVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.15 }}>
         <div className={styles.sliderViewport}>
           <div
             ref={trackRef}
-            className={`${styles.track} ${!enableTransition ? styles.trackNoTransition : ''}`}
-            style={{ transform: `translateX(-${offset}px)` }}
+            className={`${styles.track} ${isTransitioning ? styles.isSwiping : ''}`}
+            style={{ 
+              transform: `translateX(-${offset}px)`,
+              transition: isTransitioning ? `transform ${CARD_TRANSITION_MS}ms cubic-bezier(0.25, 0.1, 0.25, 1)` : 'none'
+            }}
             onTransitionEnd={handleTransitionEnd}
           >
             {extendedCards.map((card, index) => {
               const isActive = index === trackIndex;
-              const isExpanded = index === expandedIndex;
               return (
                 <div
                   key={`${card.badge}-${index}`}
-                  className={`${styles.card} ${isActive ? styles.cardActive : ''} ${isExpanded ? styles.cardExpanded : ''} ${!enableTransition ? styles.cardNoTransition : ''}`}
+                  className={`${styles.card} ${isActive ? styles.cardActive : ''}`}
                 >
                   <div className={styles.cardImageWrap}>
-                    <Image
-                      src={card.imageSrc}
-                      alt={card.imageAlt}
-                      fill
-                      sizes="(max-width: 768px) 90vw, 500px"
-                      className={styles.cardImage}
-                    />
+                    <Image src={card.imageSrc} alt={card.imageAlt} fill sizes="(max-width: 768px) 90vw, 500px" className={styles.cardImage} />
                   </div>
-
                   <div className={styles.cardContent}>
                     <h3 className={styles.cardBadge}>{card.badge}</h3>
                     <p className={styles.cardDescription}>{card.description}</p>
-
                     <ul className={styles.featureList}>
-                      {card.features.map((feature) => (
-                        <li key={feature} className={styles.featureItem}>
-                          <Image
-                            src={starIconSrc}
-                            alt=""
-                            width={20}
-                            height={20}
-                            className={styles.featureIcon}
-                          />
-                          <span>{feature}</span>
+                      {card.features.map((f, i) => (
+                        <li key={i} className={styles.featureItem}>
+                          <Image src={starIconSrc} alt="" width={20} height={20} className={styles.featureIcon} />
+                          <span>{f}</span>
                         </li>
                       ))}
                     </ul>
@@ -295,39 +182,16 @@ useEffect(() => {
           </div>
         </div>
       </motion.div>
-      <motion.div
-        className={styles.footer}
-        variants={footerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        style={{ willChange: 'transform, opacity' }}
-      >
-        <div className={styles.progressTrack}>
-          <span
-            className={styles.progressThumb}
-            style={{
-              width: `${100 / total}%`,
-              left: `${(activeRealIndex / total) * 100}%`,
-            }}
-          />
-        </div>
 
+      <motion.div className={styles.footer} variants={footerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+        <div className={styles.progressTrack}>
+          <span className={styles.progressThumb} style={{ width: `${100 / total}%`, left: `${(activeRealIndex / total) * 100}%` }} />
+        </div>
         <div className={styles.navArrows}>
-          <button
-            type="button"
-            className={styles.navBtn}
-            aria-label="Əvvəlki"
-            onClick={goPrev}
-          >
+          <button type="button" className={styles.navBtn} onClick={() => move(-1)}>
             <span className={`${styles.navIcon} ${styles.navIconLeft}`} />
           </button>
-          <button
-            type="button"
-            className={styles.navBtn}
-            aria-label="Növbəti"
-            onClick={goNext}
-          >
+          <button type="button" className={styles.navBtn} onClick={() => move(1)}>
             <span className={`${styles.navIcon} ${styles.navIconRight}`} />
           </button>
         </div>
