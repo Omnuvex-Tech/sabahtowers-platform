@@ -5,8 +5,7 @@ import { getDictionary } from "@/lib/i18n";
 const TREVA_BASE_URL = "https://www.treva.realestate";
 
 function getBrokersHref(locale: string) {
-  const prefix = locale === "az" ? "" : `/${locale}`;
-  return `${TREVA_BASE_URL}${prefix}/brokers`;
+  return `${TREVA_BASE_URL}/${locale}/brokers`;
 }
 
 export function Header({ locale }: { locale: string }) {

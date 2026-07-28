@@ -19,6 +19,7 @@ const inter = localFont({
     display: "swap",
 });
 
+
 export const metadata: Metadata = {
     title: config.project.projectName,
     description: config.project.projectDescription,

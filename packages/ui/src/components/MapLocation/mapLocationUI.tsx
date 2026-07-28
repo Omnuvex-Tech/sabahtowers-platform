@@ -7,9 +7,6 @@ import { motion, Variants } from 'framer-motion';
 interface MapLocationUIProps {
   mapImageSrc: string;
   mapImageAlt: string;
-  badgeIconSrc: string;
-  badgeIconAlt: string;
-  pinIconSrc: string;
   viewOnMapLabel: string;
   viewOnMapHref: string;
 }
@@ -34,9 +31,6 @@ const mapSectionVariants: Variants = {
 export function MapLocationUI({
   mapImageSrc,
   mapImageAlt,
-  badgeIconSrc,
-  badgeIconAlt,
-  pinIconSrc,
   viewOnMapLabel,
   viewOnMapHref,
 }: MapLocationUIProps) {
@@ -57,24 +51,6 @@ export function MapLocationUI({
           sizes="100vw"
           className={styles.mapImage}
         />
-
-        <div className={styles.marker}>
-          <Image
-            src={badgeIconSrc}
-            alt={badgeIconAlt}
-            width={71}
-            height={67}
-            className={styles.markerBadge}
-          />
-          <Image
-            src={pinIconSrc}
-            alt=""
-            width={40}
-            height={40}
-            className={styles.markerPin}
-          />
-        </div>
-
         <a
           href={viewOnMapHref}
           target="_blank"

@@ -114,3 +114,11 @@
     --radius-3xl: calc(var(--radius) * 2.2);
     --radius-4xl: calc(var(--radius) * 2.6);
 }
+
+
+
+body {
+  max-width: 1920px; 
+  margin: 0 auto;
+  overflow-x: hidden;  
+}
