@@ -49,6 +49,9 @@
     height: 48px;
     font-size: 15px;
   }
+    .mapImage {
+    object-position: 22% center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -61,6 +64,9 @@
     right: 20px;
     width: auto;
     padding: 10px 16px;
+  }
+    .mapImage {
+    object-position: 15% center;
   }
 }
 
@@ -81,5 +87,9 @@
     height: 40px;
     padding: 8px 14px;
     font-size: 13px;
+  }
+
+    .mapImage {
+    object-position: 10% center;
   }
 }

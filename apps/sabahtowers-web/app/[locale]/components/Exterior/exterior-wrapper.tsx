@@ -1,22 +1,34 @@
 import { ExteriorUI } from "@repo/ui/components/Exterior/exteriorUI";
 import { getDictionary } from "@/lib/i18n";
-import { getCatalogueHref } from "@/lib/catalogue";
+
+const exteriorImages = [
+  "/images/exterior.jpg",
+  "/images/interior.jpg",
+  "/images/residental1.jpg",
+  "/images/residental2.jpg",
+  "/images/residental3.jpg",
+];
 
 export function Exterior({ locale }: { locale: string }) {
   const t = getDictionary(locale);
-  const catalogueHref = getCatalogueHref(locale);
 
-  const slides = t.exterior.slides.map((title: string) => ({
-    imageSrc: "/images/exterior.jpg",
+  const slides = t.exterior.slides.map((title: string, i: number) => ({
+    imageSrc: exteriorImages[i % exteriorImages.length] ?? exteriorImages[0]!,
     imageAlt: t.exterior.imageAlt,
     title,
+  }));
+
+  const galleryImages = exteriorImages.map((imageSrc) => ({
+    imageSrc,
+    imageAlt: t.exterior.imageAlt,
   }));
 
   return (
     <ExteriorUI
       eyebrow={t.exterior.eyebrow}
       slides={slides}
-      primaryCta={{ label: t.exterior.primaryCtaLabel, href: catalogueHref, download: true }}
+      galleryImages={galleryImages}
+      primaryCta={{ label: t.exterior.primaryCtaLabel }}
       secondaryCta={{ label: t.exterior.secondaryCtaLabel, href: "#contact" }}
     />
   );

@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from '../../styles/Exterior/exterior.module.css';
 import { motion, Variants } from 'framer-motion';
 import { handleAnchorClick } from '../../lib/smooth-scroll';
+import { GalleryModal } from './gallerymodal';
 
 export interface ExteriorSlide {
     imageSrc: string;
@@ -12,16 +13,21 @@ export interface ExteriorSlide {
     title: string;
 }
 
+export interface ExteriorGalleryImage {
+    imageSrc: string;
+    imageAlt: string;
+}
+
 export interface ExteriorCta {
     label: string;
     href: string;
-    download?: boolean;
 }
 
 interface ExteriorUIProps {
     eyebrow: string;
     slides: ExteriorSlide[];
-    primaryCta: ExteriorCta;
+    galleryImages: ExteriorGalleryImage[];
+    primaryCta: { label: string };
     secondaryCta: ExteriorCta;
 }
 
@@ -75,11 +81,19 @@ const fadeUpVariants: Variants = {
     }),
 };
 
-export function ExteriorUI({ eyebrow, slides, primaryCta, secondaryCta }: ExteriorUIProps) {
+export function ExteriorUI({ eyebrow, slides, galleryImages, primaryCta, secondaryCta }: ExteriorUIProps) {
     const [activeIndex, setActiveIndex] = useState(0);
     const [introPlayed, setIntroPlayed] = useState(false);
+    const [isGalleryOpen, setIsGalleryOpen] = useState(false);
     const total = slides.length;
     const activeSlide = slides[activeIndex];
+
+    useEffect(() => {
+        galleryImages.forEach((img) => {
+            const preloadImg = new window.Image();
+            preloadImg.src = img.imageSrc;
+        });
+    }, [galleryImages]);
 
     const goPrev = () => {
         setActiveIndex((prev) => (prev === 0 ? total - 1 : prev - 1));
@@ -118,6 +132,11 @@ export function ExteriorUI({ eyebrow, slides, primaryCta, secondaryCta }: Exteri
             </>
         );
     };
+
+    const activeGalleryIndex = (() => {
+        const found = galleryImages.findIndex((img) => img.imageSrc === activeSlide.imageSrc);
+        return found === -1 ? 0 : found;
+    })();
 
     return (
         <section className={styles.exterior}>
@@ -173,12 +192,14 @@ export function ExteriorUI({ eyebrow, slides, primaryCta, secondaryCta }: Exteri
                         viewport={{ once: true }}
                         style={{ willChange: 'transform, opacity' }}
                     >
-                        <a href={primaryCta.href}
+                        <button
+                            type="button"
                             className={styles.btnPrimary}
-                            {...(primaryCta.download ? { download: true } : {})}
+                            style={{ border: 'none', font: 'inherit', cursor: 'pointer' }}
+                            onClick={() => setIsGalleryOpen(true)}
                         >
                             {primaryCta.label}
-                        </a>
+                        </button>
                         <a href={secondaryCta.href}
                             className={styles.btnSecondary}
                             onClick={(e) => handleAnchorClick(e, secondaryCta.href)}
@@ -237,6 +258,13 @@ export function ExteriorUI({ eyebrow, slides, primaryCta, secondaryCta }: Exteri
                     </div>
                 </motion.div>
             </motion.div>
+
+            <GalleryModal
+                isOpen={isGalleryOpen}
+                onClose={() => setIsGalleryOpen(false)}
+                images={galleryImages}
+                initialIndex={activeGalleryIndex}
+            />
         </section>
     );
 }

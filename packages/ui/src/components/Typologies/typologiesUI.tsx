@@ -62,6 +62,7 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
   const trackRef = useRef<HTMLDivElement>(null);
   const [step, setStep] = useState(486);
   const activeRealIndex = total > 0 ? ((trackIndex % total) + total) % total : 0;
+  const [isPaused, setIsPaused] = useState(false);
   const move = useCallback((dir: 1 | -1) => {
     if (isTransitioning || total <= 1) return;
     setIsTransitioning(true);
@@ -106,6 +107,14 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
 }, [total]);
 
 
+useEffect(() => {
+    if (total <= 1 || isPaused) return;
+    const timer = setInterval(() => {
+      move(1);
+    }, 2000);
+    return () => clearInterval(timer);
+  }, [trackIndex, total, move, isPaused]);
+
   const offset = trackIndex * step;
   const renderAnimatedSegments = () => {
     let globalWordIndex = 0;
@@ -144,7 +153,11 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
       </motion.h2>
 
       <motion.div className={styles.sliderOuter} variants={sliderOuterVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.15 }}>
-        <div className={styles.sliderViewport}>
+     <div
+          className={styles.sliderViewport}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
           <div
             ref={trackRef}
             className={`${styles.track} ${isTransitioning ? styles.isSwiping : ''}`}
