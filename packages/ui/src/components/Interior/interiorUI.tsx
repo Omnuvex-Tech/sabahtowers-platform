@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from '../../styles/Interior/interior.module.css';
 import { motion, Variants } from 'framer-motion';
 import { handleAnchorClick } from '../../lib/smooth-scroll';
+import { GalleryModal } from './gallerymodal';
 
 export interface InteriorSlide {
     imageSrc: string;
@@ -12,16 +13,21 @@ export interface InteriorSlide {
     title: string;
 }
 
+export interface InteriorGalleryImage {
+    imageSrc: string;
+    imageAlt: string;
+}
+
 export interface InteriorCta {
     label: string;
     href: string;
-    download?: boolean;
 }
 
 interface InteriorUIProps {
     eyebrow: string;
     slides: InteriorSlide[];
-    primaryCta: InteriorCta;
+    galleryImages: InteriorGalleryImage[];
+    primaryCta: { label: string };
     secondaryCta: InteriorCta;
 }
 
@@ -75,11 +81,19 @@ const fadeUpVariants: Variants = {
     }),
 };
 
-export function InteriorUI({ eyebrow, slides, primaryCta, secondaryCta }: InteriorUIProps) {
+export function InteriorUI({ eyebrow, slides, galleryImages, primaryCta, secondaryCta }: InteriorUIProps) {
     const [activeIndex, setActiveIndex] = useState(0);
     const [introPlayed, setIntroPlayed] = useState(false);
+    const [isGalleryOpen, setIsGalleryOpen] = useState(false);
     const total = slides.length;
     const activeSlide = slides[activeIndex];
+
+    useEffect(() => {
+        galleryImages.forEach((img) => {
+            const preloadImg = new window.Image();
+            preloadImg.src = img.imageSrc;
+        });
+    }, [galleryImages]);
 
     const goPrev = () => {
         setActiveIndex((prev) => (prev === 0 ? total - 1 : prev - 1));
@@ -94,7 +108,6 @@ export function InteriorUI({ eyebrow, slides, primaryCta, secondaryCta }: Interi
     const renderAnimatedTitle = (fullTitle: string) => {
         const words = fullTitle.split(" ");
         const totalWords = words.length;
-
         return (
             <>
                 {words.map((word, index) => {
@@ -119,6 +132,11 @@ export function InteriorUI({ eyebrow, slides, primaryCta, secondaryCta }: Interi
             </>
         );
     };
+
+    const activeGalleryIndex = (() => {
+        const found = galleryImages.findIndex((img) => img.imageSrc === activeSlide.imageSrc);
+        return found === -1 ? 0 : found;
+    })();
 
     return (
         <section className={styles.exterior}>
@@ -174,12 +192,14 @@ export function InteriorUI({ eyebrow, slides, primaryCta, secondaryCta }: Interi
                         viewport={{ once: true }}
                         style={{ willChange: 'transform, opacity' }}
                     >
-                        <a href={primaryCta.href}
+                        <button
+                            type="button"
                             className={styles.btnPrimary}
-                            {...(primaryCta.download ? { download: true } : {})}
+                            style={{ border: 'none', font: 'inherit', cursor: 'pointer' }}
+                            onClick={() => setIsGalleryOpen(true)}
                         >
                             {primaryCta.label}
-                        </a>
+                        </button>
                         <a
                             href={secondaryCta.href}
                             className={styles.btnSecondary}
@@ -240,6 +260,12 @@ export function InteriorUI({ eyebrow, slides, primaryCta, secondaryCta }: Interi
                     </div>
                 </motion.div>
             </motion.div>
+            <GalleryModal
+                isOpen={isGalleryOpen}
+                onClose={() => setIsGalleryOpen(false)}
+                images={galleryImages}
+                initialIndex={activeGalleryIndex}
+            />
         </section>
     );
 }

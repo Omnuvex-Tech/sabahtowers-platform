@@ -1,22 +1,34 @@
 import { InteriorUI } from "@repo/ui/components/Interior/interiorUI";
 import { getDictionary } from "@/lib/i18n";
-import { getCatalogueHref } from "@/lib/catalogue";
+
+const interiorImages = [
+  "/images/interior.jpg",
+  "/images/exterior.jpg",
+  "/images/residental1.jpg",
+  "/images/residental2.jpg",
+  "/images/residental3.jpg",
+];
 
 export function Interior({ locale }: { locale: string }) {
   const t = getDictionary(locale);
-  const catalogueHref = getCatalogueHref(locale);
 
-  const slides = t.interior.slides.map((title: string) => ({
-    imageSrc: "/images/interior.jpg",
+  const slides = t.interior.slides.map((title: string, i: number) => ({
+    imageSrc: interiorImages[i % interiorImages.length] ?? interiorImages[0]!,
     imageAlt: t.interior.imageAlt,
     title,
+  }));
+
+  const galleryImages = interiorImages.map((imageSrc) => ({
+    imageSrc,
+    imageAlt: t.interior.imageAlt,
   }));
 
   return (
     <InteriorUI
       eyebrow={t.interior.eyebrow}
       slides={slides}
-      primaryCta={{ label: t.interior.primaryCtaLabel, href: catalogueHref, download: true }}
+      galleryImages={galleryImages}
+      primaryCta={{ label: t.interior.primaryCtaLabel }}
       secondaryCta={{ label: t.interior.secondaryCtaLabel, href: "#contact" }}
     />
   );
