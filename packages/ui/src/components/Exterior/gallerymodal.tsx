@@ -175,26 +175,23 @@ export function GalleryModal({ isOpen, onClose, images, initialIndex }: GalleryM
                         </button>
 
                         <div className={styles.stage}>
-                            <AnimatePresence>
-                                <motion.div
-                                    key={index}
-                                    className={styles.imageWrap}
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    exit={{ opacity: 0 }}
-                                    transition={{ duration: 0.35, ease: smoothEase }}
-                                >
-                                    <Image
-                                        src={activeSlide.imageSrc}
-                                        alt={activeSlide.imageAlt}
-                                        fill
-                                        sizes="100vw"
-                                        priority
-                                        className={`${styles.image} ${isZoomed ? styles.imageZoomed : ''}`}
-                                        onClick={() => setIsZoomed((z) => !z)}
-                                    />
-                                </motion.div>
-                            </AnimatePresence>
+                            <motion.div
+                                key="stage-image"
+                                className={styles.imageWrap}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.35, ease: smoothEase }}
+                            >
+                                <Image
+                                    key={activeSlide.imageSrc}
+                                    src={activeSlide.imageSrc}
+                                    alt={activeSlide.imageAlt}
+                                    fill
+                                    sizes="100vw"
+                                    priority
+                                    className={`${styles.image} ${isZoomed ? styles.imageZoomed : ''}`}
+                                    onClick={() => setIsZoomed((z) => !z)}
+                                />
+                            </motion.div>
 
                             {neighborIndices.map((i) => {
                                 const neighbor = images[i];
