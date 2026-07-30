@@ -142,6 +142,39 @@
           "AÇIQ HAVADA İSTİRAHƏT ÜÇÜN EYVAN",
           "OPTİMAL DƏHLİZ VƏ SANİTAR QOVŞAQ BÖLGÜSÜ"
         ]
+      },
+      {
+        "imageAlt": "1 YATAQ OTAQLI MƏNZİL",
+        "badge": "1 YATAQ OTAQLI MƏNZİL",
+        "description": "Ayırılmış şəxsi zonasından geniş 11,06 m² eyvanına qədər erqonomik planlaşdırılmış yaşayış sahəsi.",
+        "features": [
+          "83,44 M² (11,06 M² EYVAN DAXİL)",
+          "36,44 M² STUDİYA (QONAQ OTAĞI + MƏTBƏX)",
+          "GÜN İŞIĞI VƏ AÇIQ HAVA ÜÇÜN GENİŞ EYVAN",
+          "AYRICA QARDEROB VƏ OPTİMAL DƏHLİZ BÖLGÜSÜ"
+        ]
+      },
+      {
+        "imageAlt": "2 YATAQ OTAQLI MƏNZİL",
+        "badge": "2 YATAQ OTAQLI MƏNZİL",
+        "description": "Ailəvi rahatlıq üçün nəzərdə tutulmuş geniş daxili məkan, iki ayrı sanitar qovşaq və 28,70 m²-lik böyük eyvan sahəsi.",
+        "features": [
+          "110,47 M² (28,70 M² EYVAN DAXİL)",
+          "27,39 M² STUDİYA (QONAQ OTAĞI + MƏTBƏX)",
+          "2 AYRI YATAQ OTAĞI VƏ 2 SANİTAR QOVŞAQ",
+          "AÇIQ HAVADA İSTİRAHƏT ÜÇÜN GENİŞ EYVAN ZONASI"
+        ]
+      },
+      {
+        "imageAlt": "STUDİYA MƏNZİL",
+        "badge": "STUDİYA MƏNZİL",
+        "description": "Şəxsi rahatlıq, erqonomik zonallıq və gündəlik istirahət ritminə uyğunlaşdırılmış kompakt yaşayış sahəsi.",
+        "features": [
+          "41,34 M² (5,46 M² EYVAN DAXİL)",
+          "20,60 M² NƏZƏRƏ ÇARPAN YAŞAYIŞ VƏ MƏTBƏX ZONASI",
+          "AÇIQ HAVADA İSTİRAHƏT ÜÇÜN EYVAN",
+          "OPTİMAL DƏHLİZ VƏ SANİTAR QOVŞAQ BÖLGÜSÜ"
+        ]
       }
     ]
   },

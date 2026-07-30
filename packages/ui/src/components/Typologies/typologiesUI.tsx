@@ -27,7 +27,7 @@ export interface TypologiesUIProps {
 
 const REPEAT = 3;
 const CARD_TRANSITION_MS = 500;
-
+const DRAG_THRESHOLD_RATIO = 0.15; 
 const smoothEase = [0.16, 1, 0.3, 1] as const;
 
 const mainSectionVariants: Variants = {
@@ -63,6 +63,13 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
   const [step, setStep] = useState(486);
   const activeRealIndex = total > 0 ? ((trackIndex % total) + total) % total : 0;
   const [isPaused, setIsPaused] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const draggingRef = useRef(false);
+  const hasMovedRef = useRef(false);
+  const dragStartXRef = useRef(0);
+  const dragBaseOffsetRef = useRef(0);
+
   const move = useCallback((dir: 1 | -1) => {
     if (isTransitioning || total <= 1) return;
     setIsTransitioning(true);
@@ -116,6 +123,52 @@ useEffect(() => {
   }, [trackIndex, total, move, isPaused]);
 
   const offset = trackIndex * step;
+
+  const handlePointerDown = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
+    if (isTransitioning || total <= 1) return;
+    const track = trackRef.current;
+    if (!track) return;
+    draggingRef.current = true;
+    hasMovedRef.current = false;
+    dragStartXRef.current = e.clientX;
+    dragBaseOffsetRef.current = offset;
+    track.style.transition = 'none';
+    track.setPointerCapture(e.pointerId);
+    setIsPaused(true);
+    setIsDragging(true);
+  }, [isTransitioning, total, offset]);
+
+  const handlePointerMove = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
+    if (!draggingRef.current) return;
+    const track = trackRef.current;
+    if (!track) return;
+    const delta = e.clientX - dragStartXRef.current;
+    if (Math.abs(delta) > 4) hasMovedRef.current = true;
+    track.style.transform = `translateX(${-dragBaseOffsetRef.current + delta}px)`;
+  }, []);
+
+  const endDrag = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
+    if (!draggingRef.current) return;
+    draggingRef.current = false;
+    const track = trackRef.current;
+    try { track?.releasePointerCapture(e.pointerId); } catch {}
+    setIsDragging(false);
+    setIsPaused(false);
+
+    if (!hasMovedRef.current) return; 
+
+    const delta = e.clientX - dragStartXRef.current;
+    const threshold = step * DRAG_THRESHOLD_RATIO;
+
+    if (delta <= -threshold) {
+      move(1);
+    } else if (delta >= threshold) {
+      move(-1);
+    } else {
+      setIsTransitioning(true);
+    }
+  }, [step, move]);
+
   const renderAnimatedSegments = () => {
     let globalWordIndex = 0;
     return titleSegments.map((segment, segmentIndex) => {
@@ -153,19 +206,20 @@ useEffect(() => {
       </motion.h2>
 
       <motion.div className={styles.sliderOuter} variants={sliderOuterVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.15 }}>
-     <div
-          className={styles.sliderViewport}
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-        >
+     <div className={styles.sliderViewport}>
           <div
             ref={trackRef}
             className={`${styles.track} ${isTransitioning ? styles.isSwiping : ''}`}
             style={{ 
               transform: `translateX(-${offset}px)`,
-              transition: isTransitioning ? `transform ${CARD_TRANSITION_MS}ms cubic-bezier(0.25, 0.1, 0.25, 1)` : 'none'
+              transition: isTransitioning ? `transform ${CARD_TRANSITION_MS}ms cubic-bezier(0.25, 0.1, 0.25, 1)` : 'none',
+              cursor: isDragging ? 'grabbing' : 'grab',
             }}
             onTransitionEnd={handleTransitionEnd}
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={endDrag}
+            onPointerCancel={endDrag}
           >
             {extendedCards.map((card, index) => {
               const isActive = index === trackIndex;
@@ -175,7 +229,7 @@ useEffect(() => {
                   className={`${styles.card} ${isActive ? styles.cardActive : ''}`}
                 >
                   <div className={styles.cardImageWrap}>
-                    <Image src={card.imageSrc} alt={card.imageAlt} fill sizes="(max-width: 768px) 90vw, 500px" className={styles.cardImage} />
+                    <Image src={card.imageSrc} alt={card.imageAlt} fill sizes="(max-width: 768px) 90vw, 500px" className={styles.cardImage} draggable={false} />
                   </div>
                   <div className={styles.cardContent}>
                     <h3 className={styles.cardBadge}>{card.badge}</h3>
@@ -183,7 +237,7 @@ useEffect(() => {
                     <ul className={styles.featureList}>
                       {card.features.map((f, i) => (
                         <li key={i} className={styles.featureItem}>
-                          <Image src={starIconSrc} alt="" width={20} height={20} className={styles.featureIcon} />
+                          <Image src={starIconSrc} alt="" width={20} height={20} className={styles.featureIcon} draggable={false} />
                           <span>{f}</span>
                         </li>
                       ))}

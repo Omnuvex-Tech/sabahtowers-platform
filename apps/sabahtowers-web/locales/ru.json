@@ -82,31 +82,31 @@
       }
     ]
   },
-"typologies": {
-  "eyebrow": "Жилые типологии",
-  "titleSegments": [
-    {
-      "text": "Разные",
-      "italic": true
-    },
-    {
-      "text": "жилые и планировочные решения, специально разработанные для дополнения"
-    },
-    {
-      "text": "ритма",
-      "italic": true
-    },
-    {
-      "text": "современной жизни и"
-    },
-    {
-      "text": "индивидуальных",
-      "italic": true
-    },
-    {
-      "text": "потребностей в активности."
-    }
-  ],
+  "typologies": {
+    "eyebrow": "Жилые типологии",
+    "titleSegments": [
+      {
+        "text": "Разные",
+        "italic": true
+      },
+      {
+        "text": "жилые и планировочные решения, специально разработанные для дополнения"
+      },
+      {
+        "text": "ритма",
+        "italic": true
+      },
+      {
+        "text": "современной жизни и"
+      },
+      {
+        "text": "индивидуальных",
+        "italic": true
+      },
+      {
+        "text": "потребностей в активности."
+      }
+    ],
     "cards": [
       {
         "imageAlt": "1-Bedroom",
@@ -153,19 +153,19 @@
     "formTitle": "Выразите свой интерес",
     "submitLabel": "Отправить",
     "phoneMinError": "Введите минимум 5 цифр",
-"requiredError": "Это поле обязательно"
+    "requiredError": "Это поле обязательно"
   },
   "footer": {
-  "addressText": "Жилой комплекс Sabah Towers, Sea Breeze, Баку, Азербайджан. Пространство для активной жизни и семейного отдыха.",
-  "exploreTitle": "ИЗУЧИТЬ",
-  "exploreLinks": {
-    "about": "О НАС",
-    "brokers": "БРОКЕРЫ",
-    "units": "КВАРТИРЫ",
-    "contact": "КОНТАКТЫ"
-  },
-  "getInTouchTitle": "СВЯЗАТЬСЯ С НАМИ",
-  "followTitle": "ПОДПИСЫВАЙТЕСЬ",
-  "copyrightText": "COPYRIGHT© 2026 | SABAH TOWERS"
-}
+    "addressText": "Жилой комплекс Sabah Towers, Sea Breeze, Баку, Азербайджан. Пространство для активной жизни и семейного отдыха.",
+    "exploreTitle": "ИЗУЧИТЬ",
+    "exploreLinks": {
+      "about": "О НАС",
+      "brokers": "БРОКЕРЫ",
+      "units": "КВАРТИРЫ",
+      "contact": "КОНТАКТЫ"
+    },
+    "getInTouchTitle": "СВЯЗАТЬСЯ С НАМИ",
+    "followTitle": "ПОДПИСЫВАЙТЕСЬ",
+    "copyrightText": "COPYRIGHT© 2026 | SABAH TOWERS"
+  }
 }

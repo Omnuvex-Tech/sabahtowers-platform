@@ -85,30 +85,29 @@
   },
   "typologies": {
     "eyebrow": "Residential Typologies",
-   "titleSegments": [
-  {
-    "text": "Different",
-    "italic": true
-  },
-  {
-    "text": "living and planning solutions specially designed to complement the"
-  },
-  {
-    "text": "rhythm",
-    "italic": true
-  },
-  {
-    "text": "of modern life and"
-  },
-  {
-    "text": "individual",
-    "italic": true
-  },
-  {
-    "text": "activity needs."
-  }
-],
-
+    "titleSegments": [
+      {
+        "text": "Different",
+        "italic": true
+      },
+      {
+        "text": "living and planning solutions specially designed to complement the"
+      },
+      {
+        "text": "rhythm",
+        "italic": true
+      },
+      {
+        "text": "of modern life and"
+      },
+      {
+        "text": "individual",
+        "italic": true
+      },
+      {
+        "text": "activity needs."
+      }
+    ],
     "cards": [
       {
         "imageAlt": "1-Bedroom",
@@ -142,6 +141,39 @@
           "Balcony for outdoor relaxation",
           "Optimal layout for hallway and bathroom"
         ]
+      },
+      {
+        "imageAlt": "1-Bedroom Apartment",
+        "badge": "1-Bedroom Apartment",
+        "description": "Ergonomically planned living space featuring a private bedroom area and a spacious 11.06 m² balcony.",
+        "features": [
+          "83.44 m² (including 11.06 m² balcony)",
+          "36.44 m² studio (living room + kitchen)",
+          "Expansive balcony for natural sunlight and outdoor air",
+          "Walk-in closet and optimized hallway spatial layout"
+        ]
+      },
+      {
+        "imageAlt": "2-Bedroom Apartment",
+        "badge": "2-Bedroom Apartment",
+        "description": "Spacious interior layout built for family comfort, complete with two separate bathrooms and a massive 28.70 m² balcony.",
+        "features": [
+          " 110.47 m² (including 28.70 m² balcony)",
+          "27.39 m² studio (living room + kitchen)",
+          "2 separate bedrooms and 2 bathrooms",
+          "Large balcony zone for outdoor relaxation"
+        ]
+      },
+      {
+        "imageAlt": "Studio Apartment",
+        "badge": "Studio Apartment",
+        "description": "A compact residence engineered for personal comfort, ergonomic zoning, and daily rest.",
+        "features": [
+          "41.34 m² (including 5.46 m² balcony)",
+          "20.60 m² combined living and kitchen area",
+          "Balcony for outdoor relaxation",
+          "Optimal hallway and bathroom arrangement"
+        ]
       }
     ]
   },
@@ -155,19 +187,19 @@
     "formTitle": "Express your interest",
     "submitLabel": "Submit",
     "phoneMinError": "Enter at least 5 digits",
-"requiredError": "This field is required"
+    "requiredError": "This field is required"
   },
   "footer": {
-  "addressText": "Sabah Towers Residential Complex, Sea Breeze, Baku, Azerbaijan. A living environment designed for an active lifestyle and family recreation.",
-  "exploreTitle": "EXPLORE",
-  "exploreLinks": {
-    "about": "ABOUT",
-    "brokers": "BROKERS",
-    "units": "UNITS",
-    "contact": "CONTACT"
-  },
-  "getInTouchTitle": "GET IN TOUCH",
-  "followTitle": "FOLLOW US",
-  "copyrightText": "COPYRIGHT© 2026 | SABAH TOWERS"
-}
+    "addressText": "Sabah Towers Residential Complex, Sea Breeze, Baku, Azerbaijan. A living environment designed for an active lifestyle and family recreation.",
+    "exploreTitle": "EXPLORE",
+    "exploreLinks": {
+      "about": "ABOUT",
+      "brokers": "BROKERS",
+      "units": "UNITS",
+      "contact": "CONTACT"
+    },
+    "getInTouchTitle": "GET IN TOUCH",
+    "followTitle": "FOLLOW US",
+    "copyrightText": "COPYRIGHT© 2026 | SABAH TOWERS"
+  }
 }
