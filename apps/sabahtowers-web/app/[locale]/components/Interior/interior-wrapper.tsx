@@ -2,11 +2,11 @@ import { InteriorUI } from "@repo/ui/components/Interior/interiorUI";
 import { getDictionary } from "@/lib/i18n";
 
 const interiorImages = [
-  "/images/interior.jpg",
-  "/images/exterior.jpg",
-  "/images/residental1.webp",
-  "/images/residental2.webp",
-  "/images/residental3.webp",
+  "/images/interior4.png",
+  "/images/interior1.png",
+  "/images/interior2.png",
+  "/images/interior3.png",
+  "/images/interior5.png",
 ];
 
 export function Interior({ locale }: { locale: string }) {

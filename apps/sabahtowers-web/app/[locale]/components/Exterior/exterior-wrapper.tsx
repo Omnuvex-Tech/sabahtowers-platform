@@ -2,11 +2,12 @@ import { ExteriorUI } from "@repo/ui/components/Exterior/exteriorUI";
 import { getDictionary } from "@/lib/i18n";
 
 const exteriorImages = [
-  "/images/exterior.jpg",
-  "/images/interior.jpg",
-  "/images/residental1.webp",
-  "/images/residental2.webp",
-  "/images/residental3.webp",
+  "/images/exterior1.png",
+  "/images/exterior2.png",
+  "/images/exterior3.jpeg",
+  "/images/exterior4.png",
+  "/images/exterior5.png"
+
 ];
 
 export function Exterior({ locale }: { locale: string }) {
