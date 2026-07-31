@@ -4,9 +4,9 @@ import { getDictionary } from "@/lib/i18n";
 const exteriorImages = [
   "/images/exterior.jpg",
   "/images/interior.jpg",
-  "/images/residental1.jpg",
-  "/images/residental2.jpg",
-  "/images/residental3.jpg",
+  "/images/residental1.webp",
+  "/images/residental2.webp",
+  "/images/residental3.webp",
 ];
 
 export function Exterior({ locale }: { locale: string }) {
