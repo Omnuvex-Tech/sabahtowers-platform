@@ -1,6 +1,6 @@
 {
   "hero": {
-    "eyebrow": "Modern residential complex",
+    "eyebrow": "The Tomorrow of Healthy Living Starts Here",
     "titleBefore": "Everyday resort living on the first coastline of the Caspian Sea, where",
     "titleItalic": "wellness shapes your daily routine.",
     "titleAfter": "",
@@ -112,7 +112,7 @@
       {
         "imageAlt": "1-Bedroom",
         "badge": "1 BEDROOM APARTMENT",
-        "description": "A living space tailored to daily relaxation, featuring a spacious studio area and a functional layout.",
+        "description": "A functional living area tailored to the daily relaxation routine.",
         "features": [
           "84.09 M² (including 8.26 M² and 2.66 M² balconies)",
           "37.74 M² Studio (Living Room + Kitchen)",
@@ -123,7 +123,7 @@
       {
         "imageAlt": "2 BEDROOM APARTMENT",
         "badge": "2 BEDROOM APARTMENT",
-        "description": "A layout adapted for family living, featuring two separate bedroom zones, two bathrooms, and a spacious 17.36 m² balcony.",
+        "description": "A family-friendly layout with two separate bedroom zones and a spacious balcony.",
         "features": [
           "98.02 M² (including 17.36 M² balcony)",
           "25.36 M² Studio (Living Room + Kitchen)",
@@ -134,7 +134,7 @@
       {
         "imageAlt": "STUDIO APARTMENT",
         "badge": "STUDIO APARTMENT",
-        "description": "A compact living space with ergonomic planning, designed for personal comfort and a daily resort rhythm.",
+        "description": "A compact living space tailored for personal comfort with ergonomic layout planning.",
         "features": [
           "40.58 M² (including 5.31 M² balcony)",
           "22.62 M² Spacious studio zone",
@@ -145,7 +145,7 @@
       {
         "imageAlt": "1-Bedroom Apartment",
         "badge": "1-Bedroom Apartment",
-        "description": "Ergonomically planned living space featuring a private bedroom area and a spacious 11.06 m² balcony.",
+        "description": "An ergonomically planned living space from its private zone to a large 11.06 m² balcony.",
         "features": [
           "83.44 m² (including 11.06 m² balcony)",
           "36.44 m² studio (living room + kitchen)",
@@ -156,9 +156,9 @@
       {
         "imageAlt": "2-Bedroom Apartment",
         "badge": "2-Bedroom Apartment",
-        "description": "Spacious interior layout built for family comfort, complete with two separate bathrooms and a massive 28.70 m² balcony.",
+        "description": "Spacious interior space designed for family comfort, featuring a large 28.70 m² balcony area.",
         "features": [
-          " 110.47 m² (including 28.70 m² balcony)",
+          "110.47 m² (including 28.70 m² balcony)",
           "27.39 m² studio (living room + kitchen)",
           "2 separate bedrooms and 2 bathrooms",
           "Large balcony zone for outdoor relaxation"
@@ -167,7 +167,7 @@
       {
         "imageAlt": "Studio Apartment",
         "badge": "Studio Apartment",
-        "description": "A compact residence engineered for personal comfort, ergonomic zoning, and daily rest.",
+        "description": "A compact living space tailored for personal comfort with ergonomic layout planning.",
         "features": [
           "41.34 m² (including 5.46 m² balcony)",
           "20.60 m² combined living and kitchen area",

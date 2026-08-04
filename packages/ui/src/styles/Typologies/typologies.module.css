@@ -119,6 +119,8 @@
     color: rgba(33, 37, 41, 1);
     max-height: 28px;
     overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     transition: max-height 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 

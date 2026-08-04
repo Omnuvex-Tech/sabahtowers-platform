@@ -1,6 +1,6 @@
 {
   "hero": {
-    "eyebrow": "Moderin yaşayış kompleksi",
+    "eyebrow": "Sağlam həyatın Sabahı burada başlayır",
     "titleBefore": "Xəzər dənizinin birinci sahil xəttində",
     "titleItalic": "sağlamlıqla formalaşan, hər günü tətil dadında",
     "titleAfter": "yeni bir yaşam.",
@@ -113,7 +113,7 @@
       {
         "imageAlt": "YATAQ OTAQLI MƏNZİL",
         "badge": "1 YATAQ OTAQLI MƏNZİL",
-        "description": "Gündəlik istirahət ritminə uyğunlaşdırılmış, geniş studiya zonası və funksional daxili planlamaya malik yaşayış sahəsi.",
+        "description": "Gündəlik istirahət ritminə uyğunlaşdırılmış, funksional daxili planlamaya malik yaşayış sahəsi.",
         "features": [
           "84,09 M² (8,26 M² VƏ 2,66 M² EYVANLAR DAXİL)",
           "37,74 M² STUDİYA (QONAQ OTAĞI + MƏTBƏX)",
@@ -124,7 +124,7 @@
       {
         "imageAlt": "Studio",
         "badge": "2 YATAQ OTAQLI MƏNZİL",
-        "description": "İki ayrı yataq zonası, iki sanitar qovşağı və geniş 17,36 m²-lik eyvanı ilə ailəvi yaşayış ritminə uyğunlaşdırılmış planlaşdırma.",
+        "description": "İki ayrı yataq zonası, geniş eyvanı ilə ailəvi yaşayış ritminə uyğunlaşdırılmış planlaşdırma.",
         "features": [
           "98,02 M² (17,36 M² EYVAN DAXİL)",
           "25,36 M² STUDİYA (QONAQ OTAĞI + MƏTBƏX)",
@@ -135,7 +135,7 @@
       {
         "imageAlt": "STUDİYA MƏNZİL",
         "badge": "STUDİYA MƏNZİL",
-        "description": "Şəxsi rahatlıq, erqonomik planlaşdırma və gündəlik istirahət ritminə uyğunlaşdırılmış kompakt yaşayış sahəsi.",
+        "description": "Şəxsi rahatlıq, erqonomik planlaşdırma və gündəlik ritmə uyğunlaşdırılmış kompakt yaşayış sahəsi.",
         "features": [
           "40,58 M² (5,31 M² EYVAN DAXİL)",
           "22,62 M² GENİŞ STUDİYA ZONASI",
@@ -157,7 +157,7 @@
       {
         "imageAlt": "2 YATAQ OTAQLI MƏNZİL",
         "badge": "2 YATAQ OTAQLI MƏNZİL",
-        "description": "Ailəvi rahatlıq üçün nəzərdə tutulmuş geniş daxili məkan, iki ayrı sanitar qovşaq və 28,70 m²-lik böyük eyvan sahəsi.",
+        "description": "Ailəvi rahatlıq üçün nəzərdə tutulmuş geniş daxili məkan, 28,70 m²-lik böyük eyvan sahəsi.",
         "features": [
           "110,47 M² (28,70 M² EYVAN DAXİL)",
           "27,39 M² STUDİYA (QONAQ OTAĞI + MƏTBƏX)",
@@ -168,7 +168,7 @@
       {
         "imageAlt": "STUDİYA MƏNZİL",
         "badge": "STUDİYA MƏNZİL",
-        "description": "Şəxsi rahatlıq, erqonomik zonallıq və gündəlik istirahət ritminə uyğunlaşdırılmış kompakt yaşayış sahəsi.",
+        "description": "Şəxsi rahatlıq, erqonomik planlaşdırma və gündəlik ritmə uyğunlaşdırılmış kompakt yaşayış sahəsi.",
         "features": [
           "41,34 M² (5,46 M² EYVAN DAXİL)",
           "20,60 M² NƏZƏRƏ ÇARPAN YAŞAYIŞ VƏ MƏTBƏX ZONASI",
