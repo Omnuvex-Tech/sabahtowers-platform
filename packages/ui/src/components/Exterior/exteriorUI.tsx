@@ -95,6 +95,16 @@ export function ExteriorUI({ eyebrow, slides, galleryImages, primaryCta, seconda
         });
     }, [galleryImages]);
 
+    useEffect(() => {
+        if (total <= 1 || isGalleryOpen) return;
+
+        const timer = setInterval(() => {
+            setActiveIndex((prev) => (prev === total - 1 ? 0 : prev + 1));
+        }, 3000);
+
+        return () => clearInterval(timer);
+    }, [activeIndex, total, isGalleryOpen]);
+
     const goPrev = () => {
         setActiveIndex((prev) => (prev === 0 ? total - 1 : prev - 1));
     };

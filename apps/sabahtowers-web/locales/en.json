@@ -40,10 +40,8 @@
     "imageAlt": "Sabah Towers — Interior",
     "slides": [
       "Apartments are delivered without interior finishing and with open floor plans, giving you total freedom to design according to your personal taste",
-      "4A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism.",
-      "2A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism.",
-      "3A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism."
-    ],
+      "By shaping your living space to suit your habits, how you welcome the daylight and the sea view is entirely your choice.",
+      "Pools, sea air, and wellness zones create a serene atmosphere, revitalizing your body every day."    ],
     "primaryCtaLabel": "Gallery",
     "secondaryCtaLabel": "Contact us"
   },
@@ -84,7 +82,7 @@
     ]
   },
   "typologies": {
-    "eyebrow": "Residential Typologies",
+    "eyebrow": "Apartment types",
     "titleSegments": [
       {
         "text": "Different",
@@ -180,17 +178,22 @@
   "contact": {
     "backgroundImageAlt": "Sabah Towers",
     "getInTouchLabel": "Get in touch",
-    "addressLabel": "Address",
-    "addressTitle": "Sea Breeze, Azerbaijan",
-    "addressText": "Sabah Towers, Baku Azerbaijan",
+ "addresses": [
+    { "label": "Baku Sales Office", "text": "10 Ziya Yusifzade str., Sabah Residence" },
+    { "label": "Sea Breeze Sales Office", "text": "Mikayil Mushfig str., Nardaran, Baku 1907" }
+  ],
     "followLabel": "Follow us",
     "formTitle": "Express your interest",
     "submitLabel": "Submit",
     "phoneMinError": "Enter at least 5 digits",
-    "requiredError": "This field is required"
+    "requiredError": "This field is required",
+      "namePlaceholder": "Name",
+  "surnamePlaceholder": "Surname",
+  "phonePlaceholder": "00 123 45 67",
+  "messagePlaceholder": "Message"
   },
   "footer": {
-    "addressText": "Sabah Towers Residential Complex, Sea Breeze, Baku, Azerbaijan. A living environment designed for an active lifestyle and family recreation.",
+    "addressText": "A living environment designed for an active lifestyle and family leisure. Here, coastal energy becomes a daily habit, and resort comfort turns into a natural part of your home.",
     "exploreTitle": "EXPLORE",
     "exploreLinks": {
       "about": "ABOUT",

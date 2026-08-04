@@ -38,4 +38,3 @@ Runs on [http://localhost:40010](http://localhost:40010).
 - `@repo/ui` — Shared components and styles
 - `@repo/types` — Type and interface definitions
 - `@repo/shared` — Shared utilities
-

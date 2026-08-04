@@ -40,18 +40,26 @@ const countryCodes: CountryCode[] = [
   { iso: 'UZB', label: 'Uzbekistan', dialCode: '+998' },
 ];
 
+export interface ContactAddress {
+  label: string;
+  text: string;
+}
+
+
 interface ContactUIProps {
   backgroundImageSrc: string;
   backgroundImageAlt: string;
   getInTouchLabel: string;
   phoneShort: string;
   phoneFull: string;
-  addressLabel: string;
-  addressTitle: string;
-  addressText: string;
+  addresses: ContactAddress[];
   followLabel: string;
   socialLinks: SocialLink[];
   formTitle: string;
+  namePlaceholder: string;
+  surnamePlaceholder: string;
+  phonePlaceholder: string;
+  messagePlaceholder: string;
   submitLabel: string;
   phoneMinError: string;
   requiredError: string;
@@ -106,18 +114,21 @@ function sanitizePhoneInput(value: string): string {
 
 type SubmitStatus = 'idle' | 'loading' | 'success' | 'error';
 
+
 export function ContactUI({
   backgroundImageSrc,
   backgroundImageAlt,
   getInTouchLabel,
   phoneShort,
   phoneFull,
-  addressLabel,
-  addressTitle,
-  addressText,
+  addresses,
   followLabel,
   socialLinks,
   formTitle,
+  namePlaceholder,
+  surnamePlaceholder,
+  phonePlaceholder,
+  messagePlaceholder,
   submitLabel,
   phoneMinError,
   requiredError,
@@ -273,14 +284,15 @@ export function ContactUI({
               {phoneFull}
             </a>
           </div>
-          <div className={`${styles.infoGroup} ${styles.addressGroup}`}>
-            <div className={styles.labelRow}>
-              <span className={styles.label}>{addressLabel}</span>
-              <span className={styles.labelLine} />
+          {addresses.map((address, index) => (
+            <div key={index} className={`${styles.infoGroup} ${styles.addressGroup}`}>
+              <div className={styles.labelRow}>
+                <span className={styles.label}>{address.label}</span>
+                <span className={styles.labelLine} />
+              </div>
+              <p className={styles.addressText}>{address.text}</p>
             </div>
-            <p className={styles.addressTitle}>{addressTitle}</p>
-            <p className={styles.addressText}>{addressText}</p>
-          </div>
+          ))}
           <div className={`${styles.infoGroup} ${styles.followGroup}`}>
             <div className={styles.labelRow}>
               <span className={styles.labelFollow}>{followLabel}</span>
@@ -331,7 +343,7 @@ export function ContactUI({
                   <input
                     type="text"
                     name="name"
-                    placeholder="Name"
+                    placeholder={namePlaceholder}
                     className={`${styles.input} ${nameError ? styles.inputError : ''}`}
                     value={nameValue}
                     onChange={handleNameChange}
@@ -348,7 +360,7 @@ export function ContactUI({
                   <input
                     type="text"
                     name="surname"
-                    placeholder="Surname"
+                    placeholder={surnamePlaceholder}
                     className={`${styles.input} ${surnameError ? styles.inputError : ''}`}
                     value={surnameValue}
                     onChange={handleSurnameChange}
@@ -394,7 +406,7 @@ export function ContactUI({
                   <input
                     type="tel"
                     name="phone"
-                    placeholder="00 123 45 67"
+                    placeholder={phonePlaceholder}
                     className={`${styles.inputNumber} ${phoneError ? styles.inputError : ''}`}
                     value={phoneValue}
                     onChange={handlePhoneChange}
@@ -414,7 +426,7 @@ export function ContactUI({
                 <input
                   type="text"
                   name="message"
-                  placeholder="Message"
+                  placeholder={messagePlaceholder}
                   className={styles.input}
                   value={messageValue}
                   onChange={(e) => setMessageValue(e.target.value)}

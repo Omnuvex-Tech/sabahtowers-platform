@@ -27,7 +27,7 @@ export interface TypologiesUIProps {
 
 const REPEAT = 3;
 const CARD_TRANSITION_MS = 500;
-const DRAG_THRESHOLD_RATIO = 0.15; 
+const DRAG_THRESHOLD_RATIO = 0.15;
 const smoothEase = [0.16, 1, 0.3, 1] as const;
 
 const mainSectionVariants: Variants = {
@@ -64,7 +64,6 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
   const activeRealIndex = total > 0 ? ((trackIndex % total) + total) % total : 0;
   const [isPaused, setIsPaused] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
-
   const draggingRef = useRef(false);
   const hasMovedRef = useRef(false);
   const dragStartXRef = useRef(0);
@@ -94,27 +93,27 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
   }, [trackIndex, total]);
 
   useEffect(() => {
-  const updateStep = () => {
-    if (!trackRef.current) return;
-    const firstCard = trackRef.current.children[0] as HTMLElement | undefined;
-    if (!firstCard) return;
+    const updateStep = () => {
+      if (!trackRef.current) return;
+      const firstCard = trackRef.current.children[0] as HTMLElement | undefined;
+      if (!firstCard) return;
 
-    const cardWidth = firstCard.getBoundingClientRect().width;
-    const gap = parseFloat(
-      getComputedStyle(trackRef.current).columnGap ||
-      getComputedStyle(trackRef.current).gap ||
-      '0'
-    );
-    setStep(cardWidth + gap);
-  };
+      const cardWidth = firstCard.getBoundingClientRect().width;
+      const gap = parseFloat(
+        getComputedStyle(trackRef.current).columnGap ||
+        getComputedStyle(trackRef.current).gap ||
+        '0'
+      );
+      setStep(cardWidth + gap);
+    };
 
-  updateStep();
-  window.addEventListener('resize', updateStep);
-  return () => window.removeEventListener('resize', updateStep);
-}, [total]);
+    updateStep();
+    window.addEventListener('resize', updateStep);
+    return () => window.removeEventListener('resize', updateStep);
+  }, [total]);
 
 
-useEffect(() => {
+  useEffect(() => {
     if (total <= 1 || isPaused) return;
     const timer = setInterval(() => {
       move(1);
@@ -151,11 +150,11 @@ useEffect(() => {
     if (!draggingRef.current) return;
     draggingRef.current = false;
     const track = trackRef.current;
-    try { track?.releasePointerCapture(e.pointerId); } catch {}
+    try { track?.releasePointerCapture(e.pointerId); } catch { }
     setIsDragging(false);
     setIsPaused(false);
 
-    if (!hasMovedRef.current) return; 
+    if (!hasMovedRef.current) return;
 
     const delta = e.clientX - dragStartXRef.current;
     const threshold = step * DRAG_THRESHOLD_RATIO;
@@ -180,11 +179,9 @@ useEffect(() => {
             key={currentWordIndex}
             variants={titleWordVariants}
             custom={currentWordIndex}
-            style={{ display: "inline-block" }}
-          >
+            style={{ display: "inline-block" }}>
             {word}{"\u00A0"}
-          </motion.span>
-        );
+          </motion.span>);
       });
 
       if (segment.italic) {
@@ -206,11 +203,11 @@ useEffect(() => {
       </motion.h2>
 
       <motion.div className={styles.sliderOuter} variants={sliderOuterVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.15 }}>
-     <div className={styles.sliderViewport}>
+        <div className={styles.sliderViewport}>
           <div
             ref={trackRef}
             className={`${styles.track} ${isTransitioning ? styles.isSwiping : ''}`}
-            style={{ 
+            style={{
               transform: `translateX(-${offset}px)`,
               transition: isTransitioning ? `transform ${CARD_TRANSITION_MS}ms cubic-bezier(0.25, 0.1, 0.25, 1)` : 'none',
               cursor: isDragging ? 'grabbing' : 'grab',
@@ -219,15 +216,13 @@ useEffect(() => {
             onPointerDown={handlePointerDown}
             onPointerMove={handlePointerMove}
             onPointerUp={endDrag}
-            onPointerCancel={endDrag}
-          >
+            onPointerCancel={endDrag} >
             {extendedCards.map((card, index) => {
               const isActive = index === trackIndex;
               return (
                 <div
                   key={`${card.badge}-${index}`}
-                  className={`${styles.card} ${isActive ? styles.cardActive : ''}`}
-                >
+                  className={`${styles.card} ${isActive ? styles.cardActive : ''}`} >
                   <div className={styles.cardImageWrap}>
                     <Image src={card.imageSrc} alt={card.imageAlt} fill sizes="(max-width: 768px) 90vw, 500px" className={styles.cardImage} draggable={false} />
                   </div>
@@ -265,4 +260,4 @@ useEffect(() => {
       </motion.div>
     </motion.section>
   );
-}
+} 

@@ -74,6 +74,9 @@ export function FooterUI({
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+    const [locationPart, ...descParts] = addressText.split('\n\n');
+  const descriptionPart = descParts.join('\n\n');
+
   return (
     <motion.footer
       className={styles.footer}
@@ -127,8 +130,15 @@ export function FooterUI({
       </div>
 
       <div className={styles.mainRow}>
-        <p className={styles.addressText}>{addressText}</p>
-
+<p className={styles.addressText}>
+  <span className={styles.addressLocation}>{locationPart}</span>
+  {descriptionPart && (
+    <>
+      {'\n\n'}
+      <span className={styles.addressDescription}>{descriptionPart}</span>
+    </>
+  )}
+</p>
         <div className={styles.column}>
           <div className={styles.columnHeader}>
             <span className={styles.columnTitle}>{exploreTitle}</span>

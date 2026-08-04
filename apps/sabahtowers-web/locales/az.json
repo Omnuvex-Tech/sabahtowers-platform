@@ -17,7 +17,7 @@
     }
   },
   "exterior": {
-    "eyebrow": "Exterior Design",
+    "eyebrow": "Eksteryer dizaynı",
     "imageAlt": "Sabah Towers — Exterior",
     "slides": [
       "Bu konsepsiyada diqqət sakinlərin sağlamlığına və  asudə vaxtın keyfiyyətinə yönəlib.",
@@ -35,18 +35,18 @@
     "secondaryCtaLabel": "Bizimlə əlaqə"
   },
   "interior": {
-    "eyebrow": "Interior Design",
+    "eyebrow": "İnteryer dizaynı",
     "imageAlt": "Sabah Towers — Interior",
     "slides": [
       "Mənzillərin təmirsiz və sərbəst planlaşdırma ilə təhvil verilməsi öz zövqünüzə uyğun dizayn etmək azadlığı yaradır.",
-      "Səhəri sahil boyu gəzinti ilə qarşılayıb, günortanı aktiv idman sahələrində keçirmək buradakı gündəlik ritmin təbii hissəsidir.",
+      "Yaşayış sahənizi vərdişlərinizə uyğun formalaşdıraraq gün işığını və dəniz mənzərəsini necə qarşılayacağınız tamamilə sizin seçiminizdir.",
       "Hovuzlar, dəniz havası və sağlamlıq zonaları runsuz sakitlik yaradaraq bədəninizi hər gün yenidən bərpa edir."
     ],
     "primaryCtaLabel": "Qaleriya",
     "secondaryCtaLabel": "Bizimlə əlaqə"
   },
   "amenities": {
-    "eyebrow": "Exclusive Amenities",
+    "eyebrow": "Eksklüziv imkanlar",
     "title": "Burada hər bir sahə gündəlik həyatınızı daimi kurort mühitinə çevirmək üçün layihələndirilib.",
     "items": [
       {
@@ -82,7 +82,7 @@
     ]
   },
   "typologies": {
-    "eyebrow": "Residential Typologies",
+    "eyebrow": "Mənzil növləri",
     "titleSegments": [
       {
         "text": "Müasir həyat"
@@ -181,17 +181,23 @@
   "contact": {
     "backgroundImageAlt": "Sabah Towers",
     "getInTouchLabel": "BİZİMLƏ ƏLAQƏ",
-    "addressLabel": "ÜNVAN",
-    "addressTitle": "Sea Breeze, Azərbaycan",
-    "addressText": "Sabah Towers, Bakı Azərbaycan",
+     "addresses": [
+    { "label": "Bakı Satış Ofisi", "title": "", "text": "Ziya Yusifzadə 10, Sabah Residence" },
+    { "label": "Sea Breeze Satış Ofisi", "title": "", "text": "Mikayıl Müşfiq küçəsi, Nardaran, Bakı 1907" }
+  ],
     "followLabel": "BİZİ İZLƏYİN",
     "formTitle": "Marağınızı bildirin",
     "submitLabel": "Göndər",
     "phoneMinError": "Minimum 5 rəqəm daxil edin",
-    "requiredError": "Bu sahə mütləqdir"
+    "requiredError": "Bu sahə mütləqdir",
+      "namePlaceholder": "Ad",
+  "surnamePlaceholder": "Soyad",
+  "phonePlaceholder": "00 123 45 67",
+  "messagePlaceholder": "Mesaj"
+
   },
   "footer": {
-    "addressText": "Sabah Towers Yaşayış Kompleksi, Sea Breeze, Bakı, Azərbaycan. Aktiv həyat tərzi və ailəvi istirahət üçün layihələndirilmiş yaşayış mühiti.",
+    "addressText": "Aktiv həyat tərzi və ailəvi istirahət üçün layihələndirilmiş yaşayış mühiti. Burada dəniz sahilindəki dinamika gündəlik vərdişə, kurort rahatlığı isə evinizin daimi hissəsinə çevrilir.",
     "exploreTitle": "KƏŞF ET",
     "exploreLinks": {
       "about": "HAQQIMIZDA",
