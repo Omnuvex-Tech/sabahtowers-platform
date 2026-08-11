@@ -42,7 +42,7 @@ export default async function Home({
             <Amenities locale={locale} />
             <Typologies locale={locale} />
             <Contact locale={locale} />
-            <MapLocation />
+            <MapLocation locale={locale} />            
             <Footer locale={locale} />
         </>
     );

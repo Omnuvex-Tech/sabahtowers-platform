@@ -176,13 +176,13 @@
   },
   "contact": {
     "backgroundImageAlt": "Sabah Towers",
-    "getInTouchLabel": "Свяжитесь с нами",
+    "getInTouchLabel": "Наши контактные номера",
    "addresses": [
     { "label": "Офис продаж в Баку", "text": "ул. Зии Юсифзаде 10, Sabah Residence" },
     { "label": "Офис продаж в Sea Breeze", "text": "ул. Микаила Мушфига, Нардаран, Баку 1907" }
   ],
     "followLabel": "Подписывайтесь на нас",
-    "formTitle": "Выразите свой интерес",
+    "formTitle": "Свяжитесь с нами",
     "submitLabel": "Отправить",
     "phoneMinError": "Введите минимум 5 цифр",
     "requiredError": "Это поле обязательно",
@@ -203,5 +203,9 @@
     "getInTouchTitle": "СВЯЗАТЬСЯ С НАМИ",
     "followTitle": "ПОДПИСЫВАЙТЕСЬ",
     "copyrightText": "COPYRIGHT© 2026 | SABAH TOWERS"
-  }
+  },
+"mapLocation": {
+  "mapImageAlt": "Карта расположения Sabah Towers",
+  "viewOnMapLabel": "Посмотреть на карте"
+}
 }

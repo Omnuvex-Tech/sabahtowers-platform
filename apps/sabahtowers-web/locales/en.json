@@ -177,13 +177,13 @@
   },
   "contact": {
     "backgroundImageAlt": "Sabah Towers",
-    "getInTouchLabel": "Get in touch",
+    "getInTouchLabel": "Our contact numbers",
  "addresses": [
     { "label": "Baku Sales Office", "text": "10 Ziya Yusifzade str., Sabah Residence" },
     { "label": "Sea Breeze Sales Office", "text": "Mikayil Mushfig str., Nardaran, Baku 1907" }
   ],
     "followLabel": "Follow us",
-    "formTitle": "Express your interest",
+    "formTitle": "Contact us",
     "submitLabel": "Submit",
     "phoneMinError": "Enter at least 5 digits",
     "requiredError": "This field is required",
@@ -204,5 +204,9 @@
     "getInTouchTitle": "GET IN TOUCH",
     "followTitle": "FOLLOW US",
     "copyrightText": "COPYRIGHT© 2026 | SABAH TOWERS"
-  }
+  },
+"mapLocation": {
+  "mapImageAlt": "Sabah Towers location map",
+  "viewOnMapLabel": "View on map"
+}
 }

@@ -17,7 +17,7 @@
     }
   },
   "exterior": {
-    "eyebrow": "Eksteryer dizaynı",
+    "eyebrow": "EKSTERYER DİZAYNI",
     "imageAlt": "Sabah Towers — Exterior",
     "slides": [
       "Bu konsepsiyada diqqət sakinlərin sağlamlığına və  asudə vaxtın keyfiyyətinə yönəlib.",
@@ -35,7 +35,7 @@
     "secondaryCtaLabel": "Bizimlə əlaqə"
   },
   "interior": {
-    "eyebrow": "İnteryer dizaynı",
+    "eyebrow": "İNTERYER DİZAYNI",
     "imageAlt": "Sabah Towers — Interior",
     "slides": [
       "Mənzillərin təmirsiz və sərbəst planlaşdırma ilə təhvil verilməsi öz zövqünüzə uyğun dizayn etmək azadlığı yaradır.",
@@ -46,7 +46,7 @@
     "secondaryCtaLabel": "Bizimlə əlaqə"
   },
   "amenities": {
-    "eyebrow": "Eksklüziv imkanlar",
+    "eyebrow": "EKSKLÜZİV İMKANLAR",
     "title": "Burada hər bir sahə gündəlik həyatınızı daimi kurort mühitinə çevirmək üçün layihələndirilib.",
     "items": [
       {
@@ -82,7 +82,7 @@
     ]
   },
   "typologies": {
-    "eyebrow": "Mənzil növləri",
+    "eyebrow": "MƏNZİL NÖVLƏRİ",
     "titleSegments": [
       {
         "text": "Müasir həyat"
@@ -180,13 +180,13 @@
   },
   "contact": {
     "backgroundImageAlt": "Sabah Towers",
-    "getInTouchLabel": "BİZİMLƏ ƏLAQƏ",
+    "getInTouchLabel": "Əlaqə nömrələrimiz",
      "addresses": [
     { "label": "Bakı Satış Ofisi", "title": "", "text": "Ziya Yusifzadə 10, Sabah Residence" },
     { "label": "Sea Breeze Satış Ofisi", "title": "", "text": "Mikayıl Müşfiq küçəsi, Nardaran, Bakı 1907" }
   ],
-    "followLabel": "BİZİ İZLƏYİN",
-    "formTitle": "Marağınızı bildirin",
+    "followLabel": "Bizi İZLƏYİN",
+    "formTitle": "Bizimlə əlaqə",
     "submitLabel": "Göndər",
     "phoneMinError": "Minimum 5 rəqəm daxil edin",
     "requiredError": "Bu sahə mütləqdir",
@@ -208,5 +208,9 @@
     "getInTouchTitle": "BİZİMLƏ ƏLAQƏ",
     "followTitle": "BİZİ İZLƏYİN",
     "copyrightText": "COPYRIGHT© 2026 | SABAH TOWERS"
-  }
+  },
+"mapLocation": {
+  "mapImageAlt": "Sabah Towers məkan xəritəsi",
+  "viewOnMapLabel": "Xəritədə bax"
+}
 }
