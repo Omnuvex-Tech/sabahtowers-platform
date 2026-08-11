@@ -180,13 +180,13 @@
   },
   "contact": {
     "backgroundImageAlt": "Sabah Towers",
-    "getInTouchLabel": "Əlaqə nömrələrimiz",
+    "getInTouchLabel": "Əlaqə Nömrələrimiz",
      "addresses": [
     { "label": "Bakı Satış Ofisi", "title": "", "text": "Ziya Yusifzadə 10, Sabah Residence" },
     { "label": "Sea Breeze Satış Ofisi", "title": "", "text": "Mikayıl Müşfiq küçəsi, Nardaran, Bakı 1907" }
   ],
-    "followLabel": "Bizi İZLƏYİN",
-    "formTitle": "Bizimlə əlaqə",
+    "followLabel": "BİZİ İZLƏYİN",
+    "formTitle": "Bizimlə Əlaqə",
     "submitLabel": "Göndər",
     "phoneMinError": "Minimum 5 rəqəm daxil edin",
     "requiredError": "Bu sahə mütləqdir",
