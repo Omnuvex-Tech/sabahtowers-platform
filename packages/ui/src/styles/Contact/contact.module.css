@@ -439,12 +439,12 @@
     .infoCard,
     .formCard {
         padding: 24px;
-        gap: 32px;
+        gap: 21px;
     }
 
     .row {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 18px;
     }
 
     .form {
@@ -488,7 +488,7 @@
 
     .input,
     .inputNumber {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .codeField {
@@ -499,6 +499,7 @@
     .submitBtn {
         width: 100%;
         align-self: stretch;
+        margin-top: 21px;
     }
 }
 
@@ -510,10 +511,11 @@
     .infoCard,
     .formCard {
         padding: 20px;
+        gap: 21px;
         border-radius: 18px;
-        gap: 24px;
     }
 
+      .infoCard{gap: 0;}
     .getInTouchGroup {
         gap: 12px;
     }
@@ -569,13 +571,13 @@
 
     .input,
     .inputNumber {
-        font-size: 16px;
+        font-size: 14px;
         padding: 6px 2px 8px 3px;
     }
 
     .codeField {
         width: 96px;
-        font-size: 15px;
+        font-size: 14px;
         padding: 8px 0;
     }
 
@@ -590,5 +592,6 @@
     .submitBtn {
         height: 52px;
         font-size: 15px;
+        margin-top: 21px;
     }
 }

@@ -20,7 +20,7 @@
   border-radius: 14px;
   justify-content: center;
   align-items: center;
-  width: 190px;
+  width: fit-content;
   height: 54px;
   padding: 12px 20px;
   font-family: "Bai Jamjuree", sans-serif;

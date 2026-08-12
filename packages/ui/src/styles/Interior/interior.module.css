@@ -193,7 +193,7 @@
     .exterior .box {
         height: auto;
         min-height: 460px;
-        padding: 60px 40px 32px 40px;
+        padding: 120px 40px 32px 40px;
     }
 
     .exterior .image {
@@ -228,9 +228,15 @@
     .btnPrimary,
     .btnSecondary {
         width: 160px;
-        height: 48px;
+        height: 408px;
         font-size: 15px;
     }
+
+    .navIcon {
+        height: 30px;
+        width: 30px;
+    }
+
 }
 
 @media (max-width: 640px) {
@@ -256,7 +262,7 @@
         height: auto;
         min-height: 340px;
         border-radius: 24px;
-        padding: 52px 20px 20px 20px;
+        padding: 75px 20px 20px 20px;
     }
 
     .exterior .box>div {
@@ -273,24 +279,24 @@
     }
 
     .title {
-        font-size: 22px;
+        font-size: 18px;
         line-height: 28px;
     }
 
-    .actions {
-        flex-direction: column;
+.actions {
+        flex-direction: row;
         width: 100%;
         gap: 12px;
     }
 
     .btnPrimary,
     .btnSecondary {
-        width: 100%;
+        flex: 1;
+        width: auto;
         height: 46px;
         font-size: 14px;
         border-radius: 12px;
     }
-
     .footer {
         gap: 16px;
     }

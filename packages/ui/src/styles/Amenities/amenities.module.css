@@ -124,25 +124,30 @@
         padding: 40px 0;
     }
 
-    .eyebrowRow,
-    .title {
+    .eyebrowRow {
         margin-left: 20px;
         margin-right: 20px;
+            margin: 0 68px 11px 21px;
     }
+
+
+    .title{ margin-left: 20px;
+        margin-right: 20px;}
 
     .eyebrowLine {
         display: none;
     }
 
     .title {
-        font-size: 26px;
+      margin-bottom: 5px;
+        font-size: 16px;
         line-height: 34px;
-        margin-bottom: 32px;
     }
+    
 
     .grid {
         grid-template-columns: 1fr;
-        padding: 24px 20px 32px 20px;
+        padding: 24px 20px 0px 20px;
         gap: 28px;
     }
 
@@ -154,4 +159,8 @@
         width: 100%;
         max-width: 260px;
     }
+
+    .itemTitle{font-size: 20px;}
+    .itemDescription{font-size: 16px;}
+    .eyebrow{font-size: 18px;}
 }

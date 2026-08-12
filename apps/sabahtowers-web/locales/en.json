@@ -22,7 +22,6 @@
     "slides": [
       "This concept focuses on the residents' health and quality leisure time",
       "Thanks to outdoor pools and a cafe offering organic flavors, there’s no need to make extra vacation plans.",
-      "3A minimalist union of resort presence with sustainable architecture, panoramic sea views, and urban dynamism.",
       "The layout of the complex caters to diverse interests, creating a continuous resort atmosphere."
     ],
     "primaryCtaLabel": "Gallery",
@@ -177,13 +176,13 @@
   },
   "contact": {
     "backgroundImageAlt": "Sabah Towers",
-    "getInTouchLabel": "Our contact numbers",
+    "getInTouchLabel": "Our Contact Numbers",
  "addresses": [
     { "label": "Baku Sales Office", "text": "10 Ziya Yusifzade str., Sabah Residence" },
     { "label": "Sea Breeze Sales Office", "text": "Mikayil Mushfig str., Nardaran, Baku 1907" }
   ],
     "followLabel": "Follow us",
-    "formTitle": "Contact us",
+    "formTitle": "Contact Us",
     "submitLabel": "Submit",
     "phoneMinError": "Enter at least 5 digits",
     "requiredError": "This field is required",

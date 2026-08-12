@@ -281,6 +281,8 @@
         margin-right: 16px;
     }
 
+
+    .eyebrowRow{    margin: 0 60px 7px 17px;}
     .eyebrowLine {
         display: none;
     }
@@ -297,12 +299,17 @@
         gap: 0 !important;
     }
 
+
+    .eyebrow{font-size: 18px;}
+    .eyebrowLine{font-size: 16px;}
     .title,
     .titleItalic {
-        font-size: 24px;
-        line-height: 32px;
+              font-size: 16px;
+        line-height: 27px;
     }
 
+
+    .title{margin: 0 28px 15px 16px;}
     .card,
     .cardActive {
         width: calc(100vw - 32px) !important;
@@ -327,4 +334,10 @@
     .cardActive .cardBadge {
         max-height: none !important;
     }
+
+    .cardBadge{font-size: 18px;}
+    .cardDescription{font-size: 16px;}
+.featureItem{font-size: 13px;}
+    .featureIcon{width: 21px; height: 21px;}
+    .cardContent{gap: 9px;}
 }
