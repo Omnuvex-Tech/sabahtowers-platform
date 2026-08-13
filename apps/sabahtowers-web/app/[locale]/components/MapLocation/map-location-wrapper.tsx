@@ -9,7 +9,7 @@ export function MapLocation({ locale }: { locale: string }) {
       mapImageSrc="/images/old-map.jpg"
       mapImageAlt={t.mapLocation.mapImageAlt}
       viewOnMapLabel={t.mapLocation.viewOnMapLabel}
-      viewOnMapHref="https://maps.app.goo.gl/4T9Ja645pfEto97j7"
+      viewOnMapHref="https://www.google.com/maps/place/Sabah+Towers+Sea+Breeze/@40.5808125,49.9271875,17z/data=!4m2!3m1!1s0x4030f37b01907189:0xeab873444182bd84"
     />
   );
 }

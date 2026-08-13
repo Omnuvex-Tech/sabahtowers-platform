@@ -1,10 +1,23 @@
 import { normalizer } from "@repo/shared/utils";
+import az from "@/locales/az.json";
+import en from "@/locales/en.json";
+import ru from "@/locales/ru.json";
+
+export type Locale = "az" | "en" | "ru";
+
+const SEO_BY_LOCALE: Record<Locale, { projectName: string; projectDescription: string; keywords: string[] }> = {
+  az: az.seo,
+  en: en.seo,
+  ru: ru.seo,
+};
 
 export const project = {
-    url: normalizer.string(process.env.NEXT_PUBLIC_APP_URL),
-    name: normalizer.string(process.env.NEXT_PUBLIC_APP_NAME),
-    projectName: "Sabah Towers Sea Breeze",
-    projectDescription: "Sabah Towers - Azərbaycanın Sea Breeze ərazisində fərdi və tam bərpa proseslərini mərkəzə alan ilk 'Longevity Wellness' konseptini təqdim edir.",
-    keywords: ["Sabah Towers", "Sea Breeze", "Longevity Wellness", "Sea Breeze mənzillər", "Sabah Towers mənzil qiymətləri", "Sabah Towers mənzillər", "Sea Breeze mənzil qiymətləri", "Sabah Towers ünvanı", "Sabah Towers hardadı", "Sabah Towers Sea Breeze", "Sabah Towers Azərbaycan", "Sabah Towers Bakı", "Bakı", "Azərbaycan", "Sea Breeze ev qiymətləri", "Sea Breeze evlər", "ev qiymətləri"],
-    defLang: "az",
-} as const; 
+  url: normalizer.string(process.env.NEXT_PUBLIC_APP_URL),
+  name: normalizer.string(process.env.NEXT_PUBLIC_APP_NAME),
+  defLang: "az" as Locale,
+};
+
+export function getSeo(locale: string) {
+  const lang = (locale as Locale) in SEO_BY_LOCALE ? (locale as Locale) : project.defLang;
+  return SEO_BY_LOCALE[lang];
+}
