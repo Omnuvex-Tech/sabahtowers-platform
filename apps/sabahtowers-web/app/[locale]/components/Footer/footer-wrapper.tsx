@@ -34,6 +34,11 @@ export function Footer({ locale }: { locale: string }) {
     { label: t.footer.exploreLinks.contact, href: '#contact' },
   ];
 
+  const privacyPolicyLink: FooterLink = {
+    label: t.footer.exploreLinks.privacyPolicy,
+    href: `/${locale}/privacypolicy`,
+  };
+
   return (
     <FooterUI
       locales={locales}
@@ -42,6 +47,7 @@ export function Footer({ locale }: { locale: string }) {
       addressText={t.footer.addressText}
       exploreTitle={t.footer.exploreTitle}
       exploreLinks={exploreLinks}
+      privacyPolicyLink={privacyPolicyLink}
       getInTouchTitle={t.footer.getInTouchTitle}
       phoneShort="*2662"
       phoneFull="+994 50 277 2662"

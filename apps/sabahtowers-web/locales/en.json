@@ -198,7 +198,8 @@
       "about": "ABOUT",
       "brokers": "BROKERS",
       "units": "UNITS",
-      "contact": "CONTACT"
+      "contact": "CONTACT",
+      "privacyPolicy": "PRIVACY POLICY"
     },
     "getInTouchTitle": "GET IN TOUCH",
     "followTitle": "FOLLOW US",
@@ -213,5 +214,19 @@
     "projectName": "Sabah Towers Sea Breeze - Seaside Apartments",
     "projectDescription": "Sabah Towers introduces Azerbaijan's first 'Longevity Wellness' concept in the Sea Breeze area, centered on personalized and complete rejuvenation processes.",
     "keywords": ["Sabah Towers", "Sea Breeze", "Longevity Wellness", "Sea Breeze apartments", "Sabah Towers apartment prices", "Sabah Towers apartments", "Sea Breeze apartment prices", "Sabah Towers address", "Sabah Towers location", "Sabah Towers Sea Breeze", "Sabah Towers Azerbaijan", "Sabah Towers Baku", "Baku", "Azerbaijan", "Sea Breeze home prices", "Sea Breeze homes", "home prices"]
-  }
+  },
+  "privacyPolicy": {
+  "title": "PRIVACY POLICY",
+  "intro": "As Sabah Towers, we guarantee the privacy of personal data of users visiting our website.",
+  "items": [
+    {
+      "title": "1. Data Collection and Usage",
+      "description": "When you fill out contact forms, the provided name, surname, phone number, and email address, as well as automatic cookie indicators, are collected. This data is used solely for the following purposes: informing you about apartments, prices, and sales terms; responding to your inquiries and contacting you; improving website performance and user experience."
+    },
+    {
+      "title": "2. Data Sharing and Security",
+      "description": "Your personal data is not sold or rented to third parties. Information may only be shared with third parties as required by law or with trusted partners providing technical support to the website (subject to confidentiality)."
+    }
+  ]
+}
 }

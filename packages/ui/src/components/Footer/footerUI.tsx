@@ -33,9 +33,10 @@ interface FooterUIProps {
   phoneFull: string;
   followTitle: string;
   socialLinks: FooterSocialLink[];
-  wordmarkSrc: string;
+wordmarkSrc: string;
   wordmarkAlt: string;
   copyrightText: string;
+  privacyPolicyLink: FooterLink;
 }
 
 const ultraSmoothEase = [0.25, 1, 0.2, 1] as const;
@@ -66,9 +67,10 @@ export function FooterUI({
   phoneFull,
   followTitle,
   socialLinks,
-  wordmarkSrc,
+wordmarkSrc,
   wordmarkAlt,
   copyrightText,
+  privacyPolicyLink,
 }: FooterUIProps) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -209,9 +211,15 @@ export function FooterUI({
           className={styles.wordmarkImage}
         />
       </div>
-
-      <div className={styles.copyrightRow}>
+<div className={styles.copyrightRow}>
         <span className={styles.copyrightText}>{copyrightText}</span>
+        <a
+          href={privacyPolicyLink.href}
+          className={styles.privacyLink}
+          onClick={(e) => handleAnchorClick(e, privacyPolicyLink.href)}
+        >
+          {privacyPolicyLink.label}
+        </a>
       </div>
     </motion.footer>
   );

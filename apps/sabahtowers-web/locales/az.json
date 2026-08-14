@@ -181,20 +181,27 @@
   "contact": {
     "backgroundImageAlt": "Sabah Towers",
     "getInTouchLabel": "Əlaqə Nömrələrimiz",
-     "addresses": [
-    { "label": "Bakı Satış Ofisi", "title": "", "text": "Ziya Yusifzadə 10, Sabah Residence" },
-    { "label": "Sea Breeze Satış Ofisi", "title": "", "text": "Mikayıl Müşfiq küçəsi, Nardaran, Bakı 1907" }
-  ],
+    "addresses": [
+      {
+        "label": "Bakı Satış Ofisi",
+        "title": "",
+        "text": "Ziya Yusifzadə 10, Sabah Residence"
+      },
+      {
+        "label": "Sea Breeze Satış Ofisi",
+        "title": "",
+        "text": "Mikayıl Müşfiq küçəsi, Nardaran, Bakı 1907"
+      }
+    ],
     "followLabel": "BİZİ İZLƏYİN",
     "formTitle": "Bizimlə Əlaqə",
     "submitLabel": "Göndər",
     "phoneMinError": "Minimum 5 rəqəm daxil edin",
     "requiredError": "Bu sahə mütləqdir",
-      "namePlaceholder": "Ad",
-  "surnamePlaceholder": "Soyad",
-  "phonePlaceholder": "00 123 45 67",
-  "messagePlaceholder": "Mesaj"
-
+    "namePlaceholder": "Ad",
+    "surnamePlaceholder": "Soyad",
+    "phonePlaceholder": "00 123 45 67",
+    "messagePlaceholder": "Mesaj"
   },
   "footer": {
     "addressText": "Aktiv həyat tərzi və ailəvi istirahət üçün layihələndirilmiş yaşayış mühiti. Burada dəniz sahilindəki dinamika gündəlik vərdişə, kurort rahatlığı isə evinizin daimi hissəsinə çevrilir.",
@@ -203,22 +210,52 @@
       "about": "HAQQIMIZDA",
       "brokers": "BROKERLƏR",
       "units": "MƏNZİLLƏR",
-      "contact": "ƏLAQƏ"
+      "contact": "ƏLAQƏ",
+      "privacyPolicy": "MƏXFİLİK SİYASƏTİ"
     },
     "getInTouchTitle": "BİZİMLƏ ƏLAQƏ",
     "followTitle": "BİZİ İZLƏYİN",
     "copyrightText": "COPYRIGHT© 2026 | SABAH TOWERS"
   },
-"mapLocation": {
-  "mapImageAlt": "Sabah Towers məkan xəritəsi",
-  "viewOnMapLabel": "Xəritədə bax"
-},
-
-
+  "mapLocation": {
+    "mapImageAlt": "Sabah Towers məkan xəritəsi",
+    "viewOnMapLabel": "Xəritədə bax"
+  },
   "seo": {
     "projectName": "Sabah Towers Sea Breeze - Dəniz Kənarı Mənzillər",
     "projectDescription": "Sabah Towers - Azərbaycanın Sea Breeze ərazisində fərdi və tam bərpa proseslərini mərkəzə alan ilk 'Longevity Wellness' konseptini təqdim edir.",
-    "keywords": ["Sabah Towers", "Sea Breeze", "Longevity Wellness", "Sea Breeze mənzillər", "Sabah Towers mənzil qiymətləri", "Sabah Towers mənzillər", "Sea Breeze mənzil qiymətləri", "Sabah Towers ünvanı", "Sabah Towers hardadı", "Sabah Towers Sea Breeze", "Sabah Towers Azərbaycan", "Sabah Towers Bakı", "Bakı", "Azərbaycan", "Sea Breeze ev qiymətləri", "Sea Breeze evlər", "ev qiymətləri"]
+    "keywords": [
+      "Sabah Towers",
+      "Sea Breeze",
+      "Longevity Wellness",
+      "Sea Breeze mənzillər",
+      "Sabah Towers mənzil qiymətləri",
+      "Sabah Towers mənzillər",
+      "Sea Breeze mənzil qiymətləri",
+      "Sabah Towers ünvanı",
+      "Sabah Towers hardadı",
+      "Sabah Towers Sea Breeze",
+      "Sabah Towers Azərbaycan",
+      "Sabah Towers Bakı",
+      "Bakı",
+      "Azərbaycan",
+      "Sea Breeze ev qiymətləri",
+      "Sea Breeze evlər",
+      "ev qiymətləri"
+    ]
+  },
+  "privacyPolicy": {
+    "title": "MƏXFİLİK SİYASƏTİ",
+    "intro": "Sabah Towers olaraq vebsaytımızı ziyarət edən istifadəçilərin fərdi məlumatlarının məxfiliyini qorumağa zəmanət veririk.",
+    "items": [
+      {
+        "title": "1. Məlumatların toplanması və istifadəsi",
+        "description": "Əlaqə formalarını doldurduğunuz zaman təqdim etdiyiniz ad, soyad, telefon və e-poçt məlumatları, həmçinin avtomatik kuki (cookie) göstəriciləri toplanır. Bu məlumatlar yalnız aşağıdakı məqsədlər üçün istifadə olunur: mənzillər, qiymət və satış şərtləri haqqında sizi məlumatlandırmaq; sorğularınıza cavab vermək və sizinlə əlaqə saxlamaq; vebsaytın işini və istifadəçi təcrübəsini təkmilləşdirmək."
+      },
+      {
+        "title": "2. Məlumatların paylaşılması və təhlükəsizlik",
+        "description": "Fərdi məlumatlarınız üçüncü şəxslərə satılmır və icarəyə verilmir. Məlumatlar yalnız qanunvericiliyin tələbi olduqda və ya vebsayta texniki dəstək göstərən etibarlı tərəfdaşlarla (məxfilik qorunmaq şərtilə) paylaşıla bilər."
+      }
+    ]
   }
-
 }

@@ -100,7 +100,7 @@
 .columnRight {
     display: flex;
     flex-direction: column;
-    margin-left: 93px;
+    margin-left: 45px;
 }
 
 .columnHeader {
@@ -114,7 +114,7 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 11px;
 }
 
 .columnTitleRight {
@@ -157,7 +157,7 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 17px;
 }
 
 .link {
@@ -255,8 +255,10 @@
     z-index: 2;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 8px 0;
+    justify-content: space-between;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 8px 67px;
     border-top: 1px solid rgba(186, 223, 228, 1);
     background-color: rgba(186, 223, 228, 1);
 }
@@ -264,13 +266,28 @@
 .copyrightText {
     font-family: 'Bai Jamjuree', sans-serif;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 20px;
     letter-spacing: 0.1px;
     text-transform: uppercase;
     color: rgba(2, 59, 76, 1);
 }
 
+.privacyLink {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+    color: rgba(2, 59, 76, 1);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.privacyLink:hover {
+    opacity: 0.7;
+}
 @media (max-width: 1024px) {
     .footer {
         height: auto;
@@ -331,6 +348,9 @@
     .phoneLink {
         font-size: 19px;
         line-height: 28px;
+    }
+    .copyrightRow {
+        padding: 8px 32px;
     }
 }
 
@@ -424,5 +444,15 @@
 
     .copyrightText {
         font-size: 12px;
+    }
+
+    .copyrightRow {
+        padding: 10px 20px;
+        gap: 8px;
+    }
+
+    .copyrightText,
+    .privacyLink {
+        font-size: 11px;
     }
 }

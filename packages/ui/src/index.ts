@@ -15,5 +15,6 @@ export { EcosystemUI } from "./components/Ecosystem/ecosystemUI"
 export { ExteriorUI } from "./components/Exterior/exteriorUI"
 export{InteriorUI} from "./components/Interior/interiorUI"
 export {AmenitiesUI} from "./components/Amenities/amenitiesUI"
+export {PrivacyPolicyUI} from "./components/PrivacyPolicy/privacyPolicyUI"
 
 export { cn } from "./lib/utils";

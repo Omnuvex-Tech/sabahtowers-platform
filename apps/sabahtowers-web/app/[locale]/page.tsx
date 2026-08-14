@@ -2,6 +2,7 @@ import type { Language, Translation } from "@repo/types/types";
 import { api } from "@/lib/api";
 import { config } from "@/config";
 import { getDictionary } from "@/lib/i18n";
+import { getHomeSchema } from "@/lib/structured-data";
 import { Hero } from "./components/Hero/hero-wrapper";
 import { Ecosystem } from "./components/Ecosystem/ecosystem-wrapper";
 import { Exterior } from "./components/Exterior/exterior-wrapper";
@@ -33,8 +34,15 @@ export default async function Home({
             </div>
         );
     }
+
+    const structuredData = getHomeSchema(locale as "az" | "en" | "ru");
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
             <Hero locale={locale} />
             <Ecosystem locale={locale} />
             <Exterior locale={locale} />
