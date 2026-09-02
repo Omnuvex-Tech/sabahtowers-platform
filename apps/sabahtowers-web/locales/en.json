@@ -115,7 +115,8 @@
           "37.74 M² Studio (Living Room + Kitchen)",
           "2 separate balconies with internal access",
           "Separate walk-in closet and bathroom"
-        ]
+        ],
+        "rooms": 1
       },
       {
         "imageAlt": "2 BEDROOM APARTMENT",
@@ -126,7 +127,8 @@
           "25.36 M² Studio (Living Room + Kitchen)",
           "2 separate bedrooms and 2 bathrooms",
           "Spacious balcony area"
-        ]
+        ],
+        "rooms": 2
       },
       {
         "imageAlt": "STUDIO APARTMENT",
@@ -137,7 +139,9 @@
           "22.62 M² Spacious studio zone",
           "Balcony for outdoor relaxation",
           "Optimal layout for hallway and bathroom"
-        ]
+        ],
+        "rooms": 0
+
       },
       {
         "imageAlt": "1-Bedroom Apartment",
@@ -148,7 +152,8 @@
           "36.44 m² studio (living room + kitchen)",
           "Expansive balcony for natural sunlight and outdoor air",
           "Walk-in closet and optimized hallway spatial layout"
-        ]
+        ],
+        "rooms": 1
       },
       {
         "imageAlt": "2-Bedroom Apartment",
@@ -159,7 +164,8 @@
           "27.39 m² studio (living room + kitchen)",
           "2 separate bedrooms and 2 bathrooms",
           "Large balcony zone for outdoor relaxation"
-        ]
+        ],
+        "rooms": 2
       },
       {
         "imageAlt": "Studio Apartment",
@@ -170,7 +176,8 @@
           "20.60 m² combined living and kitchen area",
           "Balcony for outdoor relaxation",
           "Optimal hallway and bathroom arrangement"
-        ]
+        ],
+        "rooms": 0
       }
     ]
   },

@@ -119,7 +119,8 @@
           "37,74 M² STUDİYA (QONAQ OTAĞI + MƏTBƏX)",
           "İÇƏRİDƏN ÇIXIŞLI 2 AYRI EYVAN",
           "AYRICA QARDEROB VƏ SANİTAR QOVŞAQ"
-        ]
+        ],
+        "rooms": 1
       },
       {
         "imageAlt": "Studio",
@@ -130,7 +131,8 @@
           "25,36 M² STUDİYA (QONAQ OTAĞI + MƏTBƏX)",
           "2 AYRI YATAQ OTAĞI VƏ 2 SANİTAR QOVŞAQ",
           "GENİŞ EYVAN ZONASI"
-        ]
+        ],
+        "rooms": 2
       },
       {
         "imageAlt": "STUDİYA MƏNZİL",
@@ -141,7 +143,8 @@
           "22,62 M² GENİŞ STUDİYA ZONASI",
           "AÇIQ HAVADA İSTİRAHƏT ÜÇÜN EYVAN",
           "OPTİMAL DƏHLİZ VƏ SANİTAR QOVŞAQ BÖLGÜSÜ"
-        ]
+        ],
+        "rooms": 0
       },
       {
         "imageAlt": "1 YATAQ OTAQLI MƏNZİL",
@@ -152,7 +155,8 @@
           "36,44 M² STUDİYA (QONAQ OTAĞI + MƏTBƏX)",
           "GÜN İŞIĞI VƏ AÇIQ HAVA ÜÇÜN GENİŞ EYVAN",
           "AYRICA QARDEROB VƏ OPTİMAL DƏHLİZ BÖLGÜSÜ"
-        ]
+        ],
+        "rooms": 1
       },
       {
         "imageAlt": "2 YATAQ OTAQLI MƏNZİL",
@@ -163,7 +167,8 @@
           "27,39 M² STUDİYA (QONAQ OTAĞI + MƏTBƏX)",
           "2 AYRI YATAQ OTAĞI VƏ 2 SANİTAR QOVŞAQ",
           "AÇIQ HAVADA İSTİRAHƏT ÜÇÜN GENİŞ EYVAN ZONASI"
-        ]
+        ],
+        "rooms": 2
       },
       {
         "imageAlt": "STUDİYA MƏNZİL",
@@ -174,7 +179,8 @@
           "20,60 M² NƏZƏRƏ ÇARPAN YAŞAYIŞ VƏ MƏTBƏX ZONASI",
           "AÇIQ HAVADA İSTİRAHƏT ÜÇÜN EYVAN",
           "OPTİMAL DƏHLİZ VƏ SANİTAR QOVŞAQ BÖLGÜSÜ"
-        ]
+        ],
+        "rooms": 0
       }
     ]
   },

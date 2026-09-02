@@ -11,6 +11,7 @@ export interface TypologyCard {
   badge: string;
   description: string;
   features: string[];
+  href?: string;
 }
 
 export interface TitleSegment {
@@ -26,8 +27,7 @@ export interface TypologiesUIProps {
 }
 
 const REPEAT = 3;
-const CARD_TRANSITION_MS = 500;
-const DRAG_THRESHOLD_RATIO = 0.15;
+const AUTOPLAY_MS = 3000;
 const smoothEase = [0.16, 1, 0.3, 1] as const;
 
 const mainSectionVariants: Variants = {
@@ -63,11 +63,6 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
   const [step, setStep] = useState(486);
   const activeRealIndex = total > 0 ? ((trackIndex % total) + total) % total : 0;
   const [isPaused, setIsPaused] = useState(false);
-  const [isDragging, setIsDragging] = useState(false);
-  const draggingRef = useRef(false);
-  const hasMovedRef = useRef(false);
-  const dragStartXRef = useRef(0);
-  const dragBaseOffsetRef = useRef(0);
 
   const move = useCallback((dir: 1 | -1) => {
     if (isTransitioning || total <= 1) return;
@@ -112,61 +107,15 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
     return () => window.removeEventListener('resize', updateStep);
   }, [total]);
 
-
   useEffect(() => {
     if (total <= 1 || isPaused) return;
     const timer = setInterval(() => {
       move(1);
-    }, 2000);
+    }, AUTOPLAY_MS);
     return () => clearInterval(timer);
   }, [trackIndex, total, move, isPaused]);
 
   const offset = trackIndex * step;
-
-  const handlePointerDown = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
-    if (isTransitioning || total <= 1) return;
-    const track = trackRef.current;
-    if (!track) return;
-    draggingRef.current = true;
-    hasMovedRef.current = false;
-    dragStartXRef.current = e.clientX;
-    dragBaseOffsetRef.current = offset;
-    track.style.transition = 'none';
-    track.setPointerCapture(e.pointerId);
-    setIsPaused(true);
-    setIsDragging(true);
-  }, [isTransitioning, total, offset]);
-
-  const handlePointerMove = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
-    if (!draggingRef.current) return;
-    const track = trackRef.current;
-    if (!track) return;
-    const delta = e.clientX - dragStartXRef.current;
-    if (Math.abs(delta) > 4) hasMovedRef.current = true;
-    track.style.transform = `translateX(${-dragBaseOffsetRef.current + delta}px)`;
-  }, []);
-
-  const endDrag = useCallback((e: React.PointerEvent<HTMLDivElement>) => {
-    if (!draggingRef.current) return;
-    draggingRef.current = false;
-    const track = trackRef.current;
-    try { track?.releasePointerCapture(e.pointerId); } catch { }
-    setIsDragging(false);
-    setIsPaused(false);
-
-    if (!hasMovedRef.current) return;
-
-    const delta = e.clientX - dragStartXRef.current;
-    const threshold = step * DRAG_THRESHOLD_RATIO;
-
-    if (delta <= -threshold) {
-      move(1);
-    } else if (delta >= threshold) {
-      move(-1);
-    } else {
-      setIsTransitioning(true);
-    }
-  }, [step, move]);
 
   const renderAnimatedSegments = () => {
     let globalWordIndex = 0;
@@ -202,27 +151,29 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
         {renderAnimatedSegments()}
       </motion.h2>
 
-      <motion.div className={styles.sliderOuter} variants={sliderOuterVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.15 }}>
+      <motion.div
+        className={styles.sliderOuter}
+        variants={sliderOuterVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.15 }}
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
         <div className={styles.sliderViewport}>
           <div
             ref={trackRef}
             className={`${styles.track} ${isTransitioning ? styles.isSwiping : ''}`}
             style={{
               transform: `translateX(-${offset}px)`,
-              transition: isTransitioning ? `transform ${CARD_TRANSITION_MS}ms cubic-bezier(0.25, 0.1, 0.25, 1)` : 'none',
-              cursor: isDragging ? 'grabbing' : 'grab',
+              transition: isTransitioning ? `transform 500ms cubic-bezier(0.25, 0.1, 0.25, 1)` : 'none',
             }}
             onTransitionEnd={handleTransitionEnd}
-            onPointerDown={handlePointerDown}
-            onPointerMove={handlePointerMove}
-            onPointerUp={endDrag}
-            onPointerCancel={endDrag} >
+          >
             {extendedCards.map((card, index) => {
               const isActive = index === trackIndex;
-              return (
-                <div
-                  key={`${card.badge}-${index}`}
-                  className={`${styles.card} ${isActive ? styles.cardActive : ''}`} >
+              const cardInner = (
+                <>
                   <div className={styles.cardImageWrap}>
                     <Image src={card.imageSrc} alt={card.imageAlt} fill sizes="(max-width: 768px) 90vw, 500px" className={styles.cardImage} draggable={false} />
                   </div>
@@ -238,6 +189,20 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
                       ))}
                     </ul>
                   </div>
+                </>
+              );
+
+              return (
+                <div
+                  key={`${card.badge}-${index}`}
+                  className={`${styles.card} ${isActive ? styles.cardActive : ''}`} >
+                  {card.href ? (
+                    <a href={card.href} target="_blank" rel="noopener noreferrer" className={styles.cardLink}>
+                      {cardInner}
+                    </a>
+                  ) : (
+                    cardInner
+                  )}
                 </div>
               );
             })}
@@ -260,4 +225,4 @@ export function TypologiesUI({ eyebrow, titleSegments, cards, starIconSrc }: Typ
       </motion.div>
     </motion.section>
   );
-} 
+}

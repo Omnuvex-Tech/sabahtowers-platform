@@ -17,7 +17,7 @@ export function Typologies({ locale }: { locale: string }) {
 
   const cards: TypologyCard[] = t.typologies.cards.map(
     (
-      card: { imageAlt: string; badge: string; description: string; features: string[] },
+      card: { imageAlt: string; badge: string; description: string; features: string[]; rooms: number },
       i: number
     ) => ({
       imageSrc: imageSrcs[i] ?? "",
@@ -25,6 +25,7 @@ export function Typologies({ locale }: { locale: string }) {
       badge: card.badge,
       description: card.description,
       features: card.features,
+      href: `https://treva.realestate/${locale}/off-plan?category=sabah-towers&rooms=${card.rooms}`,
     })
   );
 
