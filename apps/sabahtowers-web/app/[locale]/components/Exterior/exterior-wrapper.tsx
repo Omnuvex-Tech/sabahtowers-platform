@@ -2,11 +2,12 @@ import { ExteriorUI } from "@repo/ui/components/Exterior/exteriorUI";
 import { getDictionary } from "@/lib/i18n";
 
 const exteriorImages = [
-  "/images/exterior1.png",
-  "/images/exterior2.png",
-  "/images/exterior3.jpeg",
+  "/images/exterior-7.png",
+  "/images/exterior9.png",
+  "/images/exterior8.png",
   "/images/exterior4.png",
-  "/images/exterior5.png"
+  "/images/exterior5.png",
+  "/images/exterior1.png"
 
 ];
 

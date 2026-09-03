@@ -10,9 +10,9 @@ export function Ecosystem({ locale }: { locale: string }) {
     <EcosystemUI
       title={t.ecosystem.title}
       description={t.ecosystem.description}
-      leftImageSrc="/images/img-hero2.jpg"
+      leftImageSrc="/images/ecosystem-1.jpeg"
       leftImageAlt={t.ecosystem.imageAlt}
-      rightImageSrc="/images/img-hero2.jpg"
+      rightImageSrc="/images/ecosystem.jpeg"
       rightImageAlt={t.ecosystem.imageAlt}
       iconSrc="/images/StarFour.svg"
       primaryCta={{ label: t.ecosystem.primaryCtaLabel, href: catalogueHref, download: true }}
