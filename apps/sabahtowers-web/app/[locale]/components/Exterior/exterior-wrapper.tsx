@@ -7,7 +7,12 @@ const exteriorImages = [
   "/images/exterior8.png",
   "/images/exterior4.png",
   "/images/exterior5.png",
-  "/images/exterior1.png"
+  "/images/exterior1.png",
+
+  "/images/exterior-10.jpeg",
+  "/images/exterior-11.jpeg",
+  "/images/exterior-12.jpeg",
+  "/images/exterior-13.jpeg"
 
 ];
 
