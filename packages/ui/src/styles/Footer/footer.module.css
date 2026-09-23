@@ -288,6 +288,48 @@
 .privacyLink:hover {
     opacity: 0.7;
 }
+
+.rightGroup {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.powered {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.powered:hover {
+    opacity: 0.7;
+}
+
+.poweredText {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+    color: rgba(2, 59, 76, 1);
+}
+
+.poweredBadge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.poweredLogo {
+object-fit: contain;
+    width: 71px;
+    height: 69px;
+    margin: -9px 0;
+}
+
 @media (max-width: 1024px) {
     .footer {
         height: auto;
@@ -453,6 +495,21 @@
 
     .copyrightText,
     .privacyLink {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .copyrightRow {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .rightGroup {
+        gap: 16px;
+    }
+
+    .poweredText {
         font-size: 11px;
     }
 }

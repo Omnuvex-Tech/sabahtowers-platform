@@ -33,10 +33,13 @@ interface FooterUIProps {
   phoneFull: string;
   followTitle: string;
   socialLinks: FooterSocialLink[];
-wordmarkSrc: string;
+  wordmarkSrc: string;
   wordmarkAlt: string;
   copyrightText: string;
   privacyPolicyLink: FooterLink;
+  poweredByLabel?: string;
+  poweredByHref?: string;
+  poweredByLogoSrc?: string;
 }
 
 const ultraSmoothEase = [0.25, 1, 0.2, 1] as const;
@@ -67,16 +70,19 @@ export function FooterUI({
   phoneFull,
   followTitle,
   socialLinks,
-wordmarkSrc,
+  wordmarkSrc,
   wordmarkAlt,
   copyrightText,
   privacyPolicyLink,
+  poweredByLabel = 'Powered by',
+  poweredByHref = 'https://omnuvex.net',
+  poweredByLogoSrc = '/images/omnuvexx.png',
 }: FooterUIProps) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-    const [locationPart, ...descParts] = addressText.split('\n\n');
+  const [locationPart, ...descParts] = addressText.split('\n\n');
   const descriptionPart = descParts.join('\n\n');
 
   return (
@@ -132,15 +138,15 @@ wordmarkSrc,
       </div>
 
       <div className={styles.mainRow}>
-<p className={styles.addressText}>
-  <span className={styles.addressLocation}>{locationPart}</span>
-  {descriptionPart && (
-    <>
-      {'\n\n'}
-      <span className={styles.addressDescription}>{descriptionPart}</span>
-    </>
-  )}
-</p>
+        <p className={styles.addressText}>
+          <span className={styles.addressLocation}>{locationPart}</span>
+          {descriptionPart && (
+            <>
+              {'\n\n'}
+              <span className={styles.addressDescription}>{descriptionPart}</span>
+            </>
+          )}
+        </p>
         <div className={styles.column}>
           <div className={styles.columnHeader}>
             <span className={styles.columnTitle}>{exploreTitle}</span>
@@ -211,15 +217,36 @@ wordmarkSrc,
           className={styles.wordmarkImage}
         />
       </div>
-<div className={styles.copyrightRow}>
+      <div className={styles.copyrightRow}>
         <span className={styles.copyrightText}>{copyrightText}</span>
-        <a
-          href={privacyPolicyLink.href}
-          className={styles.privacyLink}
-          onClick={(e) => handleAnchorClick(e, privacyPolicyLink.href)}
-        >
-          {privacyPolicyLink.label}
-        </a>
+
+        <div className={styles.rightGroup}>
+          <a
+            href={poweredByHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.powered}
+          >
+            <span className={styles.poweredText}>{poweredByLabel}</span>
+            <span className={styles.poweredBadge}>
+              <Image
+                src={poweredByLogoSrc}
+                alt="Omnuvex"
+                width={40}
+                height={40}
+                className={styles.poweredLogo}
+              />
+            </span>
+          </a>
+
+          <a
+            href={privacyPolicyLink.href}
+            className={styles.privacyLink}
+            onClick={(e) => handleAnchorClick(e, privacyPolicyLink.href)}
+          >
+            {privacyPolicyLink.label}
+          </a>
+        </div>
       </div>
     </motion.footer>
   );
